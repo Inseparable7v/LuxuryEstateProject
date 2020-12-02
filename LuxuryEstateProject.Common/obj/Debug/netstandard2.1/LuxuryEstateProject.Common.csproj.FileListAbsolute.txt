@@ -1,0 +1,8 @@
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\LuxuryEstateProject.Common\bin\Debug\netstandard2.1\LuxuryEstateProject.Common.deps.json
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\LuxuryEstateProject.Common\bin\Debug\netstandard2.1\LuxuryEstateProject.Common.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\LuxuryEstateProject.Common\bin\Debug\netstandard2.1\LuxuryEstateProject.Common.pdb
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\LuxuryEstateProject.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Common.AssemblyInfoInputs.cache
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\LuxuryEstateProject.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Common.AssemblyInfo.cs
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\LuxuryEstateProject.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Common.csproj.CoreCompileInputs.cache
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\LuxuryEstateProject.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Common.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\LuxuryEstateProject.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Common.pdb

@@ -1,0 +1,9 @@
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.deps.json
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.pdb
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.csprojAssemblyReference.cache
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.AssemblyInfoInputs.cache
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.AssemblyInfo.cs
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.csproj.CoreCompileInputs.cache
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.pdb

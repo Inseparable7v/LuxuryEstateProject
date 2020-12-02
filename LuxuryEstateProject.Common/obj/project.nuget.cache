@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "euGNCiVh1SrCe4cm8o/Ud1vNU29hwY8HHZl5vkNWqhhPbT9QbCJxny8BpgoX9GaoC/5yWGyhdP4CIsGmbRSADA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\danie\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
+    "C:\\Users\\danie\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512"
+  ],
+  "logs": []
+}
