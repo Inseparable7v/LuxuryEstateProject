@@ -13,19 +13,16 @@
 
     public class AgentViewModel : IMapFrom<Agent>, IHaveCustomMappings
     {
-        [Required]
+        public string Id { get; set; }
+
         public string Name { get; set; }
 
-        [Required]
         public string LastName { get; set; }
 
-        [Required]
         public string Email { get; set; }
 
-        [Required]
         public string Phone { get; set; }
 
-        [Required]
         public string Description { get; set; }
 
         public string ImageRemoteImageUrl { get; set; }

@@ -1,9 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@using LuxuryEstateProject.Common
+
+@model LuxuryEstateProject.Web.ViewModels.Agent.AgentsListViewModel
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
 
     <title>About Page</title>
     <meta content="" name="descriptison">
@@ -47,37 +51,36 @@
                         </div>
                         <div class="sinse-box">
                             <h3 class="sinse-title">
-                                EstateAgency
-                                <span></span>
+                                LuxuryEstate  @*@GlobalConstants.SystemName   ----  another chance to show the Name.*@
                                 <br> Sinse 2020
                             </h3>
-                            <p>Art & Creative</p>
+                            <p>RealEstate Agency</p>
                         </div>
                     </div>
-                    <div class="col-md-12 section-t8">
-                        <div class="row">
-                            <div class="col-md-6 col-lg-5">
-                                <img src="~/assets/img/about-2.jpg" alt="" class="img-fluid">
-                            </div>
-                            <div class="col-lg-2  d-none d-lg-block">
-                               
-                            </div>
-                            <div class="col-md-6 col-lg-5 section-md-t3">
-                                <div class="title-box-d">
-                                    <h3 class="title-d">
-                                        Място за Името на Agen-а
-                                        <span class="color-d">ИМЕ!!!!</span>
-                                    </h3>
-                                </div>
-                                <p class="color-text-a">
-                                    Много Цъкам
-                                </p>
-                                <p class="color-text-a">
-                                    нещо си...
-                                </p>
+                        <div class="col-md-12 section-t8">
+                            <div class="row">
+                                @foreach (var firstAgent in @Model.Agents.Take(1))
+                                {
+                                    <div class="col-md-6 col-lg-5">
+                                        <img src="@firstAgent.ImageRemoteImageUrl" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="col-lg-2  d-none d-lg-block">
+
+                                    </div>
+                                    <div class="col-md-6 col-lg-5 section-md-t3">
+                                        <div class="title-box-d">
+                                            <h3 class="title-d">
+                                                @firstAgent.Name
+                                                <span class="color-d">@firstAgent.LastName</span>
+                                            </h3>
+                                        </div>
+                                        <p class="color-text-a">
+                                            @firstAgent.Description
+                                        </p>
+                                    </div>
+                                }
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -95,195 +98,42 @@
                     </div>
                 </div>
                 <div class="row">
+                @foreach (var agent in @Model.Agents)
+                {
                     <div class="col-md-4">
                         <div class="card-box-d">
                             <div class="card-img-d">
-                                <img src="~/assets/img/agent-7.jpg" alt="" class="img-d img-fluid">
+                                <img src="@agent.ImageRemoteImageUrl" alt="" class="img-d img-fluid">
                             </div>
                             <div class="card-overlay card-overlay-hover">
                                 <div class="card-header-d">
                                     <div class="card-title-d align-self-center">
                                         <h3 class="title-d">
                                             <a href="agent-single.html" class="link-two">
-                                                Margaret Sotillo
-                                                <br> Escala
+                                                @agent.Name
+                                                <br> @agent.LastName
                                             </a>
                                         </h3>
                                     </div>
                                 </div>
                                 <div class="card-body-d">
                                     <p class="content-d color-text-a">
-                                        Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
+                                        @agent.Id
+                                        @agent.Description
                                     </p>
                                     <div class="info-agents color-a">
                                         <p>
-                                            <strong>Phone: </strong> +54 356 945234
+                                            <strong>Phone: </strong> @agent.Phone
                                         </p>
                                         <p>
-                                            <strong>Email: </strong> agents@example.com
+                                            <strong>Email: </strong> @agent.Email
                                         </p>
-                                    </div>
-                                </div>
-                                <div class="card-footer-d">
-                                    <div class="socials-footer d-flex justify-content-center">
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="fa fa-dribbble" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card-box-d">
-                            <div class="card-img-d">
-                                <img src="~/assets/img/agent-6.jpg" alt="" class="img-d img-fluid">
-                            </div>
-                            <div class="card-overlay card-overlay-hover">
-                                <div class="card-header-d">
-                                    <div class="card-title-d align-self-center">
-                                        <h3 class="title-d">
-                                            <a href="agent-single.html" class="link-two">
-                                                Stiven Spilver
-                                                <br> Darw
-                                            </a>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="card-body-d">
-                                    <p class="content-d color-text-a">
-                                        Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
-                                    </p>
-                                    <div class="info-agents color-a">
-                                        <p>
-                                            <strong>Phone: </strong> +54 356 945234
-                                        </p>
-                                        <p>
-                                            <strong>Email: </strong> agents@example.com
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card-footer-d">
-                                    <div class="socials-footer d-flex justify-content-center">
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="fa fa-dribbble" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card-box-d">
-                            <div class="card-img-d">
-                                <img src="~/assets/img/agent-5.jpg" alt="" class="img-d img-fluid">
-                            </div>
-                            <div class="card-overlay card-overlay-hover">
-                                <div class="card-header-d">
-                                    <div class="card-title-d align-self-center">
-                                        <h3 class="title-d">
-                                            <a href="agent-single.html" class="link-two">
-                                                Emma Toledo
-                                                <br> Cascada
-                                            </a>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="card-body-d">
-                                    <p class="content-d color-text-a">
-                                        Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
-                                    </p>
-                                    <div class="info-agents color-a">
-                                        <p>
-                                            <strong>Phone: </strong> +54 356 945234
-                                        </p>
-                                        <p>
-                                            <strong>Email: </strong> agents@example.com
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card-footer-d">
-                                    <div class="socials-footer d-flex justify-content-center">
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="fa fa-dribbble" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                }
                 </div>
             </div>
         </section><!-- End About Section-->

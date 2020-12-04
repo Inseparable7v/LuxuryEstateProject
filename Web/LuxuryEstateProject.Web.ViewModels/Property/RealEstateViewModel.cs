@@ -35,8 +35,6 @@
 
         public string DistrictName { get; set; }
 
-        public AgentViewModel Agent { get; set; }
-
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<RealEstateProperty, RealEstateViewModel>()

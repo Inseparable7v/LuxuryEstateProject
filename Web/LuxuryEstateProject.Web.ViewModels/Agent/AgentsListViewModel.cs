@@ -6,6 +6,6 @@
 
     public class AgentsListViewModel
     {
-        public ICollection<AgentViewModel> Agents { get; set; }
+        public IEnumerable<AgentViewModel> Agents { get; set; }
     }
 }

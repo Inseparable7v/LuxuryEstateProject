@@ -17,10 +17,10 @@
             //    return;
             //}
 
-            await dbContext.RealEstateProperties.AddAsync(new RealEstateProperty
+            var property = await dbContext.RealEstateProperties.AddAsync(new RealEstateProperty
             {
                 Description = "Some sexy ass property",
-                Name = "Vitosha Property",
+                Name = "Dragalevtzi Property",
                 Garage = 3,
                 Bed = 6,
                 Bath = 4,
@@ -28,7 +28,7 @@
                 Price = 206500.430m,
                 Size = 423.6f,
                 Year = 2021,
-                Type = PropertyType.ForSale,
+                Type = PropertyType.ForRent,
                 TotalNumberOfFloors = 6,
                 IsDeleted = false,
                 CreatedOn = DateTime.UtcNow,
@@ -57,9 +57,9 @@
                 Agent = new Agent
                 {
                     Email = "daniel.todorow1@gmail.com",
-                    Name = "Jimmy",
+                    Name = "Merlin",
                     Phone = "0896797550",
-                    LastName = "Italiano",
+                    LastName = "Pachoti",
                     Description = "Some random text",
                     IsDeleted = false,
                     CreatedOn = DateTime.UtcNow,
@@ -67,13 +67,13 @@
                     {
                         new Image
                         {
-                            RemoteImageUrl = "https://hr14.org/wp-content/uploads/2020/02/real-estate-agent-qualities-e1478704779127.jpg",
+                            RemoteImageUrl = "https://images.unsplash.com/photo-1556157382-97eda2d62296?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
                             CreatedOn = DateTime.UtcNow,
                             IsDeleted = false,
                         },
                         new Image
                         {
-                            RemoteImageUrl = "https://www.blogrollcenter.com/wp-content/uploads/ngg_featured/choose_a_real_estate_agent_to_sell_a_house.jpg",
+                            RemoteImageUrl = "https://images.unsplash.com/photo-1555421689-d68471e189f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
                             CreatedOn = DateTime.UtcNow,
                             IsDeleted = false,
                         },
@@ -101,7 +101,7 @@
                             {
                                 new District
                                 {
-                                    Name = "Vitosha",
+                                    Name = "Dragalevtzi",
                                     CreatedOn = DateTime.UtcNow,
                                     IsDeleted = false,
                                 },
@@ -114,7 +114,12 @@
                 {
                     new Image
                     {
-                        RemoteImageUrl = "https://i.pinimg.com/originals/2d/a0/a3/2da0a3e36f00e259099734ae5132846c.jpg",
+                        RemoteImageUrl = "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                        CreatedOn = DateTime.UtcNow,
+                        IsDeleted = false,
+                    },new Image
+                    {
+                        RemoteImageUrl = "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
                         CreatedOn = DateTime.UtcNow,
                         IsDeleted = false,
                     },

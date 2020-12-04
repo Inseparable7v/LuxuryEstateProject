@@ -946,3 +946,5 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.pdb
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.genruntimeconfig.cache
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Agent\All.cshtml.g.cs
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Agent\SingleAsync.cshtml.g.cs

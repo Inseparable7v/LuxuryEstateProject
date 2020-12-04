@@ -1,7 +1,11 @@
-﻿namespace LuxuryEstateProject.Web.Controllers
+﻿using System.Linq;
+using LuxuryEstateProject.Web.ViewModels.Agent;
+
+namespace LuxuryEstateProject.Web.Controllers
 {
     using System.Diagnostics;
 
+    using LuxuryEstateProject.Services.Data.Agent;
     using LuxuryEstateProject.Services.Data.Property;
     using LuxuryEstateProject.Web.ViewModels;
     using LuxuryEstateProject.Web.ViewModels.Property;
@@ -10,22 +14,30 @@
     public class HomeController : BaseController
     {
         private readonly IPropertyService propertyService;
+        private readonly IAgentService agentService;
 
-        public HomeController(IPropertyService propertyService)
+        public HomeController(IPropertyService propertyService, IAgentService agentService)
         {
+            this.agentService = agentService;
             this.propertyService = propertyService;
         }
 
         public IActionResult Index()
         {
-            var state = this.propertyService.GetLatestProperties<RealEstateViewModel>();
-            var model = new RealEstateListViewModel { PropertyViewModels = state };
+            var property = this.propertyService.GetLatestProperties<RealEstateViewModel>();
+            var agent = this.agentService.GetHomePageAgents<AgentViewModel>();
+
+            var model = new RealEstateListViewModel { PropertyViewModels = property, Agents = agent };
             return this.View(model);
         }
 
         public IActionResult About()
         {
-            return this.View();
+            var state = this.agentService.GetHomePageAgents<AgentViewModel>();
+
+            var model = new AgentsListViewModel { Agents = state };
+
+            return this.View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

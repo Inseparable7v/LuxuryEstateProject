@@ -44,15 +44,12 @@
                 <div class="row">
                     <div class="col-sm-10">
                         <div id="property-single-carousel" class="owl-carousel owl-arrow gallery-property">
-                            <div class="carousel-item-b">
-                                <img src="@Model.ImageRemoteImageUrl" alt="">
-                            </div>
-                            <div class="~/carousel-item-b">
-                                <img src="assets/img/slide-3.jpg" alt="">
-                            </div>
-                            <div class="~/carousel-item-b">
-                                <img src="assets/img/slide-1.jpg" alt="">
-                            </div>
+                            @foreach (var img in @Model.ImageRemoteImageUrl)
+                            {
+                                <div class="carousel-item-b">
+                                    <img src="@img" alt="">
+                                </div>
+                            }
                         </div>
                         <div class="row justify-content-between">
                             <div class="col-md-5 col-lg-4">
@@ -85,8 +82,8 @@
                                                 <span>@Model.CountriesName</span>
                                             </li>
                                             <li class="d-flex justify-content-between">
-                                                <strong>Property Type:</strong>
-                                                <span>House</span>
+                                                <strong>Year:</strong>
+                                                <span>@Model.Year</span>
                                             </li>
                                             <li class="d-flex justify-content-between">
                                                 <strong>Status:</strong>
@@ -156,14 +153,11 @@
                         </div>
                         <div class="row">
                             <div class="col-md-10 col-lg-5">
-                                @foreach (var imgURL in @Model.Agent.ImageRemoteImageUrl)
-                                {
-                                    <img src="@imgURL" alt="" class="img-fluid">
-                                }
+                                    <img src="@Model.Agent.ImageRemoteImageUrl" alt="" class="img-fluid">
                             </div>
                             <div class="col-md-10 col-lg-5">
                                 <div class="property-agent">
-                                    <h4 class="title-agent">@Model.Agent.Name @Model.Agent.LastName</h4>
+                                    <h4 class="title-agent">@Model.Agent.Name @Model.Agent.LastName  @Model.Agent.Id</h4>
                                     <p class="color-text-a">
                                         @Model.Agent.Description
                                     </p>

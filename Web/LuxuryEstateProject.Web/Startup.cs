@@ -1,4 +1,6 @@
-﻿namespace LuxuryEstateProject.Web
+﻿using LuxuryEstateProject.Services.Data.Agent;
+
+namespace LuxuryEstateProject.Web
 {
     using System.Reflection;
 
@@ -67,6 +69,7 @@
             services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<IPropertyService, PropertyService>();
+            services.AddTransient<IAgentService, AgentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
