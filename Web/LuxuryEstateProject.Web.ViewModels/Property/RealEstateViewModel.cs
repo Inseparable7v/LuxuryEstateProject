@@ -1,10 +1,13 @@
 ﻿namespace LuxuryEstateProject.Web.ViewModels.Property
 {
+    using System.Collections;
+    using System.Collections.Generic;
     using System.Linq;
 
     using AutoMapper;
     using LuxuryEstateProject.Data.Models;
     using LuxuryEstateProject.Services.Mapping;
+    using LuxuryEstateProject.Web.ViewModels.Agent;
 
     public class RealEstateViewModel : IMapFrom<RealEstateProperty>, IHaveCustomMappings
     {
@@ -22,8 +25,6 @@
 
         public string Type { get; set; }
 
-        public string DistrictName { get; set; }
-
         public decimal Price { get; set; }
 
         public int Floor { get; set; }
@@ -32,9 +33,16 @@
 
         public string Year { get; set; }
 
+        public string DistrictName { get; set; }
+
+        public AgentViewModel Agent { get; set; }
+
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<RealEstateProperty, RealEstateViewModel>()
+                .ForMember(
+                    x => x.DistrictName,
+                    opt => opt.MapFrom(y => y.Countries.Cities.FirstOrDefault().Districts.FirstOrDefault().Name))
                 .ForMember(x => x.ImageRemoteImageUrl, opt =>
                     opt.MapFrom(x =>
                         x.Images.FirstOrDefault().RemoteImageUrl != null ?

@@ -11,7 +11,7 @@
     using LuxuryEstateProject.Services.Mapping;
     using LuxuryEstateProject.Web.ViewModels.Image;
 
-    public class AgentViewModel : IMapFrom<Agent>
+    public class AgentViewModel : IMapFrom<Agent>, IHaveCustomMappings
     {
         [Required]
         public string Name { get; set; }
@@ -28,6 +28,16 @@
         [Required]
         public string Description { get; set; }
 
-        public ICollection<ImageViewModel> RemoteImageUrl { get; set; }
+        public string ImageRemoteImageUrl { get; set; }
+
+        public void CreateMappings(IProfileExpression configuration)
+        {
+            configuration.CreateMap<Agent, AgentViewModel>()
+                .ForMember(x => x.ImageRemoteImageUrl, opt =>
+                    opt.MapFrom(x =>
+                        x.Images.FirstOrDefault().RemoteImageUrl != null ?
+                            x.Images.FirstOrDefault().RemoteImageUrl :
+                            "/assets/img/" + x.Images.FirstOrDefault().Id + "." + x.Images.FirstOrDefault().Extension));
+        }
     }
 }

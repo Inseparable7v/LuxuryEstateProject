@@ -12,10 +12,10 @@
     {
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
         {
-            if (dbContext.RealEstateProperties.Any())
-            {
-                return;
-            }
+            //if (dbContext.RealEstateProperties.Any())
+            //{
+            //    return;
+            //}
 
             await dbContext.RealEstateProperties.AddAsync(new RealEstateProperty
             {
@@ -32,6 +32,7 @@
                 TotalNumberOfFloors = 6,
                 IsDeleted = false,
                 CreatedOn = DateTime.UtcNow,
+
                 Amenities = new List<Amenities>
                 {
                     new Amenities
@@ -50,7 +51,7 @@
                     {
                         CreatedOn = DateTime.UtcNow,
                         IsDeleted = false,
-                        Name = "Sun Room",
+                        Name = "East View",
                     },
                 },
                 Agent = new Agent
@@ -113,7 +114,7 @@
                 {
                     new Image
                     {
-                        RemoteImageUrl = "https://luxurylifestyleawards.com/wp-content/uploads/2020/02/MAIN-IMAGE.jpg",
+                        RemoteImageUrl = "https://i.pinimg.com/originals/2d/a0/a3/2da0a3e36f00e259099734ae5132846c.jpg",
                         CreatedOn = DateTime.UtcNow,
                         IsDeleted = false,
                     },

@@ -156,7 +156,10 @@
                         </div>
                         <div class="row">
                             <div class="col-md-10 col-lg-5">
-                                <img src="@Model.Agent.RemoteImageUrl.FirstOrDefault()" alt="" class="img-fluid">
+                                @foreach (var imgURL in @Model.Agent.ImageRemoteImageUrl)
+                                {
+                                    <img src="@imgURL" alt="" class="img-fluid">
+                                }
                             </div>
                             <div class="col-md-10 col-lg-5">
                                 <div class="property-agent">
