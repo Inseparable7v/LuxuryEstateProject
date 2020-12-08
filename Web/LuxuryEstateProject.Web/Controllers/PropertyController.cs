@@ -17,6 +17,11 @@
             this.propertyService = propertyService;
         }
 
+        public IActionResult CreateProperty()
+        {
+
+        }
+
         public IActionResult PropertyGrid(int id = 1)
         {
             if (id <= 0)

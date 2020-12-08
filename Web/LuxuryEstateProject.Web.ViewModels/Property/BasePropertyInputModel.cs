@@ -1,0 +1,38 @@
+﻿namespace LuxuryEstateProject.Web.ViewModels.Property
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    public abstract class BasePropertyInputModel
+    {
+        public string Name { get; set; }
+
+        public string Description { get; set; }
+
+        public float Size { get; set; }
+
+        public int Bath { get; set; }
+
+        public int Garage { get; set; }
+
+        public int Bed { get; set; }
+
+        public int Floor { get; set; }
+
+        public int Year { get; set; }
+
+        public int TotalNumberOfFloors { get; set; }
+
+        public decimal Price { get; set; }
+
+        public string CountryName { get; set; }
+
+        public string CityName { get; set; }
+
+        public string DistrictName { get; set; }
+
+        public string BuildingType { get; set; }
+
+    }
+}

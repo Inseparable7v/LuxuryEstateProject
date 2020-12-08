@@ -35,9 +35,16 @@
 
         public string DistrictName { get; set; }
 
+        public string CountriesName { get; set; }
+
+        public string CityName { get; set; }
+
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<RealEstateProperty, RealEstateViewModel>()
+                .ForMember(
+                    x => x.CityName,
+                    opt => opt.MapFrom(y => y.Countries.Cities.Select(n => n.Name)))
                 .ForMember(
                     x => x.DistrictName,
                     opt => opt.MapFrom(y => y.Countries.Cities.FirstOrDefault().Districts.FirstOrDefault().Name))

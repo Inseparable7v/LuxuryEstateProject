@@ -26,7 +26,6 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web.ViewModels\obj\Debug\netstandard2.1\LuxuryEstateProject.Web.ViewModels.csprojAssemblyReference.cache
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web.ViewModels\obj\Debug\netstandard2.1\LuxuryEstateProject.Web.ViewModels.AssemblyInfoInputs.cache
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web.ViewModels\obj\Debug\netstandard2.1\LuxuryEstateProject.Web.ViewModels.AssemblyInfo.cs
-C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web.ViewModels\obj\Debug\netstandard2.1\LuxuryEstateProject.Web.ViewModels.csproj.CoreCompileInputs.cache
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web.ViewModels\obj\Debug\netstandard2.1\LuxuryEstateProject.Web.ViewModels.csproj.CopyComplete
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web.ViewModels\obj\Debug\netstandard2.1\LuxuryEstateProject.Web.ViewModels.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web.ViewModels\obj\Debug\netstandard2.1\LuxuryEstateProject.Web.ViewModels.pdb
