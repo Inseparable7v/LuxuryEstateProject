@@ -27,7 +27,7 @@ using LuxuryEstateProject.Web.ViewModels;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d1264379960ffc946bfff64c50ef54f8a5539ef3", @"/Views/Agent/SingleAsync.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4432b5840e5063822c5424e246be6fe829f294be", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7621920ed7501ee0024f5e6e2888f6a62e815788", @"/Views/_ViewImports.cshtml")]
     public class Views_Agent_SingleAsync : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<LuxuryEstateProject.Web.ViewModels.Agent.AgentViewModel>
     {
         #pragma warning disable 1998

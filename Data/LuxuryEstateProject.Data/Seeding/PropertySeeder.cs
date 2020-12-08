@@ -28,7 +28,7 @@
                 Price = 206500.430m,
                 Size = 423.6f,
                 Year = 2021,
-                Type = PropertyType.ForRent,
+                Type = PropertyType.Rent,
                 TotalNumberOfFloors = 6,
                 IsDeleted = false,
                 CreatedOn = DateTime.UtcNow,
@@ -51,7 +51,7 @@
                     {
                         CreatedOn = DateTime.UtcNow,
                         IsDeleted = false,
-                        Name = "East View",
+                        Name = "SunRoom",
                     },
                 },
                 Agent = new Agent
@@ -59,7 +59,7 @@
                     Email = "daniel.todorow1@gmail.com",
                     Name = "Merlin",
                     Phone = "0896797550",
-                    LastName = "Pachoti",
+                    LastName = "Pachotti",
                     Description = "Some random text",
                     IsDeleted = false,
                     CreatedOn = DateTime.UtcNow,
@@ -114,12 +114,12 @@
                 {
                     new Image
                     {
-                        RemoteImageUrl = "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                        RemoteImageUrl = "https://images.pexels.com/photos/2343468/pexels-photo-2343468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
                         CreatedOn = DateTime.UtcNow,
                         IsDeleted = false,
                     },new Image
                     {
-                        RemoteImageUrl = "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                        RemoteImageUrl = "https://images.pexels.com/photos/4885978/pexels-photo-4885978.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
                         CreatedOn = DateTime.UtcNow,
                         IsDeleted = false,
                     },

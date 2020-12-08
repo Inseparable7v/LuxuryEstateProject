@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@this.ViewData["Title"] - @GlobalConstants.SystemName</title>
+    <title>@this.ViewData["Title"] @GlobalConstants.SystemName</title>
     
     <link href="~/favicon.ico" rel="icon">
     <link href="~/favicon.ico" rel="apple-touch-icon">
@@ -152,7 +152,7 @@
                         @if (this.SignInManager.IsSignedIn(this.User))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><span class="text-primary">Hello @(this.User.Identity.Name)!</span></a>
+                                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><span class="color-a">Hello @(this.User.Identity.Name)!</span></a>
                             </li>
                             if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
                             {

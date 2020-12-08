@@ -55,56 +55,56 @@
                     </div>
                     @foreach (var estateModel in @Model.PropertyViewModels)
                     {
-        <div class="col-md-4">
-            <div class="card-box-a card-shadow">
-                <div class="img-box-a">
-                    <img src="@estateModel.ImageRemoteImageUrl" alt="" class="img-a img-fluid">
-                </div>
-                <div class="card-overlay">
-                    <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                            <h2 class="card-title-a">
-                                <a href="#">
-                                    <br />@estateModel.Name
-                                </a>
-                            </h2>
-                        </div>
-                        <div class="card-body-a">
-                            <div class="price-box d-flex">
-                                <span class="price-a">rent | @estateModel.Price</span>
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="@estateModel.ImageRemoteImageUrl" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay-hover">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="#">
+                                                    <br />@estateModel.Name
+                                                </a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex">
+                                                <span class="price-a">rent | @estateModel.Price</span>
+                                            </div>
+                                            <a asp-area="" asp-action="PropertySingle" asp-route-id="@estateModel.Id" class="link-a">
+                                                Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <h4 class="card-info-title">Area</h4>
+                                                    <span>
+                                                        @estateModel.Size
+                                                        <sup>2</sup>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <h4 class="card-info-title">Beds</h4>
+                                                    <span>@estateModel.Bed</span>
+                                                </li>
+                                                <li>
+                                                    <h4 class="card-info-title">Baths</h4>
+                                                    <span>@estateModel.Bath</span>
+                                                </li>
+                                                <li>
+                                                    <h4 class="card-info-title">Garages</h4>
+                                                    <span>@estateModel.Garage</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <a asp-area="" asp-action="PropertySingle" asp-route-id="@estateModel.Id" class="link-a">
-                                Click here to view
-                                <span class="ion-ios-arrow-forward"></span>
-                            </a>
                         </div>
-                        <div class="card-footer-a">
-                            <ul class="card-info d-flex justify-content-around">
-                                <li>
-                                    <h4 class="card-info-title">Area</h4>
-                                    <span>
-                                        @estateModel.Size
-                                        <sup>2</sup>
-                                    </span>
-                                </li>
-                                <li>
-                                    <h4 class="card-info-title">Beds</h4>
-                                    <span>@estateModel.Bed</span>
-                                </li>
-                                <li>
-                                    <h4 class="card-info-title">Baths</h4>
-                                    <span>@estateModel.Bath</span>
-                                </li>
-                                <li>
-                                    <h4 class="card-info-title">Garages</h4>
-                                    <span>@estateModel.Garage</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
                     }
                     <partial name="_PagingPartial" model="@Model" />
                 </div>

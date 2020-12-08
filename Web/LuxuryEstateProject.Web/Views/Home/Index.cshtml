@@ -29,7 +29,7 @@
         <div id="carousel" class="owl-carousel owl-theme">
             @foreach (var estateModel in @Model.PropertyViewModels)
             {
-                <div class="carousel-item-a intro-item bg-image img-fluid w-100" style="background-image: url(@estateModel.ImageRemoteImageUrl)">
+                <div class="carousel-item-a intro-item bg-image img-fluid" style="background-image: url(@estateModel.ImageRemoteImageUrl)">
                     <div class="overlay overlay-a"></div>
                     <div class="intro-content display-table">
                         <div class="table-cell">
@@ -143,20 +143,25 @@
                 <div id="property-carousel" class="owl-carousel owl-theme">
                     @foreach (var estateModel in @Model.PropertyViewModels)
                     {
-                        <div class="carousel-item-c">
+                        <div class="col-md-12">
                             <div class="card-box-a card-shadow">
-                                <div class=".about-img-box">
-                                    <img src="@estateModel.ImageRemoteImageUrl" class="img-a img-fluid">
+                                <div class="img-box-a">
+                                    <img src="@estateModel.ImageRemoteImageUrl" alt="" class="img-a img-fluid">
                                 </div>
-                                
-                                <div class="card-overlay">
-
+                                <div class="card-overlay-hover">
                                     <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="#">
+                                                    <br />@estateModel.Name
+                                                </a>
+                                            </h2>
+                                        </div>
                                         <div class="card-body-a">
                                             <div class="price-box d-flex">
-                                                <span class="price-a">@estateModel.Type | $ @estateModel.Price</span>
+                                                <span class="price-a">rent | @estateModel.Price</span>
                                             </div>
-                                            <a asp-area="" asp-controller="Property" asp-action="PropertyGrid" class="link-a">
+                                            <a asp-area="" asp-controller="Property" asp-action="PropertySingle" asp-route-id="@estateModel.Id" class="link-a">
                                                 Click here to view
                                                 <span class="ion-ios-arrow-forward"></span>
                                             </a>
@@ -211,46 +216,45 @@
                     </div>
                 </div>
                 <div class="row">
-                @foreach (var agents in @Model.Agents)
-                {
-                    <div class="col-md-4">
-                        <div class="card-box-d">
-                            <div class="card-img-d">
-                                <img src="@agents.ImageRemoteImageUrl" alt="" class="img-d img-fluid">
-                            </div>
-                            <div class="card-overlay card-overlay-hover">
-                                <h4>@agents.Id</h4>
-                                <div class="card-header-d">
-                                    <div class="card-title-d align-self-center">
-                                        <h3 class="title-d">
-                                            <a href="agent-single.html" class="link-two">
-                                                @agents.Name
-                                                <br> @agents.LastName
-                                            </a>
-                                        </h3>
-                                    </div>
+                    @foreach (var agents in @Model.Agents)
+                    {
+                        <div class="col-md-4">
+                            <div class="card-box-d">
+                                <div class="card-img-d">
+                                    <img src="@agents.ImageRemoteImageUrl" alt="" class="img-d img-fluid">
                                 </div>
-                                <div class="card-body-d">
-                                    <p class="content-d color-text-a">
-                                        @agents.Description
-                                    </p>
-                                    <div class="info-agents color-a">
-                                        <p>
-                                            <strong>Phone: </strong> @agents.Phone
+                                <div class="card-overlay-hover card-overlay-a-content">
+                                    <h4>@agents.Id</h4>
+                                    <div class="card-header-d">
+                                        <div class="card-title-d align-self-center">
+                                            <h3 class="title-d">
+                                                <a class="link-two">
+                                                    @agents.Name
+                                                    <br> @agents.LastName
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="card-body-d">
+                                        <p class="content-d color-text-a">
+                                            @agents.Description
                                         </p>
-                                        <p>
-                                            <strong>Email: </strong> @agents.Email
-                                        </p>
+                                        <div class="info-agents color-a">
+                                            <p>
+                                                <strong>Phone: </strong> @agents.Phone
+                                            </p>
+                                            <p>
+                                                <strong>Email: </strong> @agents.Email
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                }
+                    }
                 </div>
             </div>
         </section><!-- End Agents Section -->
-        <!-- ======= Latest News Section ======= -->
         <!-- ======= Testimonials Section ======= -->
         <section class="section-testimonials section-t8 nav-arrow-a">
             <div class="container">

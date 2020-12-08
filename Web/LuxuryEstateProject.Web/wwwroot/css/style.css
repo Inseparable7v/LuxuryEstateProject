@@ -115,10 +115,6 @@ a:hover {
   }
 }
 
-.nav-logout-color {
-    color: #0099cc;
-}
-
 .color-a {
   color: #000000;
 }
@@ -163,10 +159,10 @@ a:hover {
 
 /*------/ Bg Image /------*/
 .bg-image {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
 }
 
 /*------/ List a /------*/
@@ -951,10 +947,9 @@ a:hover {
 # Hero Section
 --------------------------------------------------------------*/
 .intro {
-    height: 100vh;
-    width: 100vh;
-    position: relative;
-    color: #ffffff;
+  height: 100vh;
+  position: relative;
+  color: #ffffff;
 }
 
 .intro .owl-theme .owl-dots {
@@ -987,18 +982,12 @@ a:hover {
 }
 
 .intro .carousel-item-a {
-    position: relative;
-    height: 100vh;
-    width: 100vh;
+  position: relative;
+  height: 100vh;
 }
 
 .intro .carousel-item-a.bg-image {
   background-attachment: scroll;
-}
-
-.logo {
-    margin-left: 0px;
-    margin-right: auto;
 }
 
 .intro .intro-content {
@@ -1006,13 +995,13 @@ a:hover {
 }
 
 .intro .intro-body {
-    padding-left: 1rem;
+  padding-left: 1rem;
 }
 
 @media (min-width: 768px) {
-    .intro .intro-body {
-        padding-left: 2rem;
-}
+  .intro .intro-body {
+    padding-left: 2rem;
+  }
 }
 
 .intro .intro-body .price-a {
@@ -1221,11 +1210,11 @@ a:hover {
 }
 
 .card-overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .card-shadow {
@@ -1328,7 +1317,7 @@ a:hover {
 }
 
 .card-body-a {
-  z-index: 3;
+  z-index: 2;
   transition: all .5s ease-in;
   padding: 0rem 1rem 2rem 1rem;
 }

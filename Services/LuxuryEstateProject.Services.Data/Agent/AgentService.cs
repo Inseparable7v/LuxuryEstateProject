@@ -28,13 +28,14 @@
 
         public IEnumerable<T> GetHomePageAgents<T>()
         {
-            return this.agentRepository.AllAsNoTracking().Take(3).OrderBy(x => x.RealEstateProperties.Count).To<T>().ToList();
+            return this.agentRepository.AllAsNoTracking().Take(3).OrderByDescending(x => x.Id).To<T>().ToList();
         }
 
         public T SingleAgent<T>()
         {
-            return this.agentRepository.AllAsNoTracking().OrderBy(x => x.RealEstateProperties.Count).To<T>().FirstOrDefault();
+            return this.agentRepository.AllAsNoTracking().OrderBy(x => x.Id).To<T>().FirstOrDefault();
         }
+
         public async Task<T> GetByIdAsync<T>(int id)
         {
             return await this.agentRepository.AllAsNoTracking().Where(x => x.Id.Equals(id)).To<T>().FirstOrDefaultAsync();

@@ -48,7 +48,7 @@ using LuxuryEstateProject.Web.Areas.Identity.Pages.Account;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"27ba6fea59d774a8876feb017be665db92c237fb", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7f670c804b660a5a070c4e360fa05418a555db09", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b213bbef3a642c1ec5807851f50304995344fe66", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account__ViewImports : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

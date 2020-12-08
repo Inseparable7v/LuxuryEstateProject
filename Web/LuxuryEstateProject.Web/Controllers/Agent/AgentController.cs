@@ -21,7 +21,7 @@
         public IActionResult All()
         {
             var state = this.agentService.GetAllAgents<AgentViewModel>().ToList();
-            var model = new AgentsListViewModel{ Agents = state };
+            var model = new AgentsListViewModel { Agents = state };
 
             return this.View(model);
         }
