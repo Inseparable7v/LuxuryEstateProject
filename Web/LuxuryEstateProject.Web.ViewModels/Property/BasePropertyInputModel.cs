@@ -25,6 +25,8 @@
         public decimal Price { get; set; }
 
         public float Size { get; set; }
+
+        public int Type { get; set; }
         //public string BuildingType { get; set; }
 
         public int CountryId { get; set; }
