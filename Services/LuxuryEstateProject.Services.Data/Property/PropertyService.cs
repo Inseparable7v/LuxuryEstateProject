@@ -71,6 +71,8 @@ namespace LuxuryEstateProject.Services.Data.Property
                 AgentId = input.AgentId,
                 BuildingTypeId = input.BuildingTypeId,
                 Description = input.Description,
+                Garage = input.Garage,
+                Type = (PropertyType)input.Type,
             };
 
              // wwwroot / images / recipes / jhdsi - 343g3h453 -= g34g.jpg
@@ -93,10 +95,10 @@ namespace LuxuryEstateProject.Services.Data.Property
                 var physicalPath = $"{imagePath}/recipes/{dbImage.Id}.{extension}";
                 await using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
                 await image.CopyToAsync(fileStream);
-
-                await this.realRepository.AddAsync(property);
-                await this.realRepository.SaveChangesAsync();
             }
+
+            await this.realRepository.AddAsync(property);
+            await this.realRepository.SaveChangesAsync();
 
         }
 
