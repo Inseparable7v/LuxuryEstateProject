@@ -69,6 +69,8 @@ namespace LuxuryEstateProject.Services.Data.Property
                 Size = input.Size,
                 Year = input.Year,
                 AgentId = input.AgentId,
+                BuildingTypeId = input.BuildingTypeId,
+                Description = input.Description,
             };
 
              // wwwroot / images / recipes / jhdsi - 343g3h453 -= g34g.jpg

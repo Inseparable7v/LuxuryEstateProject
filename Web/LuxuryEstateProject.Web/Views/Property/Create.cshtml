@@ -67,21 +67,21 @@
         <span asp-validation-for="Size" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Countries"></label>
+        <label asp-for="CountryId"></label>
         @*<vc:CategoriesDropDown name="CategoryId"></vc:CategoriesDropDown>*@
-        <select asp-for="Countries" class="form-control" asp-items="categoryItems"></select>
-        <span asp-validation-for="Countries" class="text-danger"></span>
+        <select asp-for="CountryId" class="form-control" asp-items="categoryItems"></select>
+        <span asp-validation-for="CountryId" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="AgentsCreateForm"></label>
+        <label asp-for="AgentId"></label>
         @*<vc:CategoriesDropDown name="CategoryId"></vc:CategoriesDropDown>*@
-        <select asp-for="AgentsCreateForm" class="form-control" asp-items="agents"></select>
-        <span asp-validation-for="AgentsCreateForm" class="text-danger"></span>
+        <select asp-for="AgentId" class="form-control" asp-items="agents"></select>
+        <span asp-validation-for="AgentId" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="BuildingTypes"></label>
-        <select asp-for="BuildingTypes" class="form-control" asp-items="buildingType"></select>
-        <span asp-validation-for="BuildingTypes" class="text-danger"></span>
+        <label asp-for="BuildingTypeId"></label>
+        <select asp-for="BuildingTypeId" class="form-control" asp-items="buildingType"></select>
+        <span asp-validation-for="BuildingTypeId" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Images"></label>
