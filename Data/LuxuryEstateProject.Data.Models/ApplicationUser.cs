@@ -19,13 +19,17 @@ namespace LuxuryEstateProject.Data.Models
         }
 
         // Audit info
+        /// <inheritdoc/>
         public DateTime CreatedOn { get; set; }
 
+        /// <inheritdoc/>
         public DateTime? ModifiedOn { get; set; }
 
         // Deletable entity
+        /// <inheritdoc/>
         public bool IsDeleted { get; set; }
 
+        /// <inheritdoc/>
         public DateTime? DeletedOn { get; set; }
 
         public virtual ICollection<IdentityUserRole<string>> Roles { get; set; }

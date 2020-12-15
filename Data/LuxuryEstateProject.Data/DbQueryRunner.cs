@@ -16,11 +16,13 @@
 
         public ApplicationDbContext Context { get; set; }
 
+        /// <inheritdoc/>
         public Task RunQueryAsync(string query, params object[] parameters)
         {
             return this.Context.Database.ExecuteSqlRawAsync(query, parameters);
         }
 
+        /// <inheritdoc/>
         public void Dispose()
         {
             this.Dispose(true);

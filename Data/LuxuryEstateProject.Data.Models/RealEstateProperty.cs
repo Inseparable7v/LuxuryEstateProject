@@ -17,7 +17,6 @@
         [Required]
         public string Name { get; set; }
 
-        [Required]
         public float Size { get; set; }
 
         public int Bath { get; set; }
@@ -26,7 +25,6 @@
 
         public int Bed { get; set; }
 
-        [Required]
         public int? Floor { get; set; }
 
         public int? TotalNumberOfFloors { get; set; }
@@ -56,6 +54,6 @@
 
         public ICollection<Amenities> Amenities { get; set; }
 
-        public virtual IEnumerable<Image> Images { get; set; }
+        public virtual ICollection<Image> Images { get; set; }
     }
 }

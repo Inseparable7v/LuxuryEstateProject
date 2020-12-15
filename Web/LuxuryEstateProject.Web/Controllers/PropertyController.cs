@@ -1,4 +1,10 @@
-﻿namespace LuxuryEstateProject.Web.Controllers
+﻿using System;
+using LuxuryEstateProject.Services.Data;
+using LuxuryEstateProject.Services.Data.Agent;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
+
+namespace LuxuryEstateProject.Web.Controllers
 {
     using System.Linq;
     using System.Threading.Tasks;
@@ -11,15 +17,63 @@
     public class PropertyController : BaseController
     {
         private IPropertyService propertyService;
+        private ICountryService countryService;
+        private IWebHostEnvironment environment;
+        private IAgentService agentService;
+        private IBuildingType buildingTypesService;
 
-        public PropertyController(IPropertyService propertyService)
+        public PropertyController(IPropertyService propertyService, ICountryService countryService, IAgentService agentService, IBuildingType buildingTypesService, IWebHostEnvironment environment)
         {
             this.propertyService = propertyService;
+            this.countryService = countryService;
+            this.environment = environment;
+            this.agentService = agentService;
+            this.buildingTypesService = buildingTypesService;
         }
 
-        public IActionResult CreateProperty()
+        public IActionResult Create()
         {
+            var viewModel = new PropertyInputModel
+            {
+                Countries = this.countryService.GetAllAsKeyValuePairs(),
+                AgentsCreateForm = this.agentService.GetAllAsKeyValuePairs(),
+                BuildingTypes = this.buildingTypesService.GetAllAsKeyValuePairs(),
+            };
+            return this.View(viewModel);
+        }
 
+        [HttpPost]
+        public async Task<IActionResult> Create(PropertyInputModel input)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                input.Countries = this.countryService.GetAllAsKeyValuePairs();
+                input.BuildingTypes = this.buildingTypesService.GetAllAsKeyValuePairs();
+                input.AgentsCreateForm = this.agentService.GetAllAsKeyValuePairs();
+                return this.View(input);
+            }
+
+            // var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            //var user = await this.userManager.GetUserAsync(this.User);
+
+            try
+            {
+                await this.propertyService.CreatePropertyAsync(input, $"{this.environment.WebRootPath}/images");
+            }
+            catch (Exception ex)
+            {
+                this.ModelState.AddModelError(string.Empty, ex.Message);
+                input.Countries = this.countryService.GetAllAsKeyValuePairs();
+                input.AgentsCreateForm = this.agentService.GetAllAsKeyValuePairs();
+                input.BuildingTypes = this.buildingTypesService.GetAllAsKeyValuePairs();
+
+                return this.View(input);
+            }
+
+            this.TempData["Message"] = "Property added successfully.";
+
+            // TODO: Redirect to recipe info page
+            return this.RedirectToAction("PropertyGrid");
         }
 
         public IActionResult PropertyGrid(int id = 1)

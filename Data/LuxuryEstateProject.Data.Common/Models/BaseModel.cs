@@ -8,8 +8,10 @@
         [Key]
         public TKey Id { get; set; }
 
+        /// <inheritdoc/>
         public DateTime CreatedOn { get; set; }
 
+        /// <inheritdoc/>
         public DateTime? ModifiedOn { get; set; }
     }
 }

@@ -26,13 +26,23 @@
 
         public decimal Price { get; set; }
 
-        public string CountryName { get; set; }
-
         public string CityName { get; set; }
 
         public string DistrictName { get; set; }
 
-        public string BuildingType { get; set; }
+        //public string BuildingType { get; set; }
+
+        public int CountryId { get; set; }
+
+        public IEnumerable<KeyValuePair<string, string>> Countries { get; set; }
+
+        public int AgentId { get; set; }
+
+        public IEnumerable<KeyValuePair<string,string>> AgentsCreateForm { get; set; }
+
+        public int BuildingTypeId { get; set; }
+
+        public IEnumerable<KeyValuePair<string,string>> BuildingTypes { get; set; }
 
     }
 }

@@ -5,6 +5,7 @@ namespace LuxuryEstateProject.Data.Migrations
 {
     public partial class InitialCreate : Migration
     {
+        /// <inheritdoc/>
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -522,6 +523,7 @@ namespace LuxuryEstateProject.Data.Migrations
                 column: "IsDeleted");
         }
 
+        /// <inheritdoc/>
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

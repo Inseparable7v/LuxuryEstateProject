@@ -4,6 +4,7 @@ namespace LuxuryEstateProject.Data.Migrations
 {
     public partial class ChangeImageTable : Migration
     {
+        /// <inheritdoc/>
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<int>(
@@ -21,6 +22,7 @@ namespace LuxuryEstateProject.Data.Migrations
                 oldType: "int");
         }
 
+        /// <inheritdoc/>
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<int>(

@@ -14,6 +14,7 @@
 
         public string NameAndValue { get; set; }
 
+        /// <inheritdoc/>
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<Setting, SettingViewModel>().ForMember(

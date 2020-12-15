@@ -1045,7 +1045,6 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProje
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.Tests.AssemblyInfoInputs.cache
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.Tests.AssemblyInfo.cs
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.Tests.csproj.CoreCompileInputs.cache
-C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.Tests.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.Tests.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.Tests.RazorTargetAssemblyInfo.cache
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.Tests.csproj.CopyComplete

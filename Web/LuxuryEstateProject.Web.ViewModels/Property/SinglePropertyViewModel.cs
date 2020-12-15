@@ -49,6 +49,7 @@ namespace LuxuryEstateProject.Web.ViewModels.Property
 
         public ICollection<AmenitiesViewModel> Amenities { get; set; }
 
+        /// <inheritdoc/>
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<RealEstateProperty, SinglePropertyViewModel>()

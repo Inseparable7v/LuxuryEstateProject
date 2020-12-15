@@ -5,6 +5,7 @@
 
     public class NullMessageSender : IEmailSender
     {
+        /// <inheritdoc/>
         public Task SendEmailAsync(
             string from,
             string fromName,

@@ -1,0 +1,92 @@
+﻿@model LuxuryEstateProject.Web.ViewModels.Property.PropertyInputModel
+@{
+    this.ViewData["Title"] = "Add new Property";
+    var categoryItems = this.Model.Countries.Select(x => new SelectListItem(x.Value, x.Key)).ToHashSet();
+    var agents = this.Model.AgentsCreateForm.Select(x => new SelectListItem(x.Value, x.Key));
+    var buildingType = this.Model.BuildingTypes.Select(x => new SelectListItem(x.Value, x.Key));
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<form method="post" class="col-md-6 offset-md-3"
+      enctype="multipart/form-data">
+    <h1>@this.ViewData["Title"]</h1>
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TotalNumberOfFloors"></label>
+        <input asp-for="TotalNumberOfFloors" class="form-control" />
+        <span asp-validation-for="TotalNumberOfFloors" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Floor"></label>
+        <input asp-for="Floor" class="form-control" />
+        <span asp-validation-for="Floor" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Year"></label>
+        <input asp-for="Year" class="form-control" />
+        <span asp-validation-for="Year" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Garage"></label>
+        <input asp-for="Garage" class="form-control" />
+        <span asp-validation-for="Garage" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Bed"></label>
+        <input asp-for="Bed" class="form-control" />
+        <span asp-validation-for="Bed" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Bath"></label>
+        <input asp-for="Bath" class="form-control" />
+        <span asp-validation-for="Bath" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Size"></label>
+        <input asp-for="Size" class="form-control" />
+        <span asp-validation-for="Size" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Countries"></label>
+        @*<vc:CategoriesDropDown name="CategoryId"></vc:CategoriesDropDown>*@
+        <select asp-for="Countries" class="form-control" asp-items="categoryItems"></select>
+        <span asp-validation-for="Countries" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AgentsCreateForm"></label>
+        @*<vc:CategoriesDropDown name="CategoryId"></vc:CategoriesDropDown>*@
+        <select asp-for="AgentsCreateForm" class="form-control" asp-items="agents"></select>
+        <span asp-validation-for="AgentsCreateForm" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="BuildingTypes"></label>
+        <select asp-for="BuildingTypes" class="form-control" asp-items="buildingType"></select>
+        <span asp-validation-for="BuildingTypes" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Images"></label>
+        <input asp-for="Images" class="form-control" />
+        <span asp-validation-for="Images" class="text-danger"></span>
+    </div>
+    <input type="submit" class="btn btn-primary color-a" />
+</form>

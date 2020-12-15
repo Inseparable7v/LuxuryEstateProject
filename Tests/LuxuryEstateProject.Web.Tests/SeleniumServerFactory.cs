@@ -36,6 +36,7 @@
 
         public string RootUri { get; set; }
 
+        /// <inheritdoc/>
         protected override TestServer CreateServer(IWebHostBuilder builder)
         {
             this.host = builder.Build();
@@ -46,6 +47,7 @@
             return new TestServer(new WebHostBuilder().UseStartup<FakeStartup>());
         }
 
+        /// <inheritdoc/>
         protected override IWebHostBuilder CreateWebHostBuilder()
         {
             var builder = WebHost.CreateDefaultBuilder(Array.Empty<string>());
@@ -53,6 +55,7 @@
             return builder;
         }
 
+        /// <inheritdoc/>
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);

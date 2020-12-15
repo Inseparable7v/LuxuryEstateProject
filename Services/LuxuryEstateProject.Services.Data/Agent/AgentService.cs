@@ -21,24 +21,41 @@
             this.agentRepository = agentRepository;
         }
 
+        /// <inheritdoc/>
         public IEnumerable<T> GetAllAgents<T>()
         {
             return this.agentRepository.AllAsNoTracking().To<T>().ToList();
         }
 
+        /// <inheritdoc/>
         public IEnumerable<T> GetHomePageAgents<T>()
         {
             return this.agentRepository.AllAsNoTracking().Take(3).OrderByDescending(x => x.Id).To<T>().ToList();
         }
 
+        /// <inheritdoc/>
         public T SingleAgent<T>()
         {
             return this.agentRepository.AllAsNoTracking().OrderBy(x => x.Id).To<T>().FirstOrDefault();
         }
 
+        /// <inheritdoc/>
         public async Task<T> GetByIdAsync<T>(int id)
         {
             return await this.agentRepository.AllAsNoTracking().Where(x => x.Id.Equals(id)).To<T>().FirstOrDefaultAsync();
+        }
+
+        public IEnumerable<KeyValuePair<string, string>> GetAllAsKeyValuePairs()
+        {
+            return this.agentRepository.AllAsNoTracking()
+                .Select(x => new
+                {
+                    x.Id,
+                    x.Name,
+                    x.LastName,
+                })
+                .OrderBy(x => x.Name)
+                .ToList().Select(x => new KeyValuePair<string, string>(x.Id.ToString(), x.Name));
         }
     }
 }

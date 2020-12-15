@@ -8,7 +8,7 @@
 
     public interface IPropertyService
     {
-        void AddProperty();
+        Task CreatePropertyAsync(PropertyInputModel input, string imagePath);
 
         Task<T> GetByIdAsync<T>(int id);
 

@@ -20,12 +20,16 @@ namespace LuxuryEstateProject.Data.Models
             this.Id = Guid.NewGuid().ToString();
         }
 
+        /// <inheritdoc/>
         public DateTime CreatedOn { get; set; }
 
+        /// <inheritdoc/>
         public DateTime? ModifiedOn { get; set; }
 
+        /// <inheritdoc/>
         public bool IsDeleted { get; set; }
 
+        /// <inheritdoc/>
         public DateTime? DeletedOn { get; set; }
     }
 }

@@ -330,3 +330,9 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProje
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Services.Data.Tests\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Services.Data.Tests.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Services.Data.Tests\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Services.Data.Tests.pdb
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Services.Data.Tests\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Services.Data.Tests.genruntimeconfig.cache
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Services.Data.Tests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Services.Data.Tests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Services.Data.Tests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Services.Data.Tests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Services.Data.Tests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.ObjectPool.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Services.Data.Tests\bin\Debug\netcoreapp3.1\Microsoft.Net.Http.Headers.dll

@@ -39,17 +39,21 @@
 
         public DbSet<Setting> Settings { get; set; }
 
+        /// <inheritdoc/>
         public override int SaveChanges() => this.SaveChanges(true);
 
+        /// <inheritdoc/>
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
         {
             this.ApplyAuditInfoRules();
             return base.SaveChanges(acceptAllChangesOnSuccess);
         }
 
+        /// <inheritdoc/>
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default) =>
             this.SaveChangesAsync(true, cancellationToken);
 
+        /// <inheritdoc/>
         public override Task<int> SaveChangesAsync(
             bool acceptAllChangesOnSuccess,
             CancellationToken cancellationToken = default)
@@ -58,6 +62,7 @@
             return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
         }
 
+        /// <inheritdoc/>
         protected override void OnModelCreating(ModelBuilder builder)
         {
             // Needed for Identity models configuration

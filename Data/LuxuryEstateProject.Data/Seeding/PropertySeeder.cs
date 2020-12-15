@@ -10,6 +10,7 @@
 
     public class PropertySeeder : ISeeder
     {
+        /// <inheritdoc/>
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
         {
             //if (dbContext.RealEstateProperties.Any())
@@ -83,8 +84,6 @@
                 {
                     Name = "Brick",
                     Properties = new List<RealEstateProperty>(),
-                    IsDeleted = false,
-                    CreatedOn = DateTime.UtcNow,
                 },
                 Countries = new Country
                 {

@@ -21,12 +21,16 @@
 
         protected ApplicationDbContext Context { get; set; }
 
+        /// <inheritdoc/>
         public virtual IQueryable<TEntity> All() => this.DbSet;
 
+        /// <inheritdoc/>
         public virtual IQueryable<TEntity> AllAsNoTracking() => this.DbSet.AsNoTracking();
 
+        /// <inheritdoc/>
         public virtual Task AddAsync(TEntity entity) => this.DbSet.AddAsync(entity).AsTask();
 
+        /// <inheritdoc/>
         public virtual void Update(TEntity entity)
         {
             var entry = this.Context.Entry(entity);
@@ -38,10 +42,13 @@
             entry.State = EntityState.Modified;
         }
 
+        /// <inheritdoc/>
         public virtual void Delete(TEntity entity) => this.DbSet.Remove(entity);
 
+        /// <inheritdoc/>
         public Task<int> SaveChangesAsync() => this.Context.SaveChangesAsync();
 
+        /// <inheritdoc/>
         public void Dispose()
         {
             this.Dispose(true);

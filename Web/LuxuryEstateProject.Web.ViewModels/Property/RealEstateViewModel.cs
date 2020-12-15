@@ -25,6 +25,8 @@
 
         public string Type { get; set; }
 
+        public string DistrictName { get; set; }
+
         public decimal Price { get; set; }
 
         public int Floor { get; set; }
@@ -33,21 +35,9 @@
 
         public string Year { get; set; }
 
-        public string DistrictName { get; set; }
-
-        public string CountriesName { get; set; }
-
-        public string CityName { get; set; }
-
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<RealEstateProperty, RealEstateViewModel>()
-                .ForMember(
-                    x => x.CityName,
-                    opt => opt.MapFrom(y => y.Countries.Cities.Select(n => n.Name)))
-                .ForMember(
-                    x => x.DistrictName,
-                    opt => opt.MapFrom(y => y.Countries.Cities.FirstOrDefault().Districts.FirstOrDefault().Name))
                 .ForMember(x => x.ImageRemoteImageUrl, opt =>
                     opt.MapFrom(x =>
                         x.Images.FirstOrDefault().RemoteImageUrl != null ?
@@ -56,3 +46,4 @@
         }
     }
 }
+

@@ -17,22 +17,29 @@
         {
         }
 
+        /// <inheritdoc/>
         public override IQueryable<TEntity> All() => base.All().Where(x => !x.IsDeleted);
 
+        /// <inheritdoc/>
         public override IQueryable<TEntity> AllAsNoTracking() => base.AllAsNoTracking().Where(x => !x.IsDeleted);
 
+        /// <inheritdoc/>
         public IQueryable<TEntity> AllWithDeleted() => base.All().IgnoreQueryFilters();
 
+        /// <inheritdoc/>
         public IQueryable<TEntity> AllAsNoTrackingWithDeleted() => base.AllAsNoTracking().IgnoreQueryFilters();
 
+        /// <inheritdoc/>
         public Task<TEntity> GetByIdWithDeletedAsync(params object[] id)
         {
             var getByIdPredicate = EfExpressionHelper.BuildByIdPredicate<TEntity>(this.Context, id);
             return this.AllWithDeleted().FirstOrDefaultAsync(getByIdPredicate);
         }
 
+        /// <inheritdoc/>
         public void HardDelete(TEntity entity) => base.Delete(entity);
 
+        /// <inheritdoc/>
         public void Undelete(TEntity entity)
         {
             entity.IsDeleted = false;
@@ -40,6 +47,7 @@
             this.Update(entity);
         }
 
+        /// <inheritdoc/>
         public override void Delete(TEntity entity)
         {
             entity.IsDeleted = true;

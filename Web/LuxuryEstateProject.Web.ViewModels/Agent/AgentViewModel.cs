@@ -27,6 +27,7 @@
 
         public string ImageRemoteImageUrl { get; set; }
 
+        /// <inheritdoc/>
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<Agent, AgentViewModel>()

@@ -6,6 +6,7 @@
 
     public class ApplicationUserConfiguration : IEntityTypeConfiguration<ApplicationUser>
     {
+        /// <inheritdoc/>
         public void Configure(EntityTypeBuilder<ApplicationUser> appUser)
         {
             appUser

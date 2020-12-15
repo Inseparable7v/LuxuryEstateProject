@@ -7,7 +7,6 @@
 
     public class District : BaseDeletableModel<int>
     {
-        [Required]
         public string Name { get; set; }
     }
 }
