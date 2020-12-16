@@ -58,7 +58,7 @@ namespace LuxuryEstateProject.Web.Controllers
 
             try
             {
-                await this.propertyService.CreatePropertyAsync(input, $"{this.environment.WebRootPath}/images");
+                await this.propertyService.CreatePropertyAsync(input, $"{this.environment.WebRootPath}/assets/img/");
             }
             catch (Exception ex)
             {

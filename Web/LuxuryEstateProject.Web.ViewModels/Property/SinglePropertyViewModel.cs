@@ -60,7 +60,12 @@ namespace LuxuryEstateProject.Web.ViewModels.Property
                     opt => opt.MapFrom(y => y.Countries.Cities.FirstOrDefault().Districts.FirstOrDefault().Name))
             .ForMember(x => x.ImageRemoteImageUrl, opt =>
                 opt.MapFrom(x =>
-                    x.Images.Select(x => x.RemoteImageUrl)));
+                    x.Images.Select(x => x.RemoteImageUrl != null ? x.RemoteImageUrl : "/assets/img/" + x.Id + "." + x.Extension)));
+                //.ForMember(x => x.ImageRemoteImageUrl, opt =>
+                //opt.MapFrom(x =>
+                //    x.Images.FirstOrDefault().RemoteImageUrl != null ?
+                //        x.Images.FirstOrDefault().RemoteImageUrl :
+                //        "/assets/img/" + x.Images.FirstOrDefault().Id + "." + x.Images.FirstOrDefault().Extension));
         }
     }
 }

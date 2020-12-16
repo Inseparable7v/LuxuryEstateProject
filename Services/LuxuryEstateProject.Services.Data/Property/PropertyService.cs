@@ -76,7 +76,7 @@ namespace LuxuryEstateProject.Services.Data.Property
             };
 
              // wwwroot / images / recipes / jhdsi - 343g3h453 -= g34g.jpg
-            Directory.CreateDirectory($"{imagePath}/recipes/");
+            Directory.CreateDirectory($"{imagePath}");
             foreach (var image in input.Images)
             {
                 var extension = Path.GetExtension(image.FileName).TrimStart('.');
@@ -92,7 +92,7 @@ namespace LuxuryEstateProject.Services.Data.Property
 
                 property.Images.Add(dbImage);
 
-                var physicalPath = $"{imagePath}/recipes/{dbImage.Id}.{extension}";
+                var physicalPath = $"{imagePath}{dbImage.Id}.{extension}";
                 await using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
                 await image.CopyToAsync(fileStream);
             }
