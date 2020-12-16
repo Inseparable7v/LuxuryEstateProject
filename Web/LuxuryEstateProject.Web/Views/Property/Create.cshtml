@@ -12,86 +12,112 @@
 <br />
 <br />
 <br />
-<form method="post" class="col-md-6 offset-md-3"
+<form method="post" class=" form-row col-md-12 offset-md-3"
       enctype="multipart/form-data">
-    <h1>@this.ViewData["Title"]</h1>
+    <h1 class="color-b">@this.ViewData["Title"]</h1>
     <div asp-validation-summary="All" class="text-danger"></div>
-    <div class="form-group">
-        <label asp-for="Name"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="TotalNumberOfFloors"></label>
+            <input asp-for="TotalNumberOfFloors" class="form-control" />
+            <span asp-validation-for="TotalNumberOfFloors" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="Floor"></label>
+            <input asp-for="Floor" class="form-control" />
+            <span asp-validation-for="Floor" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="Year"></label>
+            <input asp-for="Year" class="form-control" />
+            <span asp-validation-for="Year" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="Garage"></label>
+            <input asp-for="Garage" class="form-control" />
+            <span asp-validation-for="Garage" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="Type"></label>
+            <input asp-for="Type" class="form-control" />
+            <span asp-validation-for="Type" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="Bed"></label>
+            <input asp-for="Bed" class="form-control" />
+            <span asp-validation-for="Bed" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="Bath"></label>
+            <input asp-for="Bath" class="form-control" />
+            <span asp-validation-for="Bath" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="TotalNumberOfFloors"></label>
-        <input asp-for="TotalNumberOfFloors" class="form-control" />
-        <span asp-validation-for="TotalNumberOfFloors" class="text-danger"></span>
+</form>
+<form method="post" class="form-row col-md-12 offset-md-3"
+      enctype="multipart/form-data">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Price"></label>
+            <input asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <br />
+        <div class="form-group col-md-6">
+            <label asp-for="Size"></label>
+            <input asp-for="Size" class="form-control" />
+            <span asp-validation-for="Size" class="text-danger"></span>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Floor"></label>
-        <input asp-for="Floor" class="form-control" />
-        <span asp-validation-for="Floor" class="text-danger"></span>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label asp-for="CountryId"></label>
+            @*<vc:CategoriesDropDown name="CategoryId"></vc:CategoriesDropDown>*@
+            <select asp-for="CountryId" class="form-control col-md-12" asp-items="categoryItems">
+                <option value="" disabled selected>Choose your Country...</option>
+            </select>
+            <span asp-validation-for="CountryId" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="AgentId"></label>
+            <select asp-for="AgentId" class="form-control " asp-items="agents">
+                <option value="" disabled selected>Choose your Agent</option>
+            </select>
+            <span asp-validation-for="AgentId" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="BuildingTypeId"></label>
+            <select asp-for="BuildingTypeId" class="form-control col-lg-12" asp-items="buildingType">
+                <option value="" disabled selected>Choose Material</option>
+            </select>
+            <span asp-validation-for="BuildingTypeId" class="text-danger"></span>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Year"></label>
-        <input asp-for="Year" class="form-control" />
-        <span asp-validation-for="Year" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Garage"></label>
-        <input asp-for="Garage" class="form-control" />
-        <span asp-validation-for="Garage" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Description"></label>
-        <input asp-for="Description" class="form-control" />
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Type"></label>
-        <input asp-for="Type" class="form-control" />
-        <span asp-validation-for="Type" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Bed"></label>
-        <input asp-for="Bed" class="form-control" />
-        <span asp-validation-for="Bed" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Bath"></label>
-        <input asp-for="Bath" class="form-control" />
-        <span asp-validation-for="Bath" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Price"></label>
-        <input asp-for="Price" class="form-control" />
-        <span asp-validation-for="Price" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Size"></label>
-        <input asp-for="Size" class="form-control" />
-        <span asp-validation-for="Size" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="CountryId"></label>
-        @*<vc:CategoriesDropDown name="CategoryId"></vc:CategoriesDropDown>*@
-        <select asp-for="CountryId" class="form-control" asp-items="categoryItems"></select>
-        <span asp-validation-for="CountryId" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="AgentId"></label>
-        @*<vc:CategoriesDropDown name="CategoryId"></vc:CategoriesDropDown>*@
-        <select asp-for="AgentId" class="form-control" asp-items="agents"></select>
-        <span asp-validation-for="AgentId" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="BuildingTypeId"></label>
-        <select asp-for="BuildingTypeId" class="form-control" asp-items="buildingType"></select>
-        <span asp-validation-for="BuildingTypeId" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Images"></label>
-        <input asp-for="Images" class="form-control" />
+    <div class="custom-file">
+        <label asp-for="Images">Property Images</label>
+        <div class="custom-file">
+            <input asp-for="Images" type="file" class="custom-file-input" id="inputGroupFile01">
+            <label asp-for="Images" class="custom-file-label" for="inputGroupFile01">Choose file</label>
+        </div>
         <span asp-validation-for="Images" class="text-danger"></span>
     </div>
-    <input type="submit" class="btn btn-success " />
 </form>
+<br/>
+<br/>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <button class="btn btn-success col-md-3">Create</button>
+        </div>
+    </div>
+</div>
