@@ -15,7 +15,7 @@ namespace LuxuryEstateProject.Services.Data.Property
 
     public class PropertyService : IPropertyService
     {
-        private readonly string[] allowedExtensions = new[] { "jpg", "png", "gif" };
+        private readonly string[] allowedExtensions = new[] { "jpg", "png", "gif", "jpeg" };
 
         private readonly IDeletableEntityRepository<RealEstateProperty> realRepository;
 

@@ -1,13 +1,12 @@
-﻿using System.Linq;
-using LuxuryEstateProject.Web.ViewModels.Agent;
-
-namespace LuxuryEstateProject.Web.Controllers
+﻿namespace LuxuryEstateProject.Web.Controllers
 {
     using System.Diagnostics;
+    using System.Linq;
 
     using LuxuryEstateProject.Services.Data.Agent;
     using LuxuryEstateProject.Services.Data.Property;
     using LuxuryEstateProject.Web.ViewModels;
+    using LuxuryEstateProject.Web.ViewModels.Agent;
     using LuxuryEstateProject.Web.ViewModels.Property;
     using Microsoft.AspNetCore.Mvc;
 
