@@ -1,4 +1,6 @@
-﻿namespace LuxuryEstateProject.Services.Data.Agent
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace LuxuryEstateProject.Services.Data.Agent
 {
     using System;
     using System.Collections.Generic;
@@ -45,17 +47,17 @@
             return await this.agentRepository.AllAsNoTracking().Where(x => x.Id.Equals(id)).To<T>().FirstOrDefaultAsync();
         }
 
-        public IEnumerable<KeyValuePair<string, string>> GetAllAsKeyValuePairs()
+        public IEnumerable<SelectListItem> GetAllAsSelectListItems()
         {
-            return this.agentRepository.AllAsNoTracking()
-                .Select(x => new
-                {
-                    x.Id,
-                    x.Name,
-                    x.LastName,
-                })
-                .OrderBy(x => x.Name)
-                .ToList().Select(x => new KeyValuePair<string, string>(x.Id.ToString(), x.Name));
+
+            return this.agentRepository.All().Select(x => new SelectListItem { Text = x.Name + " " + x.LastName, Value = x.Id.ToString() }).OrderBy(c => c.Text);
+            //return this.agentRepository.AllAsNoTracking()
+            //    .Select(x => new
+            //    {
+            //        x.Id,
+            //        V = x.Name + " " + x.LastName,
+            //    })
+            //    .ToList().Select(x => new KeyValuePair<string, string>(x.Id.ToString(), x.V));
         }
     }
 }

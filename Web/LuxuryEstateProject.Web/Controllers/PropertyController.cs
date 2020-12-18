@@ -35,9 +35,9 @@ namespace LuxuryEstateProject.Web.Controllers
         {
             var viewModel = new PropertyInputModel
             {
-                Countries = this.countryService.GetAllAsKeyValuePairs(),
-                AgentsCreateForm = this.agentService.GetAllAsKeyValuePairs(),
-                BuildingTypes = this.buildingTypesService.GetAllAsKeyValuePairs(),
+                Countries = this.countryService.GetAllAsSelectListItems(),
+                AgentsCreateForm = this.agentService.GetAllAsSelectListItems(),
+                BuildingTypes = this.buildingTypesService.GetAllAsSelectListItems(),
             };
             return this.View(viewModel);
         }
@@ -47,9 +47,9 @@ namespace LuxuryEstateProject.Web.Controllers
         {
             if (!this.ModelState.IsValid)
             {
-                input.Countries = this.countryService.GetAllAsKeyValuePairs();
-                input.BuildingTypes = this.buildingTypesService.GetAllAsKeyValuePairs();
-                input.AgentsCreateForm = this.agentService.GetAllAsKeyValuePairs();
+                input.Countries = this.countryService.GetAllAsSelectListItems();
+                input.BuildingTypes = this.buildingTypesService.GetAllAsSelectListItems();
+                input.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
                 return this.View(input);
             }
 
@@ -63,9 +63,9 @@ namespace LuxuryEstateProject.Web.Controllers
             catch (Exception ex)
             {
                 this.ModelState.AddModelError(string.Empty, ex.Message);
-                input.Countries = this.countryService.GetAllAsKeyValuePairs();
-                input.AgentsCreateForm = this.agentService.GetAllAsKeyValuePairs();
-                input.BuildingTypes = this.buildingTypesService.GetAllAsKeyValuePairs();
+                input.Countries = this.countryService.GetAllAsSelectListItems();
+                input.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
+                input.BuildingTypes = this.buildingTypesService.GetAllAsSelectListItems();
 
                 return this.View(input);
             }

@@ -1,9 +1,7 @@
-﻿@model LuxuryEstateProject.Web.ViewModels.Property.PropertyInputModel
+﻿@using LuxuryEstateProject.Data.Models
+@model LuxuryEstateProject.Web.ViewModels.Property.PropertyInputModel
 @{
     this.ViewData["Title"] = "Add new Property";
-    var categoryItems = this.Model.Countries.Select(x => new SelectListItem(x.Value, x.Key)).ToHashSet();
-    var agents = this.Model.AgentsCreateForm.Select(x => new SelectListItem(x.Value, x.Key));
-    var buildingType = this.Model.BuildingTypes.Select(x => new SelectListItem(x.Value, x.Key));
 }
 <br />
 <br />
@@ -43,8 +41,9 @@
             <span asp-validation-for="Garage" class="text-danger"></span>
         </div>
         <div class="form-group col-md-2">
-            <label asp-for="Type"></label>
-            <input asp-for="Type" class="form-control" />
+            <label asp-for="Type" class="color-b"></label>
+            <select asp-for="Type" class="form-control col-md-12" asp-items="Html.GetEnumSelectList<PropertyType>()">
+            </select>
             <span asp-validation-for="Type" class="text-danger"></span>
         </div>
         <div class="form-group col-md-2">
@@ -63,7 +62,6 @@
             <span asp-validation-for="Description" class="text-danger"></span>
         </div>
     </div>
-
     <div class="form-row">
         <div class="form-group col-md-6">
             <label asp-for="Price" class="color-b"></label>
@@ -81,21 +79,21 @@
             <div class="form-group col-md-6">
                 <label asp-for="CountryId" class="color-b"></label>
                 @*<vc:CategoriesDropDown name="CategoryId"></vc:CategoriesDropDown>*@
-                <select asp-for="CountryId" class="form-control col-md-12" asp-items="categoryItems">
+                <select asp-for="CountryId" class="form-control col-md-12" asp-items="@Model.Countries">
                     <option value="" disabled selected>Choose your Country...</option>
                 </select>
                 <span asp-validation-for="CountryId" class="text-danger"></span>
             </div>
             <div class="form-group col-md-6">
                 <label asp-for="AgentId" class="color-b"></label>
-                <select asp-for="AgentId" class="form-control " asp-items="agents">
+                <select asp-for="AgentId" class="form-control " asp-items="@Model.AgentsCreateForm">
                     <option value="" disabled selected>Choose your Agent</option>
                 </select>
                 <span asp-validation-for="AgentId" class="text-danger"></span>
             </div>
             <div class="form-group col-md-6">
                 <label asp-for="BuildingTypeId" class="color-b"></label>
-                <select asp-for="BuildingTypeId" class="form-control col-lg-12" asp-items="buildingType">
+                <select asp-for="BuildingTypeId" class="form-control col-lg-12" asp-items="@Model.BuildingTypes">
                     <option value="" disabled selected>Choose Material</option>
                 </select>
                 <span asp-validation-for="BuildingTypeId" class="text-danger"></span>

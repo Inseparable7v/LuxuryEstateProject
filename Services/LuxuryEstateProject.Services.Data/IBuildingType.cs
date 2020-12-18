@@ -1,4 +1,6 @@
-﻿namespace LuxuryEstateProject.Services.Data
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace LuxuryEstateProject.Services.Data
 {
     using System;
     using System.Collections.Generic;
@@ -6,6 +8,6 @@
 
     public interface IBuildingType
     {
-        IEnumerable<KeyValuePair<string, string>> GetAllAsKeyValuePairs();
+        IEnumerable<SelectListItem> GetAllAsSelectListItems();
     }
 }

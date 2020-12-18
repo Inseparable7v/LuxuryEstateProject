@@ -90,6 +90,9 @@
             {
                 foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
             }
+
+            builder.Entity<Country>(entity => entity.HasIndex(x => x.Name).IsUnique());
+            builder.Entity<BuildingType>(entity => entity.HasIndex(x => x.Name).IsUnique());
         }
 
         private static void SetIsDeletedQueryFilter<T>(ModelBuilder builder)

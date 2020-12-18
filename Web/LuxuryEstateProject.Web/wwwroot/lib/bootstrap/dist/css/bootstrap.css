@@ -66,13 +66,7 @@ body {
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
-.top-buffer {
-    margin-top: 20px;
-}
 
-.container-row-margin .row + .row {
-    margin-top: 2rem;
-}
 hr {
   box-sizing: content-box;
   height: 0;

@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel;
+using LuxuryEstateProject.Data.Models;
 
 namespace LuxuryEstateProject.Web.ViewModels.Property
 {
+    using Microsoft.AspNetCore.Mvc.Rendering;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -48,22 +50,22 @@ namespace LuxuryEstateProject.Web.ViewModels.Property
         public float Size { get; set; }
 
         [Range(0, 2)]
-        public int Type { get; set; }
+        public PropertyType Type { get; set; }
 
         [DisplayName("Country")]
         public int CountryId { get; set; }
 
-        public IEnumerable<KeyValuePair<string, string>> Countries { get; set; }
+        public IEnumerable<SelectListItem> Countries { get; set; }
 
         [DisplayName("Agent")]
         public int AgentId { get; set; }
 
-        public IEnumerable<KeyValuePair<string,string>> AgentsCreateForm { get; set; }
+        public IEnumerable<SelectListItem> AgentsCreateForm { get; set; }
 
         [DisplayName("Building Material")]
         public int BuildingTypeId { get; set; }
 
-        public IEnumerable<KeyValuePair<string,string>> BuildingTypes { get; set; }
+        public IEnumerable<SelectListItem> BuildingTypes { get; set; }
 
     }
 }

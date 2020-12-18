@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
-
-namespace LuxuryEstateProject.Services.Data.Agent
+﻿namespace LuxuryEstateProject.Services.Data.Agent
 {
     using System;
     using System.Collections.Generic;
     using System.Text;
     using System.Threading.Tasks;
+
+    using Microsoft.AspNetCore.Mvc.Rendering;
+    using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 
     public interface IAgentService
     {
@@ -13,7 +14,7 @@ namespace LuxuryEstateProject.Services.Data.Agent
 
         IEnumerable<T> GetHomePageAgents<T>();
 
-        IEnumerable<KeyValuePair<string, string>> GetAllAsKeyValuePairs();
+        IEnumerable<SelectListItem> GetAllAsSelectListItems();
 
         T SingleAgent<T>();
 

@@ -1,9 +1,13 @@
-﻿namespace LuxuryEstateProject.Services.Data
+﻿using System.Linq;
+
+namespace LuxuryEstateProject.Services.Data
 {
     using System.Collections.Generic;
 
-    public interface ICountryService 
+    using Microsoft.AspNetCore.Mvc.Rendering;
+
+    public interface ICountryService
     {
-        IEnumerable<KeyValuePair<string, string>> GetAllAsKeyValuePairs();
+        IEnumerable<SelectListItem> GetAllAsSelectListItems();
     }
 }
