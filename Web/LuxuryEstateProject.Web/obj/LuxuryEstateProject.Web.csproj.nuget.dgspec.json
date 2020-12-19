@@ -198,6 +198,10 @@
               "target": "Package",
               "version": "[3.1.9, )"
             },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
             "StyleCop.Analyzers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
               "suppressParent": "All",
@@ -331,6 +335,10 @@
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
             "StyleCop.Analyzers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
               "suppressParent": "All",

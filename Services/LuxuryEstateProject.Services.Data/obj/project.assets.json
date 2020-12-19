@@ -1065,6 +1065,20 @@
           }
         }
       },
+      "SixLabors.ImageSharp/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/SixLabors.ImageSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/SixLabors.ImageSharp.dll": {}
+        }
+      },
       "StyleCop.Analyzers/1.2.0-beta.205": {
         "type": "package",
         "dependencies": {
@@ -1501,7 +1515,7 @@
           "ref/netstandard1.3/System.Net.Sockets.dll": {}
         }
       },
-      "System.Numerics.Vectors/4.4.0": {
+      "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Numerics.Vectors.dll": {}
@@ -3504,6 +3518,30 @@
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
+    "SixLabors.ImageSharp/1.0.2": {
+      "sha512": "iZJ37Iss3pUkFl961x1aka85QuvgY9oNZabHijzVnHs4QTz6EMNx3zjJDyvK/0+Ryj6JPv/PC7GVIJXLHtu2nQ==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/SixLabors.ImageSharp.dll",
+        "lib/net472/SixLabors.ImageSharp.xml",
+        "lib/netcoreapp2.1/SixLabors.ImageSharp.dll",
+        "lib/netcoreapp2.1/SixLabors.ImageSharp.xml",
+        "lib/netcoreapp3.1/SixLabors.ImageSharp.dll",
+        "lib/netcoreapp3.1/SixLabors.ImageSharp.xml",
+        "lib/netstandard1.3/SixLabors.ImageSharp.dll",
+        "lib/netstandard1.3/SixLabors.ImageSharp.xml",
+        "lib/netstandard2.0/SixLabors.ImageSharp.dll",
+        "lib/netstandard2.0/SixLabors.ImageSharp.xml",
+        "lib/netstandard2.1/SixLabors.ImageSharp.dll",
+        "lib/netstandard2.1/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.1.0.2.nupkg.sha512",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.nuspec"
+      ]
+    },
     "StyleCop.Analyzers/1.2.0-beta.205": {
       "sha512": "ORvUXKlJRqAWstZiSH9LgEuM5hBye8mUDDSpMoQhiKLFUtFEGesfr88Qa8jC0KKVaBTUZzdo4fNZM4oHeV/JsQ==",
       "type": "package",
@@ -5023,10 +5061,10 @@
         "system.net.sockets.nuspec"
       ]
     },
-    "System.Numerics.Vectors/4.4.0": {
-      "sha512": "UiLzLW+Lw6HLed1Hcg+8jSRttrbuXv7DANVj0DkL9g6EnnzbL75EB7EWsw5uRbhxd/4YdG8li5XizGWepmG3PQ==",
+    "System.Numerics.Vectors/4.5.0": {
+      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
-      "path": "system.numerics.vectors/4.4.0",
+      "path": "system.numerics.vectors/4.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5043,12 +5081,15 @@
         "lib/netstandard2.0/System.Numerics.Vectors.xml",
         "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
         "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/uap10.0.16299/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
+        "ref/net45/System.Numerics.Vectors.dll",
+        "ref/net45/System.Numerics.Vectors.xml",
         "ref/net46/System.Numerics.Vectors.dll",
         "ref/net46/System.Numerics.Vectors.xml",
         "ref/netcoreapp2.0/_._",
@@ -5056,11 +5097,12 @@
         "ref/netstandard1.0/System.Numerics.Vectors.xml",
         "ref/netstandard2.0/System.Numerics.Vectors.dll",
         "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/uap10.0.16299/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.numerics.vectors.4.4.0.nupkg.sha512",
+        "system.numerics.vectors.4.5.0.nupkg.sha512",
         "system.numerics.vectors.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -7070,6 +7112,7 @@
       "LuxuryEstateProject.Data.Models >= 1.0.0",
       "LuxuryEstateProject.Services.Mapping >= 1.0.0",
       "LuxuryEstateProject.Web.ViewModels >= 1.0.0",
+      "SixLabors.ImageSharp >= 1.0.2",
       "StyleCop.Analyzers >= 1.2.0-beta.205"
     ]
   },
@@ -7123,6 +7166,10 @@
     "frameworks": {
       "netstandard2.1": {
         "dependencies": {
+          "SixLabors.ImageSharp": {
+            "target": "Package",
+            "version": "[1.0.2, )"
+          },
           "StyleCop.Analyzers": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers",
             "suppressParent": "All",

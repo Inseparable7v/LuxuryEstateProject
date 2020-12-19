@@ -949,3 +949,4 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\bin\Debug\netcoreapp3.1\SixLabors.ImageSharp.dll

@@ -1599,6 +1599,15 @@
           }
         }
       },
+      "SixLabors.ImageSharp/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/SixLabors.ImageSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/SixLabors.ImageSharp.dll": {}
+        }
+      },
       "StyleCop.Analyzers/1.2.0-beta.205": {
         "type": "package",
         "dependencies": {
@@ -3134,7 +3143,8 @@
           "LuxuryEstateProject.Data.Models": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
-          "Microsoft.Extensions.Configuration.UserSecrets": "3.1.9"
+          "Microsoft.Extensions.Configuration.UserSecrets": "3.1.9",
+          "SixLabors.ImageSharp": "1.0.2"
         },
         "compile": {
           "bin/placeholder/LuxuryEstateProject.Data.dll": {}
@@ -3177,7 +3187,8 @@
           "LuxuryEstateProject.Data.Common": "1.0.0",
           "LuxuryEstateProject.Data.Models": "1.0.0",
           "LuxuryEstateProject.Services.Mapping": "1.0.0",
-          "LuxuryEstateProject.Web.ViewModels": "1.0.0"
+          "LuxuryEstateProject.Web.ViewModels": "1.0.0",
+          "SixLabors.ImageSharp": "1.0.2"
         },
         "compile": {
           "bin/placeholder/LuxuryEstateProject.Services.Data.dll": {}
@@ -5216,6 +5227,30 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "SixLabors.ImageSharp/1.0.2": {
+      "sha512": "iZJ37Iss3pUkFl961x1aka85QuvgY9oNZabHijzVnHs4QTz6EMNx3zjJDyvK/0+Ryj6JPv/PC7GVIJXLHtu2nQ==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/SixLabors.ImageSharp.dll",
+        "lib/net472/SixLabors.ImageSharp.xml",
+        "lib/netcoreapp2.1/SixLabors.ImageSharp.dll",
+        "lib/netcoreapp2.1/SixLabors.ImageSharp.xml",
+        "lib/netcoreapp3.1/SixLabors.ImageSharp.dll",
+        "lib/netcoreapp3.1/SixLabors.ImageSharp.xml",
+        "lib/netstandard1.3/SixLabors.ImageSharp.dll",
+        "lib/netstandard1.3/SixLabors.ImageSharp.xml",
+        "lib/netstandard2.0/SixLabors.ImageSharp.dll",
+        "lib/netstandard2.0/SixLabors.ImageSharp.xml",
+        "lib/netstandard2.1/SixLabors.ImageSharp.dll",
+        "lib/netstandard2.1/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.1.0.2.nupkg.sha512",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.nuspec"
       ]
     },
     "StyleCop.Analyzers/1.2.0-beta.205": {

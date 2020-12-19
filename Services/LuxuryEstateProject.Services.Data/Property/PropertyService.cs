@@ -1,4 +1,7 @@
 ﻿using System.IO;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats.Png;
+using SixLabors.ImageSharp.Processing;
 
 namespace LuxuryEstateProject.Services.Data.Property
 {
@@ -15,7 +18,7 @@ namespace LuxuryEstateProject.Services.Data.Property
 
     public class PropertyService : IPropertyService
     {
-        private readonly string[] allowedExtensions = new[] { "jpg", "png", "gif", "jpeg" };
+        private readonly string[] allowedExtensions = new[] { "jpg", "png", "jpeg" };
 
         private readonly IDeletableEntityRepository<RealEstateProperty> realRepository;
 
@@ -90,11 +93,17 @@ namespace LuxuryEstateProject.Services.Data.Property
                     Extension = extension,
                 };
 
+                using var imageSharp = SixLabors.ImageSharp.Image.Load(image.OpenReadStream());
+
+                imageSharp.Mutate(x => x.Resize(600, 800));
+
                 property.Images.Add(dbImage);
 
                 var physicalPath = $"{imagePath}{dbImage.Id}.{extension}";
                 await using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
-                await image.CopyToAsync(fileStream);
+                await imageSharp.SaveAsync(fileStream, new PngEncoder());
+
+                //await image.CopyToAsync(fileStream);
             }
 
             await this.realRepository.AddAsync(property);

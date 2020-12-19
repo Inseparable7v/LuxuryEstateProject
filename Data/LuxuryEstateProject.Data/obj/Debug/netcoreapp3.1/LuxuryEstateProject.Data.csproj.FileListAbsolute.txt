@@ -33,8 +33,8 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProjec
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Data.csprojAssemblyReference.cache
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Data.AssemblyInfoInputs.cache
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Data.AssemblyInfo.cs
-C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Data.csproj.CoreCompileInputs.cache
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Data.csproj.CopyComplete
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Data.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Data.pdb
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Data.genruntimeconfig.cache
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Data.csproj.CoreCompileInputs.cache

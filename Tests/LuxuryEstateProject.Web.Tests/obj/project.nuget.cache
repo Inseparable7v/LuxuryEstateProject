@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bj7I6HTSHOjgsK91q9JN5FVGD89cbkXp02o4hOxv9r++Jzt0aNaCGW+rODwOdGRsGkW1tWkJfh45yStSJLj4ig==",
+  "dgSpecHash": "Exu0kFBqvIGb6vbzjJWOcAsI8PPd1teQV5ae1MOoHRx5TXTHnNP8Vz0LsxIR0l0lVfdYG95M988V+R0CCqQvQg==",
   "success": true,
   "projectFilePath": "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\Tests\\LuxuryEstateProject.Web.Tests\\LuxuryEstateProject.Web.Tests.csproj",
   "expectedPackageFiles": [
@@ -144,6 +144,7 @@
     "C:\\Users\\danie\\.nuget\\packages\\selenium.support\\3.141.0\\selenium.support.3.141.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\sendgrid\\9.21.0\\sendgrid.9.21.0.nupkg.sha512",
+    "C:\\Users\\danie\\.nuget\\packages\\sixlabors.imagesharp\\1.0.2\\sixlabors.imagesharp.1.0.2.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\starkbank-ecdsa\\1.2.0\\starkbank-ecdsa.1.2.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512",

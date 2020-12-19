@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8omnenA2q7Cxix6OALEpEfzE8YTUa6pi0oTaUmL70tK0fl1tE839d5UHxiSTMEeMQrEZVEAXt8s/ePNRYPwqZQ==",
+  "dgSpecHash": "1/n+PUZidDW0jTRl5XehSiWxhJ8NcApNOhCZuBEoX/eUidY2r20sC+9wTDr0uWaEzXbJK2ShiCmpIn+wm+UO7w==",
   "success": true,
   "projectFilePath": "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\Services\\LuxuryEstateProject.Services.Data\\LuxuryEstateProject.Services.Data.csproj",
   "expectedPackageFiles": [
@@ -85,6 +85,7 @@
     "C:\\Users\\danie\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\danie\\.nuget\\packages\\sixlabors.imagesharp\\1.0.2\\sixlabors.imagesharp.1.0.2.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
@@ -113,7 +114,7 @@
     "C:\\Users\\danie\\.nuget\\packages\\system.net.http\\4.3.0\\system.net.http.4.3.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",
-    "C:\\Users\\danie\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\danie\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "R4SQsmq9ueTOg2+8FFhKdczIyNO7kYPrZOvUpNAZosiXr8u2Hk4ZiOM+PQKnXdcPkvrviwNnxbagm+K7YNCJYQ==",
+  "dgSpecHash": "P+W/LFFDkkr8bP9c+wwxXC1DpDh69171S0wNma8BWYBRi24mzhW3nkpOXmKvuIxdleTs7WxbOJ78+BycMGxdhA==",
   "success": true,
   "projectFilePath": "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\Web\\LuxuryEstateProject.Web\\LuxuryEstateProject.Web.csproj",
   "expectedPackageFiles": [
@@ -129,6 +129,7 @@
     "C:\\Users\\danie\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\sendgrid\\9.21.0\\sendgrid.9.21.0.nupkg.sha512",
+    "C:\\Users\\danie\\.nuget\\packages\\sixlabors.imagesharp\\1.0.2\\sixlabors.imagesharp.1.0.2.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\starkbank-ecdsa\\1.2.0\\starkbank-ecdsa.1.2.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512",

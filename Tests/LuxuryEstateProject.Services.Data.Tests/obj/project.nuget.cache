@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5f32oXk4eulIXWoARmPxCjWchnuRcKX3D0taPWdUzLVCzOB5wzKlQsQDixvdcedrN6y/pWgVVFtCMrwTamc55Q==",
+  "dgSpecHash": "86ZxCSdplte49bL2X2wFt/ivAp552If0g1xn+j5HeB8b/XgM8ejz6Id1JNytRICZBqa+LrX8YjOoVBuKVjlX6g==",
   "success": true,
   "projectFilePath": "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\Tests\\LuxuryEstateProject.Services.Data.Tests\\LuxuryEstateProject.Services.Data.Tests.csproj",
   "expectedPackageFiles": [
@@ -110,6 +110,7 @@
     "C:\\Users\\danie\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\danie\\.nuget\\packages\\sixlabors.imagesharp\\1.0.2\\sixlabors.imagesharp.1.0.2.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
