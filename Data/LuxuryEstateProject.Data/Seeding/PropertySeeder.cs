@@ -66,23 +66,19 @@
                         },
                     },
                 },
-                BuildingType = new BuildingType
-                {
-                    Name = "Concrete",
-                },
                 Countries = new Country
                 {
-                    Name = "Bulgaria",
+                    Name = "Romania",
                     Cities = new HashSet<City>
                     {
                         new City
                         {
-                            Name = "Sofia",
+                            Name = "Bucharest",
                             Districts = new HashSet<District>
                             {
                                 new District
                                 {
-                                    Name = "Dragalevtzi",
+                                    Name = "Pantelimon",
                                 },
                             },
                         },

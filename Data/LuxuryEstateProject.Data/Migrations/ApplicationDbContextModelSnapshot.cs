@@ -219,36 +219,6 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("LuxuryEstateProject.Data.Models.BuildingType", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("ModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IsDeleted");
-
-                    b.ToTable("BuildingTypes");
-                });
-
             modelBuilder.Entity("LuxuryEstateProject.Data.Models.City", b =>
                 {
                     b.Property<int>("Id")
@@ -309,11 +279,15 @@ namespace LuxuryEstateProject.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("IsDeleted");
+
+                    b.HasIndex("Name")
+                        .IsUnique()
+                        .HasFilter("[Name] IS NOT NULL");
 
                     b.ToTable("Countries");
                 });
@@ -408,7 +382,7 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.Property<int>("Bed")
                         .HasColumnType("int");
 
-                    b.Property<int>("BuildingTypeId")
+                    b.Property<int>("BuildingType")
                         .HasColumnType("int");
 
                     b.Property<int>("CountryId")
@@ -461,8 +435,6 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AgentId");
-
-                    b.HasIndex("BuildingTypeId");
 
                     b.HasIndex("CountryId");
 
@@ -644,12 +616,6 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.HasOne("LuxuryEstateProject.Data.Models.Agent", "Agent")
                         .WithMany("RealEstateProperties")
                         .HasForeignKey("AgentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("LuxuryEstateProject.Data.Models.BuildingType", "BuildingType")
-                        .WithMany("Properties")
-                        .HasForeignKey("BuildingTypeId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 

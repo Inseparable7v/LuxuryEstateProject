@@ -71,7 +71,7 @@ namespace LuxuryEstateProject.Web
             services.AddTransient<IPropertyService, PropertyService>();
             services.AddTransient<IAgentService, AgentService>();
             services.AddTransient<ICountryService, CountryService>();
-            services.AddTransient<IBuildingType, BuildingTypeService>();
+            services.AddTransient<ICity, CityService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

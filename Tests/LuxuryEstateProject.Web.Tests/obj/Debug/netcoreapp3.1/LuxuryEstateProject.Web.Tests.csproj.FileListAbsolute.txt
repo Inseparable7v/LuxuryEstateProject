@@ -1053,3 +1053,6 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProje
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.Tests.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.Tests.pdb
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.Tests.genruntimeconfig.cache
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.Tests.MvcApplicationPartsAssemblyInfo.cs

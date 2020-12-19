@@ -13,8 +13,13 @@
 <body>
     <main id="main">
         <!-- ======= Intro Single ======= -->
+        
         <section class="intro-single">
             <div class="container">
+                @if (this.TempData.ContainsKey("Message"))
+                {
+                    <div class="alert alert-success">@this.TempData["Message"]</div>
+                }
                 <div class="row">
                     <div class="col-md-12 col-lg-8">
                         <div class="title-single-box">

@@ -42,9 +42,7 @@
 
         public virtual Country Countries { get; set; }
 
-        public int BuildingTypeId { get; set; }
-
-        public virtual BuildingType BuildingType { get; set; }
+        public Material BuildingType { get; set; }
 
         public int AgentId { get; set; }
 

@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using LuxuryEstateProject.Services.Data;
 using LuxuryEstateProject.Services.Data.Agent;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LuxuryEstateProject.Web.Controllers
 {
@@ -20,15 +22,26 @@ namespace LuxuryEstateProject.Web.Controllers
         private ICountryService countryService;
         private IWebHostEnvironment environment;
         private IAgentService agentService;
-        private IBuildingType buildingTypesService;
+        private ICity cityService;
 
-        public PropertyController(IPropertyService propertyService, ICountryService countryService, IAgentService agentService, IBuildingType buildingTypesService, IWebHostEnvironment environment)
+        public PropertyController(IPropertyService propertyService, ICountryService countryService, IAgentService agentService,ICity cityService, IWebHostEnvironment environment)
         {
             this.propertyService = propertyService;
             this.countryService = countryService;
             this.environment = environment;
             this.agentService = agentService;
-            this.buildingTypesService = buildingTypesService;
+            this.cityService = cityService;
+        }
+
+        [HttpGet]
+        public ActionResult GetRegions(int Id)
+        {
+            if (!string.IsNullOrWhiteSpace(Id.ToString()))
+            {
+                IEnumerable<SelectListItem> regions = cityService.GetCities(Id);
+                return Json(regions);
+            }
+            return null;
         }
 
         public IActionResult Create()
@@ -37,7 +50,7 @@ namespace LuxuryEstateProject.Web.Controllers
             {
                 Countries = this.countryService.GetAllAsSelectListItems(),
                 AgentsCreateForm = this.agentService.GetAllAsSelectListItems(),
-                BuildingTypes = this.buildingTypesService.GetAllAsSelectListItems(),
+                Cities = this.cityService.GetAllAsSelectListItems(),
             };
             return this.View(viewModel);
         }
@@ -48,13 +61,10 @@ namespace LuxuryEstateProject.Web.Controllers
             if (!this.ModelState.IsValid)
             {
                 input.Countries = this.countryService.GetAllAsSelectListItems();
-                input.BuildingTypes = this.buildingTypesService.GetAllAsSelectListItems();
                 input.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
+                input.Cities = this.cityService.GetAllAsSelectListItems();
                 return this.View(input);
             }
-
-            // var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-            //var user = await this.userManager.GetUserAsync(this.User);
 
             try
             {
@@ -65,14 +75,13 @@ namespace LuxuryEstateProject.Web.Controllers
                 this.ModelState.AddModelError(string.Empty, ex.Message);
                 input.Countries = this.countryService.GetAllAsSelectListItems();
                 input.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
-                input.BuildingTypes = this.buildingTypesService.GetAllAsSelectListItems();
+                input.Cities = this.cityService.GetAllAsSelectListItems();
 
                 return this.View(input);
             }
 
             this.TempData["Message"] = "Property added successfully.";
 
-            // TODO: Redirect to recipe info page
             return this.RedirectToAction("PropertyGrid");
         }
 

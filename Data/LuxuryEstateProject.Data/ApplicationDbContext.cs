@@ -29,8 +29,6 @@
 
         public DbSet<Agent> Agents { get; set; }
 
-        public DbSet<BuildingType> BuildingTypes { get; set; }
-
         public DbSet<District> Districts { get; set; }
 
         public DbSet<Country> Countries { get; set; }
@@ -92,7 +90,6 @@
             }
 
             builder.Entity<Country>(entity => entity.HasIndex(x => x.Name).IsUnique());
-            builder.Entity<BuildingType>(entity => entity.HasIndex(x => x.Name).IsUnique());
         }
 
         private static void SetIsDeletedQueryFilter<T>(ModelBuilder builder)

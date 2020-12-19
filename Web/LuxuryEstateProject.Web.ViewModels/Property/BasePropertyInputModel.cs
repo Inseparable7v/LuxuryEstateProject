@@ -52,10 +52,18 @@ namespace LuxuryEstateProject.Web.ViewModels.Property
         [Range(0, 2)]
         public PropertyType Type { get; set; }
 
+        [Range(0, 5)]
+        public Material Material { get; set; }
+
         [DisplayName("Country")]
         public int CountryId { get; set; }
 
         public IEnumerable<SelectListItem> Countries { get; set; }
+
+        [DisplayName("City")]
+        public int CityId { get; set; }
+
+        public IEnumerable<SelectListItem> Cities { get; set; }
 
         [DisplayName("Agent")]
         public int AgentId { get; set; }

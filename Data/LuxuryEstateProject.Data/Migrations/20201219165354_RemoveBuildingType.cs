@@ -1,11 +1,11 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace LuxuryEstateProject.Data.Migrations
+﻿namespace LuxuryEstateProject.Data.Migrations
 {
-    public partial class InitialCreate : Migration
+    using System;
+
+    using Microsoft.EntityFrameworkCore.Migrations;
+
+    public partial class RemoveBuildingType : Migration
     {
-        /// <inheritdoc/>
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -74,23 +74,6 @@ namespace LuxuryEstateProject.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "BuildingTypes",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CreatedOn = table.Column<DateTime>(nullable: false),
-                    ModifiedOn = table.Column<DateTime>(nullable: true),
-                    IsDeleted = table.Column<bool>(nullable: false),
-                    DeletedOn = table.Column<DateTime>(nullable: true),
-                    Name = table.Column<string>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_BuildingTypes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -275,14 +258,14 @@ namespace LuxuryEstateProject.Data.Migrations
                     Bath = table.Column<int>(nullable: false),
                     Garage = table.Column<int>(nullable: false),
                     Bed = table.Column<int>(nullable: false),
-                    Floor = table.Column<int>(nullable: false),
+                    Floor = table.Column<int>(nullable: true),
                     TotalNumberOfFloors = table.Column<int>(nullable: true),
                     Year = table.Column<int>(nullable: true),
                     Description = table.Column<string>(nullable: false),
                     Type = table.Column<int>(nullable: false),
                     Price = table.Column<decimal>(nullable: false),
                     CountryId = table.Column<int>(nullable: false),
-                    BuildingTypeId = table.Column<int>(nullable: false),
+                    BuildingType = table.Column<int>(nullable: false),
                     AgentId = table.Column<int>(nullable: false),
                     ImageId = table.Column<int>(nullable: false)
                 },
@@ -293,12 +276,6 @@ namespace LuxuryEstateProject.Data.Migrations
                         name: "FK_RealEstateProperties_Agents_AgentId",
                         column: x => x.AgentId,
                         principalTable: "Agents",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_RealEstateProperties_BuildingTypes_BuildingTypeId",
-                        column: x => x.BuildingTypeId,
-                        principalTable: "BuildingTypes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
@@ -319,7 +296,7 @@ namespace LuxuryEstateProject.Data.Migrations
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
-                    Name = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
                     CityId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -366,10 +343,10 @@ namespace LuxuryEstateProject.Data.Migrations
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
-                    RealEstatePropertyId = table.Column<int>(nullable: false),
-                    AgentId = table.Column<int>(nullable: false),
                     Extension = table.Column<string>(nullable: true),
-                    RemoteImageUrl = table.Column<string>(nullable: true)
+                    RemoteImageUrl = table.Column<string>(nullable: true),
+                    AgentId = table.Column<int>(nullable: true),
+                    RealEstatePropertyId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -453,11 +430,6 @@ namespace LuxuryEstateProject.Data.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BuildingTypes_IsDeleted",
-                table: "BuildingTypes",
-                column: "IsDeleted");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Cities_CountryId",
                 table: "Cities",
                 column: "CountryId");
@@ -471,6 +443,13 @@ namespace LuxuryEstateProject.Data.Migrations
                 name: "IX_Countries_IsDeleted",
                 table: "Countries",
                 column: "IsDeleted");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Countries_Name",
+                table: "Countries",
+                column: "Name",
+                unique: true,
+                filter: "[Name] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Districts_CityId",
@@ -503,11 +482,6 @@ namespace LuxuryEstateProject.Data.Migrations
                 column: "AgentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_RealEstateProperties_BuildingTypeId",
-                table: "RealEstateProperties",
-                column: "BuildingTypeId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_RealEstateProperties_CountryId",
                 table: "RealEstateProperties",
                 column: "CountryId");
@@ -523,7 +497,6 @@ namespace LuxuryEstateProject.Data.Migrations
                 column: "IsDeleted");
         }
 
-        /// <inheritdoc/>
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
@@ -567,9 +540,6 @@ namespace LuxuryEstateProject.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Agents");
-
-            migrationBuilder.DropTable(
-                name: "BuildingTypes");
 
             migrationBuilder.DropTable(
                 name: "Countries");

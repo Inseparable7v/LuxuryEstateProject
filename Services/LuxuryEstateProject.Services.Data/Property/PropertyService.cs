@@ -69,7 +69,7 @@ namespace LuxuryEstateProject.Services.Data.Property
                 Size = input.Size,
                 Year = input.Year,
                 AgentId = input.AgentId,
-                BuildingTypeId = input.BuildingTypeId,
+                BuildingType = (Material)input.Material,
                 Description = input.Description,
                 Garage = input.Garage,
                 Type = (PropertyType)input.Type,

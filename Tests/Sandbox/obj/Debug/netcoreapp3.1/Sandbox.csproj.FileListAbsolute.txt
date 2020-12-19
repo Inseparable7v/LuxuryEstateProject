@@ -188,3 +188,7 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\Sandbox\obj\Debug
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.pdb
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.genruntimeconfig.cache
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\Sandbox\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
