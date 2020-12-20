@@ -192,3 +192,4 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\Sandbox\bin\Debug
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\Sandbox\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\Sandbox\bin\Debug\netcoreapp3.1\SixLabors.ImageSharp.dll

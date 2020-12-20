@@ -1360,6 +1360,14 @@
           }
         }
       },
+      "SixLabors.ImageSharp/1.0.2": {
+        "runtime": {
+          "lib/netcoreapp3.1/SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.2.0"
+          }
+        }
+      },
       "StyleCop.Analyzers/1.2.0-beta.205": {
         "dependencies": {
           "StyleCop.Analyzers.Unstable": "1.2.0.205"
@@ -2296,7 +2304,8 @@
           "LuxuryEstateProject.Data.Models": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
-          "Microsoft.Extensions.Configuration.UserSecrets": "3.1.9"
+          "Microsoft.Extensions.Configuration.UserSecrets": "3.1.9",
+          "SixLabors.ImageSharp": "1.0.2"
         },
         "runtime": {
           "LuxuryEstateProject.Data.dll": {}
@@ -2324,7 +2333,8 @@
           "LuxuryEstateProject.Data.Common": "1.0.0",
           "LuxuryEstateProject.Data.Models": "1.0.0",
           "LuxuryEstateProject.Services.Mapping": "1.0.0",
-          "LuxuryEstateProject.Web.ViewModels": "1.0.0"
+          "LuxuryEstateProject.Web.ViewModels": "1.0.0",
+          "SixLabors.ImageSharp": "1.0.2"
         },
         "runtime": {
           "LuxuryEstateProject.Services.Data.dll": {}
@@ -3098,6 +3108,13 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iZJ37Iss3pUkFl961x1aka85QuvgY9oNZabHijzVnHs4QTz6EMNx3zjJDyvK/0+Ryj6JPv/PC7GVIJXLHtu2nQ==",
+      "path": "sixlabors.imagesharp/1.0.2",
+      "hashPath": "sixlabors.imagesharp.1.0.2.nupkg.sha512"
     },
     "StyleCop.Analyzers/1.2.0-beta.205": {
       "type": "package",

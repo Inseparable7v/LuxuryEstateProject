@@ -123,7 +123,7 @@
         </div>
     </div>
 </form>
-@*@section Scripts {
+@section Scripts {
     <script type="text/javascript">
         $('#Country').change(function () {
             var selectedCountry = $("#Country").val();
@@ -134,14 +134,17 @@
                     if (regions != null && !jQuery.isEmptyObject(regions))
                     {
                         $.each(regions, function (index, region) {
+                            console.log(region.value);
+                            console.log(region.text);
                             regionsSelect.append($('<option/>', {
-                                value: region.Value,
-                                text: region.Text
-                            }));
+                              value: region.value,
+                               text: region.text
+                           }));
+                            console.log(regionsSelect);
                         });
                     };
                 });
             }
         });
     </script>
-}*@
+}

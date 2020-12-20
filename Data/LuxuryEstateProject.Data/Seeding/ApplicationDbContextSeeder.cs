@@ -26,6 +26,8 @@
 
             var seeders = new List<ISeeder>
                           {
+                              new AgentSeeder(),
+                              new CountrySeeder(),
                               new PropertySeeder(),
                               new RolesSeeder(),
                               new SettingsSeeder(),

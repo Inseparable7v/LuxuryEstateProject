@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LuxuryEstateProject.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201219165354_RemoveBuildingType")]
-    partial class RemoveBuildingType
+    [Migration("20201220174314_InitialSetup")]
+    partial class InitialSetup
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -237,9 +237,6 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("DistrictId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -264,9 +261,6 @@ namespace LuxuryEstateProject.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CityId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
@@ -301,9 +295,6 @@ namespace LuxuryEstateProject.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CityId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
@@ -320,8 +311,6 @@ namespace LuxuryEstateProject.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CityId");
 
                     b.HasIndex("IsDeleted");
 
@@ -404,9 +393,6 @@ namespace LuxuryEstateProject.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("Garage")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ImageId")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsDeleted")
@@ -590,16 +576,9 @@ namespace LuxuryEstateProject.Data.Migrations
 
             modelBuilder.Entity("LuxuryEstateProject.Data.Models.City", b =>
                 {
-                    b.HasOne("LuxuryEstateProject.Data.Models.Country", null)
+                    b.HasOne("LuxuryEstateProject.Data.Models.Country", "Country")
                         .WithMany("Cities")
                         .HasForeignKey("CountryId");
-                });
-
-            modelBuilder.Entity("LuxuryEstateProject.Data.Models.District", b =>
-                {
-                    b.HasOne("LuxuryEstateProject.Data.Models.City", null)
-                        .WithMany("Districts")
-                        .HasForeignKey("CityId");
                 });
 
             modelBuilder.Entity("LuxuryEstateProject.Data.Models.Image", b =>

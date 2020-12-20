@@ -55,9 +55,7 @@ namespace LuxuryEstateProject.Web.ViewModels.Property
             configuration.CreateMap<RealEstateProperty, SinglePropertyViewModel>()
                 .ForMember(
                     x => x.CityName,
-                    opt => opt.MapFrom(x => x.Countries.Cities.FirstOrDefault().Name)).ForMember(
-                    x => x.DistrictName,
-                    opt => opt.MapFrom(y => y.Countries.Cities.FirstOrDefault().Districts.FirstOrDefault().Name))
+                    opt => opt.MapFrom(x => x.Countries.Cities.FirstOrDefault().Name))
             .ForMember(x => x.ImageRemoteImageUrl, opt =>
                 opt.MapFrom(x =>
                     x.Images.Select(x => x.RemoteImageUrl != null ? x.RemoteImageUrl : "/assets/img/" + x.Id + "." + x.Extension)));

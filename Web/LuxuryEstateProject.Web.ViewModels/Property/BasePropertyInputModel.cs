@@ -1,13 +1,13 @@
-﻿using System.ComponentModel;
-using LuxuryEstateProject.Data.Models;
-
-namespace LuxuryEstateProject.Web.ViewModels.Property
+﻿namespace LuxuryEstateProject.Web.ViewModels.Property
 {
-    using Microsoft.AspNetCore.Mvc.Rendering;
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.Text;
+
+    using LuxuryEstateProject.Data.Models;
+    using Microsoft.AspNetCore.Mvc.Rendering;
 
     public abstract class BasePropertyInputModel
     {
@@ -50,6 +50,7 @@ namespace LuxuryEstateProject.Web.ViewModels.Property
         public float Size { get; set; }
 
         [Range(0, 2)]
+        [DisplayName("For")]
         public PropertyType Type { get; set; }
 
         [Range(0, 5)]
@@ -65,15 +66,11 @@ namespace LuxuryEstateProject.Web.ViewModels.Property
 
         public IEnumerable<SelectListItem> Cities { get; set; }
 
+        //public string District { get; set; }
+
         [DisplayName("Agent")]
         public int AgentId { get; set; }
 
         public IEnumerable<SelectListItem> AgentsCreateForm { get; set; }
-
-        [DisplayName("Building Material")]
-        public int BuildingTypeId { get; set; }
-
-        public IEnumerable<SelectListItem> BuildingTypes { get; set; }
-
     }
 }

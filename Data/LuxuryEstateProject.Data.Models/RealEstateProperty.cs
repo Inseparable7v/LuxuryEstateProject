@@ -38,6 +38,10 @@
 
         public decimal Price { get; set; }
 
+       //public int DistrictId { get; set; }
+       //
+       //public virtual District District { get; set; }
+
         public int CountryId { get; set; }
 
         public virtual Country Countries { get; set; }
@@ -48,9 +52,7 @@
 
         public virtual Agent Agent { get; set; }
 
-        public int ImageId { get; set; }
-
-        public ICollection<Amenities> Amenities { get; set; }
+        public virtual ICollection<Amenities> Amenities { get; set; }
 
         public virtual ICollection<Image> Images { get; set; }
     }

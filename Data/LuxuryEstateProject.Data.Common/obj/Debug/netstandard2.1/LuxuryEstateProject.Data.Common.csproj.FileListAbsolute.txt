@@ -15,3 +15,4 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProjec
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.csproj.CoreCompileInputs.cache
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.pdb
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.csprojAssemblyReference.cache
