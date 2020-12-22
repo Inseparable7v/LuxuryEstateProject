@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LuxuryEstateProject.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201220174314_InitialSetup")]
-    partial class InitialSetup
+    [Migration("20201222121728_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -295,6 +295,9 @@ namespace LuxuryEstateProject.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("CityId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
@@ -311,6 +314,8 @@ namespace LuxuryEstateProject.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CityId");
 
                     b.HasIndex("IsDeleted");
 
@@ -579,6 +584,13 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.HasOne("LuxuryEstateProject.Data.Models.Country", "Country")
                         .WithMany("Cities")
                         .HasForeignKey("CountryId");
+                });
+
+            modelBuilder.Entity("LuxuryEstateProject.Data.Models.District", b =>
+                {
+                    b.HasOne("LuxuryEstateProject.Data.Models.City", "City")
+                        .WithMany("Districts")
+                        .HasForeignKey("CityId");
                 });
 
             modelBuilder.Entity("LuxuryEstateProject.Data.Models.Image", b =>

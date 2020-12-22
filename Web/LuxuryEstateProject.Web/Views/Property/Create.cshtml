@@ -76,7 +76,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
             <label asp-for="CountryId" class="color-b"></label>
             @*<vc:CategoriesDropDown name="CategoryId"></vc:CategoriesDropDown>*@
             <select asp-for="CountryId" id="Country" class="form-control col-md-12" asp-items="@Model.Countries">
@@ -84,12 +84,19 @@
             </select>
             <span asp-validation-for="CountryId" class="text-danger"></span>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
             <label asp-for="CityId" class="color-b"></label>
             <select asp-for="CityId" id="Region" class="form-control col-md-12" asp-items="@Model.Cities">
                 <option value="" disabled selected>Choose The City</option>
             </select>
             <span asp-validation-for="CityId" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="DistrictId" class="color-b"></label>
+            <select asp-for="DistrictId" id="District" class="form-control col-md-12" asp-items="@Model.Districts">
+                <option value="" disabled selected>District</option>
+            </select>
+            <span asp-validation-for="DistrictId" class="text-danger"></span>
         </div>
         <div class="form-group col-md-6">
             <label asp-for="AgentId" class="color-b"></label>
@@ -137,10 +144,33 @@
                             console.log(region.value);
                             console.log(region.text);
                             regionsSelect.append($('<option/>', {
-                              value: region.value,
-                               text: region.text
-                           }));
+                                value: region.value,
+                                text: region.text
+                            }));
                             console.log(regionsSelect);
+                        });
+                    };
+                });
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        $('#Region').change(function () {
+            var selectedRegion = $("#Region").val();
+            var districtSelect = $('#District');
+            districtSelect.empty();
+            if (selectedRegion != null && selectedRegion != '') {
+                $.getJSON('@Url.Action("GetDisctirct")', { Id: selectedRegion }, function (regions) {
+                    if (regions != null && !jQuery.isEmptyObject(regions))
+                    {
+                        $.each(regions, function (index, region) {
+                            console.log(region.value);
+                            console.log(region.text);
+                            districtSelect.append($('<option/>', {
+                                value: region.value,
+                                text: region.text
+                            }));
+                            console.log(districtSelect);
                         });
                     };
                 });

@@ -1,0 +1,45 @@
+﻿namespace LuxuryEstateProject.Services.Data
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+
+    using LuxuryEstateProject.Data.Common.Repositories;
+    using LuxuryEstateProject.Data.Models;
+    using Microsoft.AspNetCore.Mvc.Rendering;
+
+    public class DistrictService : IDistrict
+    {
+        private IDeletableEntityRepository<District> districtRepository;
+
+        public DistrictService(IDeletableEntityRepository<District> districtRepository)
+        {
+            this.districtRepository = districtRepository;
+        }
+
+        public IEnumerable<SelectListItem> GetAllAsSelectListItems()
+        {
+
+            return this.districtRepository.AllAsNoTracking().Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).OrderBy(c => c.Text);
+        }
+
+        public IEnumerable<SelectListItem> GetDistricts(int id)
+        {
+            if (!String.IsNullOrWhiteSpace(id.ToString()))
+            {
+                IEnumerable<SelectListItem> regions = this.districtRepository.AllAsNoTracking()
+                    .OrderBy(n => n.Name)
+                    .Where(n => n.City.Id == id)
+                    .Select(n =>
+                        new SelectListItem
+                        {
+                            Value = n.Id.ToString(),
+                            Text = n.Name,
+                        }).ToList();
+                return new SelectList(regions, "Value", "Text");
+            }
+            return null;
+        }
+    }
+}

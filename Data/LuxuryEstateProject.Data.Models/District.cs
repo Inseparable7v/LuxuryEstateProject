@@ -8,5 +8,7 @@
     public class District : BaseDeletableModel<int>
     {
         public string Name { get; set; }
+
+        public virtual City City { get; set; }
     }
 }

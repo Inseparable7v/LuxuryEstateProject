@@ -23,14 +23,16 @@ namespace LuxuryEstateProject.Web.Controllers
         private IWebHostEnvironment environment;
         private IAgentService agentService;
         private ICity cityService;
+        private IDistrict districtService;
 
-        public PropertyController(IPropertyService propertyService, ICountryService countryService, IAgentService agentService,ICity cityService, IWebHostEnvironment environment)
+        public PropertyController(IPropertyService propertyService, ICountryService countryService, IAgentService agentService, ICity cityService, IDistrict districtService, IWebHostEnvironment environment)
         {
             this.propertyService = propertyService;
             this.countryService = countryService;
             this.environment = environment;
             this.agentService = agentService;
             this.cityService = cityService;
+            this.districtService = districtService;
         }
 
         [HttpGet]
@@ -41,6 +43,19 @@ namespace LuxuryEstateProject.Web.Controllers
                 IEnumerable<SelectListItem> regions = cityService.GetCities(Id);
                 return Json(regions);
             }
+
+            return null;
+        }
+
+        [HttpGet]
+        public ActionResult GetDisctirct(int Id)
+        {
+            if (!string.IsNullOrWhiteSpace(Id.ToString()))
+            {
+                IEnumerable<SelectListItem> district = districtService.GetDistricts(Id);
+                return Json(district);
+            }
+
             return null;
         }
 
@@ -51,6 +66,7 @@ namespace LuxuryEstateProject.Web.Controllers
                 Countries = this.countryService.GetAllAsSelectListItems(),
                 AgentsCreateForm = this.agentService.GetAllAsSelectListItems(),
                 Cities = this.cityService.GetAllAsSelectListItems(),
+                Districts = this.districtService.GetAllAsSelectListItems(),
             };
             return this.View(viewModel);
         }
@@ -63,6 +79,7 @@ namespace LuxuryEstateProject.Web.Controllers
                 input.Countries = this.countryService.GetAllAsSelectListItems();
                 input.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
                 input.Cities = this.cityService.GetAllAsSelectListItems();
+                input.Districts = this.districtService.GetAllAsSelectListItems();
                 return this.View(input);
             }
 
@@ -76,6 +93,7 @@ namespace LuxuryEstateProject.Web.Controllers
                 input.Countries = this.countryService.GetAllAsSelectListItems();
                 input.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
                 input.Cities = this.cityService.GetAllAsSelectListItems();
+                input.Districts = this.districtService.GetAllAsSelectListItems();
 
                 return this.View(input);
             }

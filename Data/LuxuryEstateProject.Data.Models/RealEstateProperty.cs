@@ -38,10 +38,6 @@
 
         public decimal Price { get; set; }
 
-       //public int DistrictId { get; set; }
-       //
-       //public virtual District District { get; set; }
-
         public int CountryId { get; set; }
 
         public virtual Country Countries { get; set; }

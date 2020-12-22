@@ -44,6 +44,7 @@
         public string Description { get; set; }
 
         [DisplayName("Property Price")]
+        [Range(0, 10000000)]
         public decimal Price { get; set; }
 
         [Range(0, 10000)]
@@ -66,7 +67,10 @@
 
         public IEnumerable<SelectListItem> Cities { get; set; }
 
-        //public string District { get; set; }
+        [DisplayName("District")]
+        public int DistrictId { get; set; }
+
+        public IEnumerable<SelectListItem> Districts { get; set; }
 
         [DisplayName("Agent")]
         public int AgentId { get; set; }
