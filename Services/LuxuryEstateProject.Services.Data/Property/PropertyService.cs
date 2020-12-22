@@ -44,11 +44,11 @@ namespace LuxuryEstateProject.Services.Data.Property
         /// <inheritdoc/>
         public IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 6)
         {
-            var recipes = this.realRepository.AllAsNoTracking()
+            var properties = this.realRepository.AllAsNoTracking()
                 .OrderByDescending(x => x.Id)
                 .Skip((page - 1) * itemsPerPage).Take(itemsPerPage)
                 .To<T>().ToList();
-            return recipes;
+            return properties;
         }
 
         /// <inheritdoc/>
@@ -77,8 +77,6 @@ namespace LuxuryEstateProject.Services.Data.Property
                 Garage = input.Garage,
                 Type = (PropertyType)input.Type,
             };
-
-             // wwwroot / images / recipes / jhdsi - 343g3h453 -= g34g.jpg
             Directory.CreateDirectory($"{imagePath}");
             foreach (var image in input.Images)
             {
@@ -95,7 +93,7 @@ namespace LuxuryEstateProject.Services.Data.Property
 
                 using var imageSharp = SixLabors.ImageSharp.Image.Load(image.OpenReadStream());
 
-                imageSharp.Mutate(x => x.Resize(600, 800));
+                imageSharp.Mutate(x => x.Resize(700, 900));
 
                 property.Images.Add(dbImage);
 
@@ -110,60 +108,5 @@ namespace LuxuryEstateProject.Services.Data.Property
             await this.realRepository.SaveChangesAsync();
 
         }
-
-        //public async Task CreateAsync(CreateRecipeInputModel input, string userId, string imagePath)
-        //{
-        //    var recipe = new Recipe
-        //    {
-        //        CategoryId = input.CategoryId,
-        //        CookingTime = TimeSpan.FromMinutes(input.CookingTime),
-        //        Instructions = input.Instructions,
-        //        Name = input.Name,
-        //        PortionsCount = input.PortionsCount,
-        //        PreparationTime = TimeSpan.FromMinutes(input.PreparationTime),
-        //        AddedByUserId = userId,
-        //    };
-
-        //    foreach (var inputIngredient in input.Ingredients)
-        //    {
-        //        var ingredient = this.ingredientsRespository.All().FirstOrDefault(x => x.Name == inputIngredient.IngredientName);
-        //        if (ingredient == null)
-        //        {
-        //            ingredient = new Ingredient { Name = inputIngredient.IngredientName };
-        //        }
-
-        //        recipe.Ingredients.Add(new RecipeIngredient
-        //        {
-        //            Ingredient = ingredient,
-        //            Quantity = inputIngredient.Quantity,
-        //        });
-        //    }
-
-        //    // /wwwroot/images/recipes/jhdsi-343g3h453-=g34g.jpg
-        //    Directory.CreateDirectory($"{imagePath}/recipes/");
-        //    foreach (var image in input.Images)
-        //    {
-        //        var extension = Path.GetExtension(image.FileName).TrimStart('.');
-        //        if (!this.allowedExtensions.Any(x => extension.EndsWith(x)))
-        //        {
-        //            throw new Exception($"Invalid image extension {extension}");
-        //        }
-
-        //        var dbImage = new Image
-        //        {
-        //            AddedByUserId = userId,
-        //            Extension = extension,
-        //        };
-        //        recipe.Images.Add(dbImage);
-
-        //        var physicalPath = $"{imagePath}/recipes/{dbImage.Id}.{extension}";
-        //        using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
-        //        await image.CopyToAsync(fileStream);
-        //    }
-
-        //    await this.recipesRepository.AddAsync(recipe);
-        //    await this.recipesRepository.SaveChangesAsync();
-        //}
-
     }
 }

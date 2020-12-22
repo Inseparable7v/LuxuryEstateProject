@@ -27,7 +27,7 @@
         {
             if (!String.IsNullOrWhiteSpace(id.ToString()))
             {
-                IEnumerable<SelectListItem> regions = this.cityRepository.AllAsNoTracking()
+                List<SelectListItem> cities = this.cityRepository.AllAsNoTracking()
                     .OrderBy(n => n.Name)
                     .Where(n => n.Country.Id == id)
                     .Select(n =>
@@ -36,8 +36,16 @@
                             Value = n.Id.ToString(),
                             Text = n.Name,
                         }).ToList();
-                return new SelectList(regions, "Value", "Text");
+
+                var cityFirstItem = new SelectListItem()
+                {
+                    Value = null,
+                    Text = "--- select city ---",
+                };
+                cities.Insert(0, cityFirstItem);
+                return new SelectList(cities, "Value", "Text");
             }
+
             return null;
         }
     }

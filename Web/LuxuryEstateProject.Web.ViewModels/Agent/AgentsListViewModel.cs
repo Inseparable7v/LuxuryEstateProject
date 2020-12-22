@@ -6,7 +6,7 @@
 
     using LuxuryEstateProject.Web.ViewModels.Property;
 
-    public class AgentsListViewModel
+    public class AgentsListViewModel : PagingViewModel
     {
         public IEnumerable<AgentViewModel> Agents { get; set; }
 

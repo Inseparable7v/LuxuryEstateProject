@@ -18,19 +18,32 @@
             this.agentService = agentService;
         }
 
-        public IActionResult All()
+        public IActionResult All(int id)
         {
-            var state = this.agentService.GetAllAgents<AgentViewModel>().ToList();
-            var model = new AgentsListViewModel { Agents = state };
+            if (id <= 0)
+            {
+                return this.NotFound();
+            }
+
+            const int ItemPerPage = 6;
+
+            var state = this.agentService.GetAllAgents<AgentViewModel>(id, ItemPerPage).ToList();
+            var model = new AgentsListViewModel
+            {
+                ItemsPerPage = ItemPerPage,
+                PageNumber = id,
+                PropertiesCount = this.agentService.GetCount(),
+                Agents = state,
+            };
 
             return this.View(model);
         }
 
-        public async Task<IActionResult> SingleAsync(int id)
+        public async Task<IActionResult> SingleAgent(int id)
         {
-            var property = await this.agentService.GetByIdAsync<AgentViewModel>(id);
+            var agent = await this.agentService.GetByIdAsync<AgentViewModel>(id);
 
-            return this.View(property);
+            return this.View(agent);
         }
     }
 }

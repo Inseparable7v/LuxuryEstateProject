@@ -44,7 +44,7 @@ namespace LuxuryEstateProject.Services.Data
             var countrytip = new SelectListItem()
             {
                 Value = null,
-                Text = "--- select country ---"
+                Text = "--- select country ---",
             };
             countries.Insert(0, countrytip);
             return new SelectList(countries, "Value", "Text");

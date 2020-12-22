@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
 
@@ -11,6 +12,11 @@
     {
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
         {
+            if (dbContext.Agents.Any())
+            {
+                return;
+            }
+
             await dbContext.Agents.AddRangeAsync(new List<Agent>()
             {
                 new Agent()

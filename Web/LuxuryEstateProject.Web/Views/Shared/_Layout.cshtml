@@ -143,8 +143,15 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About"><span class="color-a">About</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Property" asp-action="PropertyGrid"><span class="color-a">Property</span></a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Pages
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-area="" asp-controller="Property" asp-action="PropertyGrid">Properties</a>
+                                <a class="dropdown-item" asp-controller="Agent" asp-action="All" asp-route-id="1">Agents</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Agent" asp-action="SingleAgent">Agent Single</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Contact" asp-action="ContactForm"><span class="color-a">Contact</span></a>

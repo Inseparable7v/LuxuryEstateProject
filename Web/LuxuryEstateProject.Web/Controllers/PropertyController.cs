@@ -65,8 +65,6 @@ namespace LuxuryEstateProject.Web.Controllers
             {
                 Countries = this.countryService.GetAllAsSelectListItems(),
                 AgentsCreateForm = this.agentService.GetAllAsSelectListItems(),
-                Cities = this.cityService.GetAllAsSelectListItems(),
-                Districts = this.districtService.GetAllAsSelectListItems(),
             };
             return this.View(viewModel);
         }

@@ -24,9 +24,13 @@ namespace LuxuryEstateProject.Services.Data.Agent
         }
 
         /// <inheritdoc/>
-        public IEnumerable<T> GetAllAgents<T>()
+        public IEnumerable<T> GetAllAgents<T>(int page, int itemsPerPage = 6)
         {
-            return this.agentRepository.AllAsNoTracking().To<T>().ToList();
+            var agents = this.agentRepository.AllAsNoTracking()
+                .OrderByDescending(x => x.Id)
+                .Skip((page - 1) * itemsPerPage).Take(itemsPerPage)
+                .To<T>().ToList();
+            return agents;
         }
 
         /// <inheritdoc/>
@@ -41,6 +45,11 @@ namespace LuxuryEstateProject.Services.Data.Agent
             return this.agentRepository.AllAsNoTracking().OrderBy(x => x.Id).To<T>().FirstOrDefault();
         }
 
+        public int GetCount()
+        {
+            return this.agentRepository.AllAsNoTracking().Count();
+        }
+
         /// <inheritdoc/>
         public async Task<T> GetByIdAsync<T>(int id)
         {
@@ -51,13 +60,6 @@ namespace LuxuryEstateProject.Services.Data.Agent
         {
 
             return this.agentRepository.All().Select(x => new SelectListItem { Text = x.Name + " " + x.LastName, Value = x.Id.ToString() }).OrderBy(c => c.Text);
-            //return this.agentRepository.AllAsNoTracking()
-            //    .Select(x => new
-            //    {
-            //        x.Id,
-            //        V = x.Name + " " + x.LastName,
-            //    })
-            //    .ToList().Select(x => new KeyValuePair<string, string>(x.Id.ToString(), x.V));
         }
     }
 }

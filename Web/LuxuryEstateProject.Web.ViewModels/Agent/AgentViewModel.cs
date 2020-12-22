@@ -1,4 +1,6 @@
-﻿namespace LuxuryEstateProject.Web.ViewModels.Agent
+﻿using LuxuryEstateProject.Web.ViewModels.Property;
+
+namespace LuxuryEstateProject.Web.ViewModels.Agent
 {
     using System;
     using System.Collections.Generic;
@@ -26,6 +28,8 @@
         public string Description { get; set; }
 
         public string ImageRemoteImageUrl { get; set; }
+
+        public IEnumerable<RealEstateViewModel> RealEstateViewModels { get; set; }
 
         /// <inheritdoc/>
         public void CreateMappings(IProfileExpression configuration)

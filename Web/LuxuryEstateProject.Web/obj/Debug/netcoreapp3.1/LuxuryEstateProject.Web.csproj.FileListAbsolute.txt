@@ -476,7 +476,6 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\bin\Debug\netcoreapp3.1\bundleconfig.json
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\bin\Debug\netcoreapp3.1\libman.json
-C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\bin\Debug\netcoreapp3.1\LuxuryEstateProject.Web.StaticWebAssets.xml
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\bin\Debug\netcoreapp3.1\LuxuryEstateProject.Web.exe
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\bin\Debug\netcoreapp3.1\LuxuryEstateProject.Web.deps.json
@@ -936,7 +935,6 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.pdb
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.genruntimeconfig.cache
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Agent\All.cshtml.g.cs
-C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Agent\SingleAsync.cshtml.g.cs
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Property\Create.cshtml.g.cs
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_Layout.cshtml.g.cs
@@ -950,3 +948,5 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\bin\Debug\netcoreapp3.1\SixLabors.ImageSharp.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\scopedcss\bundle\LuxuryEstateProject.Web.styles.css
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Agent\SingleAgent.cshtml.g.cs

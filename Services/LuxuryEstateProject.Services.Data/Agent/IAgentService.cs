@@ -10,13 +10,15 @@
 
     public interface IAgentService
     {
-        IEnumerable<T> GetAllAgents<T>();
+        IEnumerable<T> GetAllAgents<T>(int page, int itemsPerPage);
 
         IEnumerable<T> GetHomePageAgents<T>();
 
         IEnumerable<SelectListItem> GetAllAsSelectListItems();
 
         T SingleAgent<T>();
+
+        int GetCount();
 
         Task<T> GetByIdAsync<T>(int id);
     }

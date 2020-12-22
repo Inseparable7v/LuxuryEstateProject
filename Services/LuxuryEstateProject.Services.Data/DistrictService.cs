@@ -28,7 +28,7 @@
         {
             if (!String.IsNullOrWhiteSpace(id.ToString()))
             {
-                IEnumerable<SelectListItem> regions = this.districtRepository.AllAsNoTracking()
+                List<SelectListItem> districts = this.districtRepository.AllAsNoTracking()
                     .OrderBy(n => n.Name)
                     .Where(n => n.City.Id == id)
                     .Select(n =>
@@ -37,7 +37,14 @@
                             Value = n.Id.ToString(),
                             Text = n.Name,
                         }).ToList();
-                return new SelectList(regions, "Value", "Text");
+                var districtFirstItem = new SelectListItem()
+                {
+                    Value = null,
+                    Text = "--- select district ---",
+                };
+                districts.Insert(0, districtFirstItem);
+
+                return new SelectList(districts, "Value", "Text");
             }
             return null;
         }
