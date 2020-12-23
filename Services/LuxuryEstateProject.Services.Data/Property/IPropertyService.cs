@@ -1,4 +1,6 @@
-﻿namespace LuxuryEstateProject.Services.Data.Property
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace LuxuryEstateProject.Services.Data.Property
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -14,10 +16,12 @@
 
         int GetCount();
 
-        IEnumerable<T> ListOfPropertiesById<T>(int id);
+        IEnumerable<T> ListOfPropertiesByAgentId<T>(int id);
 
         IEnumerable<T> GetLatestProperties<T>();
 
         IEnumerable<T> GetAll<T>(int page, int itemsPerPage);
+
+        IEnumerable<SelectListItem> GetAllAsSelectListItems();
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace LuxuryEstateProject.Services.Data.Agent
+﻿using LuxuryEstateProject.Web.ViewModels.Agent;
+
+namespace LuxuryEstateProject.Services.Data.Agent
 {
     using System;
     using System.Collections.Generic;
@@ -15,6 +17,8 @@
         IEnumerable<T> GetHomePageAgents<T>();
 
         IEnumerable<SelectListItem> GetAllAsSelectListItems();
+
+        Task CreateAgentAsync(AgentInputViewModel input, string imagePath);
 
         T SingleAgent<T>();
 

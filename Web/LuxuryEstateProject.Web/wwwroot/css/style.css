@@ -1717,7 +1717,7 @@ a {
     font-weight: 600;
     margin: 1rem 0;
     transform: translateY(-20px);
-    opacity: 0;
+    opacity: .2;
 }
 
 @media (min-width: 768px) {
@@ -1742,7 +1742,7 @@ a {
 }
 
 .card-box-d .content-d {
-    opacity: 0;
+    opacity: 8;
     transition: .5s ease-in-out;
     transform: translateY(-40px);
 }
@@ -1769,14 +1769,14 @@ a {
 }
 
 .card-box-d .info-agents {
-    opacity: 0;
+    opacity: 8;
     transition: .5s ease-in-out;
 }
 
 .card-box-d .card-footer-d {
     transition: .5s ease-in-out;
     transform: translateY(40px);
-    opacity: 0;
+    opacity: 8;
     position: absolute;
     width: 100%;
     bottom: 10px;
@@ -1789,7 +1789,7 @@ a {
 
 .card-box-d:hover .card-overlay-hover {
     background-color: #2eca6a;
-    opacity: .9;
+    opacity: 0.8;
 }
 
 .card-box-d:hover .title-d,

@@ -8,7 +8,5 @@
     public class PropertyInputModel : BasePropertyInputModel
     {
         public IEnumerable<IFormFile> Images { get; set; }
-
-        public IEnumerable<AgentViewModel> Agents { get; set; }
     }
 }

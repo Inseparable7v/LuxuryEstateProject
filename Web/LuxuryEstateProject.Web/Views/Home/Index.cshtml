@@ -223,14 +223,12 @@
                                 <div class="card-img-d">
                                     <img src="@agents.ImageRemoteImageUrl" alt="" class="img-d img-fluid">
                                 </div>
-                                <div class="card-overlay-hover card-overlay-a-content">
-                                    <h4>@agents.Id</h4>
-                                    <div class="card-header-d">
+                                <div class="card-overlay-hover card-img-overlay">
+                                    <div class="card-header-b">
                                         <div class="card-title-d align-self-center">
                                             <h3 class="title-d">
-                                                <a class="link-two">
-                                                    @agents.Name
-                                                    <br> @agents.LastName
+                                                <a asp-area="" asp-controller="Agent" asp-action="SingleAgent" asp-route-id="@agents.Id" class="link-two">
+                                                    @agents.Name @agents.LastName
                                                 </a>
                                             </h3>
                                         </div>

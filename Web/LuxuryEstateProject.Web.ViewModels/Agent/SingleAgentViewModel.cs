@@ -1,15 +1,14 @@
-﻿using System.Linq;
-using System.Runtime.CompilerServices;
-using AutoMapper;
-using LuxuryEstateProject.Web.ViewModels.Property;
-
-namespace LuxuryEstateProject.Web.ViewModels.Agent
+﻿namespace LuxuryEstateProject.Web.ViewModels.Agent
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
+    using System.Runtime.CompilerServices;
     using System.Text;
 
+    using AutoMapper;
     using LuxuryEstateProject.Services.Mapping;
+    using LuxuryEstateProject.Web.ViewModels.Property;
 
     public class SingleAgentViewModel : IMapFrom<Data.Models.Agent>,  IHaveCustomMappings
     {

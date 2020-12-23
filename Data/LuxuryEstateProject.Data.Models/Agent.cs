@@ -30,6 +30,6 @@
 
         public virtual ICollection<RealEstateProperty> RealEstateProperties { get; set; }
 
-        public virtual IEnumerable<Image> Images { get; set; }
+        public virtual ICollection<Image> Images { get; set; }
     }
 }

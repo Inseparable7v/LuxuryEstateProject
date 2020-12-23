@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Png;
 using SixLabors.ImageSharp.Processing;
@@ -33,7 +34,7 @@ namespace LuxuryEstateProject.Services.Data.Property
             return this.realRepository.AllAsNoTracking().Count();
         }
 
-        public IEnumerable<T> ListOfPropertiesById<T>(int id)
+        public IEnumerable<T> ListOfPropertiesByAgentId<T>(int id)
         {
             return this.realRepository.AllAsNoTracking().Where(x => x.AgentId.Equals(id)).To<T>().ToList();
         }
@@ -54,6 +55,11 @@ namespace LuxuryEstateProject.Services.Data.Property
                 .Skip((page - 1) * itemsPerPage).Take(itemsPerPage)
                 .To<T>().ToList();
             return properties;
+        }
+
+        public IEnumerable<SelectListItem> GetAllAsSelectListItems()
+        {
+            return this.realRepository.All().Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).OrderBy(c => c.Text);
         }
 
         /// <inheritdoc/>

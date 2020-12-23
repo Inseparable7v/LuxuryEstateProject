@@ -1,4 +1,5 @@
 ﻿using LuxuryEstateProject.Web.ViewModels.Property;
+using Microsoft.AspNetCore.Hosting;
 
 namespace LuxuryEstateProject.Web.Controllers.Agent
 {
@@ -16,14 +17,51 @@ namespace LuxuryEstateProject.Web.Controllers.Agent
     {
         private IAgentService agentService;
         private IPropertyService propertyService;
+        private IWebHostEnvironment environment;
 
-        public AgentController(IAgentService agentService, IPropertyService propertyService)
+        public AgentController(IAgentService agentService, IPropertyService propertyService, IWebHostEnvironment environment)
         {
             this.agentService = agentService;
             this.propertyService = propertyService;
+            this.environment = environment;
         }
 
-        public IActionResult All(int id)
+        public IActionResult Create()
+        {
+            var viewModel = new AgentInputViewModel()
+            {
+                Properties = this.propertyService.GetAllAsSelectListItems(),
+            };
+            return this.View(viewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(AgentInputViewModel input)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                input.Properties = this.propertyService.GetAllAsSelectListItems();
+                return this.View(input);
+            }
+
+            try
+            {
+                await this.agentService.CreateAgentAsync(input, $"{this.environment.WebRootPath}/assets/img/");
+            }
+            catch (Exception ex)
+            {
+                this.ModelState.AddModelError(string.Empty, ex.Message);
+                input.Properties = this.propertyService.GetAllAsSelectListItems();
+
+                return this.View(input);
+            }
+
+            this.TempData["Message"] = "Agent added successfully.";
+
+            return this.RedirectToAction("All");
+        }
+
+        public IActionResult All(int id = 1)
         {
             if (id <= 0)
             {
@@ -46,21 +84,27 @@ namespace LuxuryEstateProject.Web.Controllers.Agent
 
         public async Task<IActionResult> SingleAgent(int id)
         {
+            var property = this.propertyService.ListOfPropertiesByAgentId<RealEstateViewModel>(id);
+
             var agent = await this.agentService.GetByIdAsync<SingleAgentViewModel>(id);
+
+            var model = new SingleAgentViewModel
+            {
+                Name = agent.Name,
+                RealEstateProperties = property,
+                Description = agent.Description,
+                Email = agent.Email,
+                LastName = agent.LastName,
+                Phone = agent.Phone,
+                ImageRemoteImageUrl = agent.ImageRemoteImageUrl,
+            };
 
             if (agent == null)
             {
                 return this.NotFound();
             }
 
-            //var realestate = this.propertyService.ListOfPropertiesById<RealEstateViewModel>(id);
-
-            //var agents = new SingleAgentViewModel()
-            //{
-            //    RealEstate = realestate,
-            //};
-
-            return this.View(agent);
+            return this.View(model);
         }
     }
 }

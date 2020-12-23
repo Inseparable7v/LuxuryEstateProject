@@ -39,7 +39,7 @@ namespace LuxuryEstateProject.Services.Data
                     new SelectListItem
                     {
                         Value = n.Id.ToString(),
-                        Text = n.Name
+                        Text = n.Name,
                     }).ToList();
             var countrytip = new SelectListItem()
             {
