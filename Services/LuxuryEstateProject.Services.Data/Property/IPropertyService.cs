@@ -14,6 +14,8 @@
 
         int GetCount();
 
+        IEnumerable<T> ListOfPropertiesById<T>(int id);
+
         IEnumerable<T> GetLatestProperties<T>();
 
         IEnumerable<T> GetAll<T>(int page, int itemsPerPage);

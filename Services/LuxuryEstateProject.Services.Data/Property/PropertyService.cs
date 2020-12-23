@@ -33,6 +33,11 @@ namespace LuxuryEstateProject.Services.Data.Property
             return this.realRepository.AllAsNoTracking().Count();
         }
 
+        public IEnumerable<T> ListOfPropertiesById<T>(int id)
+        {
+            return this.realRepository.AllAsNoTracking().Where(x => x.AgentId.Equals(id)).To<T>().ToList();
+        }
+
         /// <inheritdoc/>
         public IEnumerable<T> GetLatestProperties<T>()
         {

@@ -1,4 +1,6 @@
-﻿namespace LuxuryEstateProject.Web.Controllers.Agent
+﻿using LuxuryEstateProject.Web.ViewModels.Property;
+
+namespace LuxuryEstateProject.Web.Controllers.Agent
 {
     using System;
     using System.Collections.Generic;
@@ -6,16 +8,19 @@
     using System.Threading.Tasks;
 
     using LuxuryEstateProject.Services.Data.Agent;
+    using LuxuryEstateProject.Services.Data.Property;
     using LuxuryEstateProject.Web.ViewModels.Agent;
     using Microsoft.AspNetCore.Mvc;
 
     public class AgentController : BaseController
     {
         private IAgentService agentService;
+        private IPropertyService propertyService;
 
-        public AgentController(IAgentService agentService)
+        public AgentController(IAgentService agentService, IPropertyService propertyService)
         {
             this.agentService = agentService;
+            this.propertyService = propertyService;
         }
 
         public IActionResult All(int id)
@@ -41,7 +46,19 @@
 
         public async Task<IActionResult> SingleAgent(int id)
         {
-            var agent = await this.agentService.GetByIdAsync<AgentViewModel>(id);
+            var agent = await this.agentService.GetByIdAsync<SingleAgentViewModel>(id);
+
+            if (agent == null)
+            {
+                return this.NotFound();
+            }
+
+            //var realestate = this.propertyService.ListOfPropertiesById<RealEstateViewModel>(id);
+
+            //var agents = new SingleAgentViewModel()
+            //{
+            //    RealEstate = realestate,
+            //};
 
             return this.View(agent);
         }
