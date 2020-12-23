@@ -46,4 +46,8 @@
     <ProjectReference Include="..\LuxuryEstateProject.Web.Infrastructure\LuxuryEstateProject.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\LuxuryEstateProject.Web.ViewModels\LuxuryEstateProject.Web.ViewModels.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+  </ItemGroup>
 </Project>

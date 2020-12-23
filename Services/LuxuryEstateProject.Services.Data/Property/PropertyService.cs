@@ -104,7 +104,7 @@ namespace LuxuryEstateProject.Services.Data.Property
 
                 using var imageSharp = SixLabors.ImageSharp.Image.Load(image.OpenReadStream());
 
-                imageSharp.Mutate(x => x.Resize(700, 900));
+                imageSharp.Mutate(x => x.Resize(600, 800));
 
                 property.Images.Add(dbImage);
 
