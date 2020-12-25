@@ -18,13 +18,13 @@ namespace LuxuryEstateProject.Web.Controllers
 
     public class PropertyController : BaseController
     {
-        private IPropertyService propertyService;
-        private ICountryService countryService;
-        private IWebHostEnvironment environment;
-        private IAgentService agentService;
-        private ICity cityService;
-        private IDistrict districtService;
-        private IAmenities amenitiesService;
+        private readonly IPropertyService propertyService;
+        private readonly ICountryService countryService;
+        private readonly IWebHostEnvironment environment;
+        private readonly IAgentService agentService;
+        private readonly ICity cityService;
+        private readonly IDistrict districtService;
+        private readonly IAmenities amenitiesService;
 
         public PropertyController(IPropertyService propertyService, ICountryService countryService, IAgentService agentService, IAmenities amenitiesService, ICity cityService, IDistrict districtService, IWebHostEnvironment environment)
         {
@@ -50,7 +50,7 @@ namespace LuxuryEstateProject.Web.Controllers
         }
 
         [HttpGet]
-        public ActionResult GetDisctirct(int Id)
+        public ActionResult GetDistrict(int Id)
         {
             if (!string.IsNullOrWhiteSpace(Id.ToString()))
             {

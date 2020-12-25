@@ -46,6 +46,7 @@
 
                 return new SelectList(districts, "Value", "Text");
             }
+
             return null;
         }
     }

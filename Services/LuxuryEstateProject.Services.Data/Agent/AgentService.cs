@@ -22,7 +22,7 @@
         private readonly string[] allowedExtensions = new[] { "jpg", "png", "jpeg" };
 
         private readonly IDeletableEntityRepository<Agent> agentRepository;
-        private IDeletableEntityRepository<RealEstateProperty> propertyRepository;
+        private readonly IDeletableEntityRepository<RealEstateProperty> propertyRepository;
 
         public AgentService(IDeletableEntityRepository<Agent> agentRepository, IDeletableEntityRepository<RealEstateProperty> propertyRepository)
         {
@@ -48,7 +48,6 @@
 
         public async Task CreateAgentAsync(AgentInputViewModel input, string imagePath)
         {
-            var prop = this.propertyRepository.AllAsNoTracking().Where(x => x.Id.Equals(input.PropertyId)).ToList();
 
             var agent = new Agent
             {
@@ -57,13 +56,7 @@
                 Email = input.Email,
                 LastName = input.LastName,
                 Phone = input.Phone,
-                RealEstateProperties = new List<RealEstateProperty>(),
             };
-
-            foreach (var property in agent.RealEstateProperties)
-            {
-                property.AgentId = agent.Id;
-            }
 
             Directory.CreateDirectory($"{imagePath}");
             foreach (var image in input.Images)
@@ -89,30 +82,13 @@
                 await using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
                 await imageSharp.SaveAsync(fileStream, new PngEncoder());
 
-                //await image.CopyToAsync(fileStream);
             }
 
             await this.agentRepository.AddAsync(agent);
             await this.agentRepository.SaveChangesAsync();
 
         }
-        //var property = new RealEstateProperty
-        //{
-        //    Bath = input.Bath,
-        //    Name = input.Name,
-        //    Bed = input.Bed,
-        //    CountryId = input.CountryId,
-        //    Floor = input.Floor,
-        //    TotalNumberOfFloors = input.TotalNumberOfFloors,
-        //    Price = input.Price,
-        //    Size = input.Size,
-        //    Year = input.Year,
-        //    AgentId = input.AgentId,
-        //    BuildingType = (Material)input.Material,
-        //    Description = input.Description,
-        //    Garage = input.Garage,
-        //    Type = (PropertyType)input.Type,
-        //};
+
         /// <inheritdoc/>
         public T SingleAgent<T>()
         {

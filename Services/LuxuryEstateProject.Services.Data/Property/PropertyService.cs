@@ -123,13 +123,10 @@ namespace LuxuryEstateProject.Services.Data.Property
                 var physicalPath = $"{imagePath}{dbImage.Id}.{extension}";
                 await using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
                 await imageSharp.SaveAsync(fileStream, new PngEncoder());
-
-                //await image.CopyToAsync(fileStream);
             }
 
             await this.realRepository.AddAsync(property);
             await this.realRepository.SaveChangesAsync();
-
         }
     }
 }

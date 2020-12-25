@@ -1,7 +1,4 @@
-﻿using LuxuryEstateProject.Web.ViewModels.Property;
-using Microsoft.AspNetCore.Hosting;
-
-namespace LuxuryEstateProject.Web.Controllers.Agent
+﻿namespace LuxuryEstateProject.Web.Controllers.Agent
 {
     using System;
     using System.Collections.Generic;
@@ -11,13 +8,15 @@ namespace LuxuryEstateProject.Web.Controllers.Agent
     using LuxuryEstateProject.Services.Data.Agent;
     using LuxuryEstateProject.Services.Data.Property;
     using LuxuryEstateProject.Web.ViewModels.Agent;
+    using LuxuryEstateProject.Web.ViewModels.Property;
+    using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;
 
     public class AgentController : BaseController
     {
-        private IAgentService agentService;
-        private IPropertyService propertyService;
-        private IWebHostEnvironment environment;
+        private readonly IAgentService agentService;
+        private readonly IPropertyService propertyService;
+        private readonly IWebHostEnvironment environment;
 
         public AgentController(IAgentService agentService, IPropertyService propertyService, IWebHostEnvironment environment)
         {
@@ -28,10 +27,7 @@ namespace LuxuryEstateProject.Web.Controllers.Agent
 
         public IActionResult Create()
         {
-            var viewModel = new AgentInputViewModel()
-            {
-                Properties = this.propertyService.GetAllAsSelectListItems(),
-            };
+            var viewModel = new AgentInputViewModel();
             return this.View(viewModel);
         }
 
@@ -40,7 +36,6 @@ namespace LuxuryEstateProject.Web.Controllers.Agent
         {
             if (!this.ModelState.IsValid)
             {
-                input.Properties = this.propertyService.GetAllAsSelectListItems();
                 return this.View(input);
             }
 
@@ -51,7 +46,6 @@ namespace LuxuryEstateProject.Web.Controllers.Agent
             catch (Exception ex)
             {
                 this.ModelState.AddModelError(string.Empty, ex.Message);
-                input.Properties = this.propertyService.GetAllAsSelectListItems();
 
                 return this.View(input);
             }
@@ -98,11 +92,6 @@ namespace LuxuryEstateProject.Web.Controllers.Agent
                 Phone = agent.Phone,
                 ImageRemoteImageUrl = agent.ImageRemoteImageUrl,
             };
-
-            if (agent == null)
-            {
-                return this.NotFound();
-            }
 
             return this.View(model);
         }

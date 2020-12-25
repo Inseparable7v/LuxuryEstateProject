@@ -170,7 +170,7 @@
             var districtSelect = $('#District');
             districtSelect.empty();
             if (selectedRegion != null && selectedRegion != '') {
-                $.getJSON('@Url.Action("GetDisctirct")', { Id: selectedRegion }, function (regions) {
+                $.getJSON('@Url.Action("GetDistrict")', { Id: selectedRegion }, function (regions) {
                     if (regions != null && !jQuery.isEmptyObject(regions))
                     {
                         $.each(regions, function (index, region) {

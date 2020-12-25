@@ -1,7 +1,7 @@
 ﻿@using LuxuryEstateProject.Data.Models
 @model LuxuryEstateProject.Web.ViewModels.Agent.AgentInputViewModel
 @{
-    this.ViewData["Title"] = "Add new Property";
+    this.ViewData["Title"] = "Add new Agent";
 }
 <br />
 <br />
@@ -31,7 +31,7 @@
             <span asp-validation-for="Phone" class="text-danger"></span>
         </div>
         <div class="form-group col-md-6">
-            <label asp-for="Email"></label>
+            <label asp-for="Email" class="color-b"></label>
             <input asp-for="Email" class="form-control" />
             <span asp-validation-for="Email" class="text-danger"></span>
         </div>
@@ -39,16 +39,6 @@
             <label asp-for="Description"></label>
             <textarea asp-for="Description" class="form-control" rows="3"></textarea>
             <span asp-validation-for="Description" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="form-group col-md-12">
-            <label asp-for="PropertyId" class="color-b"></label>
-            @*<vc:CategoriesDropDown name="CategoryId"></vc:CategoriesDropDown>*@
-            <select asp-for="PropertyId" id="Country" class="form-control col-md-12" asp-items="@Model.Properties">
-                <option value="" disabled selected>Choose your Country...</option>
-            </select>
-            <span asp-validation-for="PropertyId" class="text-danger"></span>
         </div>
     </div>
     <div class="custom-file col-md-12 mt-2">
