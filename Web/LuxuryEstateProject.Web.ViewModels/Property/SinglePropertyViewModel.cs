@@ -42,13 +42,12 @@
 
         public string DistrictName { get; set; }
 
-        public ICollection<AmenitiesViewModel> Amenities { get; set; }
+        public ICollection<AmenitiesViewModel> RealEstateAmenities { get; set; }
 
         /// <inheritdoc/>
         public void CreateMappings(IProfileExpression configuration)
         {
-            configuration.CreateMap<RealEstateProperty, SinglePropertyViewModel>()
-                .ForMember(
+            configuration.CreateMap<RealEstateProperty, SinglePropertyViewModel>().ForMember(
                     x => x.CityName,
                     opt => opt.MapFrom(x => x.Countries.Cities.FirstOrDefault().Name))
                 .ForMember(x => x.DistrictName, opt => opt.MapFrom(x => x.Countries.Cities.FirstOrDefault().Districts.FirstOrDefault().Name))

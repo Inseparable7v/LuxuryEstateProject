@@ -68,6 +68,9 @@
             <input asp-for="Price" class="form-control" />
             <span asp-validation-for="Price" class="text-danger"></span>
         </div>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
         <br />
         <div class="form-group col-md-6">
             <label asp-for="Size" class="color-b"></label>
@@ -98,14 +101,21 @@
             </select>
             <span asp-validation-for="DistrictId" class="text-danger"></span>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
             <label asp-for="AgentId" class="color-b"></label>
             <select asp-for="AgentId" class="form-control " asp-items="@Model.AgentsCreateForm">
                 <option value="" disabled selected>Choose your Agent</option>
             </select>
             <span asp-validation-for="AgentId" class="text-danger"></span>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
+            <label asp-for="Amenity" class="color-b"></label>
+            <select asp-for="Amenity" class="form-control col-lg-12" asp-items="@Model.Amenities" multiple="multiple">
+                <option value="" disabled selected>Choose Amenities</option>
+            </select>
+            <span asp-validation-for="Amenity" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-4">
             <label asp-for="Material" class="color-b"></label>
             <select asp-for="Material" class="form-control col-lg-12" asp-items="Html.GetEnumSelectList<Material>()">
                 <option value="" disabled selected>Choose Material</option>

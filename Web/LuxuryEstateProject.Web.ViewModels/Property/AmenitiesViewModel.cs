@@ -7,8 +7,8 @@
     using LuxuryEstateProject.Data.Models;
     using LuxuryEstateProject.Services.Mapping;
 
-    public class AmenitiesViewModel : IMapFrom<Amenities>
+    public class AmenitiesViewModel : IMapFrom<RealEstateAmenity>
     {
-        public string Name { get; set; }
+        public string AmenityName { get; set; }
     }
 }

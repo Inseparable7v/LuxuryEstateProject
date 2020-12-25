@@ -22,10 +22,12 @@ namespace LuxuryEstateProject.Services.Data.Property
         private readonly string[] allowedExtensions = new[] { "jpg", "png", "jpeg" };
 
         private readonly IDeletableEntityRepository<RealEstateProperty> realRepository;
+        private readonly IDeletableEntityRepository<Amenity> amenityRepository;
 
-        public PropertyService(IDeletableEntityRepository<RealEstateProperty> realRepository)
+        public PropertyService(IDeletableEntityRepository<RealEstateProperty> realRepository, IDeletableEntityRepository<Amenity> amenityRepository)
         {
             this.realRepository = realRepository;
+            this.amenityRepository = amenityRepository;
         }
 
         /// <inheritdoc/>
@@ -88,6 +90,16 @@ namespace LuxuryEstateProject.Services.Data.Property
                 Garage = input.Garage,
                 Type = (PropertyType)input.Type,
             };
+
+            foreach (var amenityInput in input.Amenity)
+            {
+                property.RealEstateAmenities.Add(new RealEstateAmenity()
+                {
+                    AmenityId = int.Parse(amenityInput),
+                    RealEstatePropertyId = property.Id,
+                });
+            }
+
             Directory.CreateDirectory($"{imagePath}");
             foreach (var image in input.Images)
             {

@@ -530,7 +530,6 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProje
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\bin\Debug\netcoreapp3.1\bundleconfig.json
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\bin\Debug\netcoreapp3.1\libman.json
-C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\bin\Debug\netcoreapp3.1\testhost.exe
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\bin\Debug\netcoreapp3.1\testhost.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
@@ -1057,3 +1056,4 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProje
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.Tests.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\bin\Debug\netcoreapp3.1\SixLabors.ImageSharp.dll
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Tests\LuxuryEstateProject.Web.Tests\obj\Debug\netcoreapp3.1\scopedcss\bundle\LuxuryEstateProject.Web.Tests.styles.css

@@ -26,24 +26,24 @@
     <!-- ======= Intro Section ======= -->
 
     <div class="intro">
-        <div id="carousel" class="owl-carousel owl-theme">
+        <div id="carousel" class="owl-carousel">
             @foreach (var estateModel in @Model.PropertyViewModels)
             {
-                <div class="carousel-item-a intro-item bg-image img-fluid" style="background-image: url(@estateModel.ImageRemoteImageUrl)">
+                <div class="carousel-item-a  bg-image d-block w-100" style="background-image: url(@estateModel.ImageRemoteImageUrl)">
                     <div class="overlay overlay-a"></div>
                     <div class="intro-content display-table">
                         <div class="table-cell">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-6">
                                         <div class="intro-body">
-                                            <p class="intro-title-top">
-                                                @estateModel.DistrictName
+                                            <p  class="intro-title-top">
+                                                <h3>@estateModel.DistrictName</h3>
                                             </p>
-                                            <h1 class="intro-title mb-4">
-                                                <span class="color-b">@estateModel.Size kv/m</span>
+                                            <h2 class="intro-title mb-4">
                                                 <br> @estateModel.Name
-                                            </h1>
+                                                <span class="color-b">@estateModel.Size m²</span>
+                                            </h2>
                                             <p class="intro-subtitle intro-price">
                                                 <a asp-area="" asp-controller="Property" asp-action="PropertySingle" asp-route-id="@estateModel.Id"><span class="price-a">@estateModel.Type | $ @estateModel.Price</span></a>
                                             </p>
@@ -85,7 +85,7 @@
                             </div>
                             <div class="card-body-c">
                                 <p class="content-c">
-                                    Real Estate Financian (Loans)
+                                    Real Estate Financial (Loans)
                                 </p>
                             </div>
                             <div class="card-footer-c">
@@ -108,7 +108,7 @@
                             </div>
                             <div class="card-body-c">
                                 <p class="content-c">
-                                    Avoit those problems when you sell your property
+                                    Avoid those problems when you sell your property
                                 </p>
                             </div>
                             <div class="card-footer-c">

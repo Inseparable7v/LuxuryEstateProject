@@ -25,6 +25,10 @@
 
         public DbSet<RealEstateProperty> RealEstateProperties { get; set; }
 
+        public DbSet<RealEstateAmenity> RealEstateAmenities { get; set; }
+
+        public DbSet<Amenity> Amenities { get; set; }
+
         public DbSet<Image> Images { get; set; }
 
         public DbSet<Agent> Agents { get; set; }

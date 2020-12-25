@@ -26,6 +26,7 @@
 
             var seeders = new List<ISeeder>
                           {
+                              new AmenitySeeder(),
                               new AgentSeeder(),
                               new CountrySeeder(),
                               new PropertySeeder(),

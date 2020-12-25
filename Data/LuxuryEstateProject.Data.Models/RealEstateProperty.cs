@@ -11,7 +11,7 @@
         public RealEstateProperty()
         {
             this.Images = new HashSet<Image>();
-            this.Amenities = new HashSet<Amenities>();
+            this.RealEstateAmenities = new HashSet<RealEstateAmenity>();
         }
 
         [Required]
@@ -48,7 +48,7 @@
 
         public virtual Agent Agent { get; set; }
 
-        public virtual ICollection<Amenities> Amenities { get; set; }
+        public virtual ICollection<RealEstateAmenity> RealEstateAmenities { get; set; }
 
         public virtual ICollection<Image> Images { get; set; }
     }

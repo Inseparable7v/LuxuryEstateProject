@@ -65,7 +65,7 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.ToTable("Agents");
                 });
 
-            modelBuilder.Entity("LuxuryEstateProject.Data.Models.Amenities", b =>
+            modelBuilder.Entity("LuxuryEstateProject.Data.Models.Amenity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -87,14 +87,9 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("RealEstatePropertyId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("IsDeleted");
-
-                    b.HasIndex("RealEstatePropertyId");
 
                     b.ToTable("Amenities");
                 });
@@ -360,6 +355,28 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.ToTable("Images");
                 });
 
+            modelBuilder.Entity("LuxuryEstateProject.Data.Models.RealEstateAmenity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AmenityId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RealEstatePropertyId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AmenityId");
+
+                    b.HasIndex("RealEstatePropertyId");
+
+                    b.ToTable("RealEstateAmenities");
+                });
+
             modelBuilder.Entity("LuxuryEstateProject.Data.Models.RealEstateProperty", b =>
                 {
                     b.Property<int>("Id")
@@ -570,13 +587,6 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("LuxuryEstateProject.Data.Models.Amenities", b =>
-                {
-                    b.HasOne("LuxuryEstateProject.Data.Models.RealEstateProperty", null)
-                        .WithMany("Amenities")
-                        .HasForeignKey("RealEstatePropertyId");
-                });
-
             modelBuilder.Entity("LuxuryEstateProject.Data.Models.City", b =>
                 {
                     b.HasOne("LuxuryEstateProject.Data.Models.Country", "Country")
@@ -600,6 +610,21 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.HasOne("LuxuryEstateProject.Data.Models.RealEstateProperty", null)
                         .WithMany("Images")
                         .HasForeignKey("RealEstatePropertyId");
+                });
+
+            modelBuilder.Entity("LuxuryEstateProject.Data.Models.RealEstateAmenity", b =>
+                {
+                    b.HasOne("LuxuryEstateProject.Data.Models.Amenity", "Amenity")
+                        .WithMany("RealEstateAmenities")
+                        .HasForeignKey("AmenityId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("LuxuryEstateProject.Data.Models.RealEstateProperty", "RealEstateProperty")
+                        .WithMany("RealEstateAmenities")
+                        .HasForeignKey("RealEstatePropertyId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("LuxuryEstateProject.Data.Models.RealEstateProperty", b =>

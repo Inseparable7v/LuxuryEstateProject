@@ -24,8 +24,9 @@ namespace LuxuryEstateProject.Web.Controllers
         private IAgentService agentService;
         private ICity cityService;
         private IDistrict districtService;
+        private IAmenities amenitiesService;
 
-        public PropertyController(IPropertyService propertyService, ICountryService countryService, IAgentService agentService, ICity cityService, IDistrict districtService, IWebHostEnvironment environment)
+        public PropertyController(IPropertyService propertyService, ICountryService countryService, IAgentService agentService, IAmenities amenitiesService, ICity cityService, IDistrict districtService, IWebHostEnvironment environment)
         {
             this.propertyService = propertyService;
             this.countryService = countryService;
@@ -33,6 +34,7 @@ namespace LuxuryEstateProject.Web.Controllers
             this.agentService = agentService;
             this.cityService = cityService;
             this.districtService = districtService;
+            this.amenitiesService = amenitiesService;
         }
 
         [HttpGet]
@@ -65,6 +67,7 @@ namespace LuxuryEstateProject.Web.Controllers
             {
                 Countries = this.countryService.GetAllAsSelectListItems(),
                 AgentsCreateForm = this.agentService.GetAllAsSelectListItems(),
+                Amenities = this.amenitiesService.GetAllAsSelectListItems(),
             };
             return this.View(viewModel);
         }
@@ -78,6 +81,7 @@ namespace LuxuryEstateProject.Web.Controllers
                 input.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
                 input.Cities = this.cityService.GetAllAsSelectListItems();
                 input.Districts = this.districtService.GetAllAsSelectListItems();
+                input.Amenities = this.amenitiesService.GetAllAsSelectListItems();
                 return this.View(input);
             }
 
@@ -92,6 +96,7 @@ namespace LuxuryEstateProject.Web.Controllers
                 input.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
                 input.Cities = this.cityService.GetAllAsSelectListItems();
                 input.Districts = this.districtService.GetAllAsSelectListItems();
+                input.Amenities = this.amenitiesService.GetAllAsSelectListItems();
 
                 return this.View(input);
             }

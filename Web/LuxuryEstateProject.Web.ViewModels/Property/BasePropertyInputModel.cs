@@ -76,5 +76,9 @@
         public int AgentId { get; set; }
 
         public IEnumerable<SelectListItem> AgentsCreateForm { get; set; }
+
+        public List<string> Amenity { get; set; }
+
+        public IEnumerable<SelectListItem> Amenities { get; set; }
     }
 }
