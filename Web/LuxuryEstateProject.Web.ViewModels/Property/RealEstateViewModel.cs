@@ -1,13 +1,10 @@
 ﻿namespace LuxuryEstateProject.Web.ViewModels.Property
 {
-    using System.Collections;
-    using System.Collections.Generic;
     using System.Linq;
 
     using AutoMapper;
     using LuxuryEstateProject.Data.Models;
     using LuxuryEstateProject.Services.Mapping;
-    using LuxuryEstateProject.Web.ViewModels.Agent;
 
     public class RealEstateViewModel : IMapFrom<RealEstateProperty>, IHaveCustomMappings
     {

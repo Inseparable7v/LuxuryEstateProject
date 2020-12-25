@@ -4,8 +4,6 @@ namespace LuxuryEstateProject.Services.Data.Property
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
-
-    using LuxuryEstateProject.Data.Models;
     using LuxuryEstateProject.Web.ViewModels.Property;
 
     public interface IPropertyService

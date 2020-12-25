@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Png;
 using SixLabors.ImageSharp.Processing;
 
@@ -22,12 +21,10 @@ namespace LuxuryEstateProject.Services.Data.Property
         private readonly string[] allowedExtensions = new[] { "jpg", "png", "jpeg" };
 
         private readonly IDeletableEntityRepository<RealEstateProperty> realRepository;
-        private readonly IDeletableEntityRepository<Amenity> amenityRepository;
 
-        public PropertyService(IDeletableEntityRepository<RealEstateProperty> realRepository, IDeletableEntityRepository<Amenity> amenityRepository)
+        public PropertyService(IDeletableEntityRepository<RealEstateProperty> realRepository)
         {
             this.realRepository = realRepository;
-            this.amenityRepository = amenityRepository;
         }
 
         /// <inheritdoc/>
@@ -116,7 +113,7 @@ namespace LuxuryEstateProject.Services.Data.Property
 
                 using var imageSharp = SixLabors.ImageSharp.Image.Load(image.OpenReadStream());
 
-                imageSharp.Mutate(x => x.Resize(600, 800));
+                imageSharp.Mutate(x => x.Resize(750, 725));
 
                 property.Images.Add(dbImage);
 

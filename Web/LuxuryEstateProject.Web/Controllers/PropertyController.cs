@@ -2,16 +2,12 @@
 using System.Collections.Generic;
 using LuxuryEstateProject.Services.Data;
 using LuxuryEstateProject.Services.Data.Agent;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LuxuryEstateProject.Web.Controllers
 {
-    using System.Linq;
     using System.Threading.Tasks;
-
-    using LuxuryEstateProject.Data.Models;
     using LuxuryEstateProject.Services.Data.Property;
     using LuxuryEstateProject.Web.ViewModels.Property;
     using Microsoft.AspNetCore.Mvc;

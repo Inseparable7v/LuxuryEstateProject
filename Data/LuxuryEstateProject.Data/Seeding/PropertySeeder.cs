@@ -1,12 +1,7 @@
 ﻿namespace LuxuryEstateProject.Data.Seeding
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
     using System.Threading.Tasks;
-
-    using LuxuryEstateProject.Data.Models;
-    using Microsoft.EntityFrameworkCore.Internal;
 
     public class PropertySeeder : ISeeder
     {

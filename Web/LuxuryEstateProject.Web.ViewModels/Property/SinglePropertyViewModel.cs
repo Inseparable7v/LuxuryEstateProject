@@ -51,7 +51,7 @@
                     x => x.CityName,
                     opt => opt.MapFrom(x => x.Countries.Cities.FirstOrDefault().Name))
                 .ForMember(x => x.DistrictName, opt => opt.MapFrom(x => x.Countries.Cities.FirstOrDefault().Districts.FirstOrDefault().Name))
-            .ForMember(x => x.ImageRemoteImageUrl, opt =>
+                .ForMember(x => x.ImageRemoteImageUrl, opt =>
                 opt.MapFrom(x =>
                     x.Images.Select(x => x.RemoteImageUrl != null ? x.RemoteImageUrl : "/assets/img/" + x.Id + "." + x.Extension)));
         }

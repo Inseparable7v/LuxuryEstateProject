@@ -1,7 +1,6 @@
 ﻿namespace LuxuryEstateProject.Web.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Logging;
 
     public class ContactController : BaseController
     {

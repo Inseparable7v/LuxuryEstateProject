@@ -4,7 +4,6 @@
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
-    using System.Text;
     using System.Threading.Tasks;
 
     using LuxuryEstateProject.Data.Common.Repositories;
@@ -74,7 +73,7 @@
 
                 using var imageSharp = SixLabors.ImageSharp.Image.Load(image.OpenReadStream());
 
-                imageSharp.Mutate(x => x.Resize(600, 700));
+                imageSharp.Mutate(x => x.Resize(650, 70));
 
                 agent.Images.Add(dbImage);
 

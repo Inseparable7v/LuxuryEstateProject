@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace LuxuryEstateProject.Services.Data
+﻿namespace LuxuryEstateProject.Services.Data
 {
     using System.Collections.Generic;
 

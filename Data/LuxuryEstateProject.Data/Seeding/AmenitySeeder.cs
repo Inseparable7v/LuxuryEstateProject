@@ -1,11 +1,7 @@
-﻿using System.Runtime.InteropServices;
-
-namespace LuxuryEstateProject.Data.Seeding
+﻿namespace LuxuryEstateProject.Data.Seeding
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
     using System.Threading.Tasks;
 
     using LuxuryEstateProject.Data.Models;
@@ -14,10 +10,10 @@ namespace LuxuryEstateProject.Data.Seeding
     {
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
         {
-            //if (dbContext.Amenities.Any())
-            //{
-            //    return;
-            //}
+            if (dbContext.Amenities.Any())
+            {
+                return;
+            }
 
             await dbContext.Amenities.AddAsync(new Amenity()
             {

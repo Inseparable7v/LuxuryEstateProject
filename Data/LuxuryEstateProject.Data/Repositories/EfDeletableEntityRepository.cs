@@ -6,7 +6,6 @@
 
     using LuxuryEstateProject.Data.Common.Models;
     using LuxuryEstateProject.Data.Common.Repositories;
-    using LuxuryEstateProject.Data.Models;
     using Microsoft.EntityFrameworkCore;
 
     public class EfDeletableEntityRepository<TEntity> : EfRepository<TEntity>, IDeletableEntityRepository<TEntity>

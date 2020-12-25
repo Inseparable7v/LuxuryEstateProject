@@ -1,8 +1,5 @@
 ﻿namespace LuxuryEstateProject.Web.ViewModels
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
 
     using LuxuryEstateProject.Data.Models;
     using LuxuryEstateProject.Services.Mapping;
