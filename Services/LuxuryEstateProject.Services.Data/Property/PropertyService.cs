@@ -1,12 +1,8 @@
-﻿using System.IO;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using SixLabors.ImageSharp.Formats.Png;
-using SixLabors.ImageSharp.Processing;
-
-namespace LuxuryEstateProject.Services.Data.Property
+﻿namespace LuxuryEstateProject.Services.Data.Property
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -14,7 +10,10 @@ namespace LuxuryEstateProject.Services.Data.Property
     using LuxuryEstateProject.Data.Models;
     using LuxuryEstateProject.Services.Mapping;
     using LuxuryEstateProject.Web.ViewModels.Property;
+    using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.EntityFrameworkCore;
+    using SixLabors.ImageSharp.Formats.Png;
+    using SixLabors.ImageSharp.Processing;
 
     public class PropertyService : IPropertyService
     {
@@ -123,6 +122,24 @@ namespace LuxuryEstateProject.Services.Data.Property
             }
 
             await this.realRepository.AddAsync(property);
+            await this.realRepository.SaveChangesAsync();
+        }
+
+        public async Task UpdateAsync(int id, EditPropertyinputModel input)
+        {
+            var model = this.realRepository.All().FirstOrDefault(x => x.Id.Equals(id));
+
+            model.Bath = input.Bath;
+            model.Bed = input.Bed;
+            model.AgentId = input.AgentId;
+            model.Description = input.Description;
+            model.Floor = input.Floor;
+            model.TotalNumberOfFloors = input.TotalNumbersOfFloors;
+            model.Size = input.Size;
+            model.Price = input.Price;
+            model.Name = input.Name;
+            model.Year = input.Year;
+
             await this.realRepository.SaveChangesAsync();
         }
     }

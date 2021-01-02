@@ -73,7 +73,7 @@
 
                 using var imageSharp = SixLabors.ImageSharp.Image.Load(image.OpenReadStream());
 
-                imageSharp.Mutate(x => x.Resize(650, 70));
+                imageSharp.Mutate(x => x.Resize(550, 700));
 
                 agent.Images.Add(dbImage);
 

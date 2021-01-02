@@ -8,6 +8,7 @@
     using LuxuryEstateProject.Services.Data.Property;
     using LuxuryEstateProject.Web.ViewModels.Agent;
     using LuxuryEstateProject.Web.ViewModels.Property;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;
 
@@ -24,12 +25,14 @@
             this.environment = environment;
         }
 
+        [Authorize]
         public IActionResult Create()
         {
             var viewModel = new AgentInputViewModel();
             return this.View(viewModel);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Create(AgentInputViewModel input)
         {

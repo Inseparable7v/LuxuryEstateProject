@@ -1,10 +1,9 @@
-﻿using LuxuryEstateProject.Web.ViewModels.Agent;
-
-namespace LuxuryEstateProject.Services.Data.Agent
+﻿namespace LuxuryEstateProject.Services.Data.Agent
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
+    using LuxuryEstateProject.Web.ViewModels.Agent;
     using Microsoft.AspNetCore.Mvc.Rendering;
 
     public interface IAgentService

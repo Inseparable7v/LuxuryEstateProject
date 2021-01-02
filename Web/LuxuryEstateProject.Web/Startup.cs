@@ -1,6 +1,4 @@
-﻿using LuxuryEstateProject.Services.Data.Agent;
-
-namespace LuxuryEstateProject.Web
+﻿namespace LuxuryEstateProject.Web
 {
     using System.Reflection;
 
@@ -11,6 +9,7 @@ namespace LuxuryEstateProject.Web
     using LuxuryEstateProject.Data.Repositories;
     using LuxuryEstateProject.Data.Seeding;
     using LuxuryEstateProject.Services.Data;
+    using LuxuryEstateProject.Services.Data.Agent;
     using LuxuryEstateProject.Services.Data.Property;
     using LuxuryEstateProject.Services.Mapping;
     using LuxuryEstateProject.Services.Messaging;

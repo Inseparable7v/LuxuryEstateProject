@@ -21,7 +21,7 @@
         public string Email { get; set; }
 
         [Required]
-        [Range(0, 10)]
+        [MaxLength(10, ErrorMessage = "Phone should contain 10 numbers")]
         [Phone]
         public string Phone { get; set; }
 

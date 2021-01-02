@@ -14,18 +14,26 @@
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
 
-    <!-- =======================================================
-    * Template Name: EstateAgency - v2.1.0
-    * Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
 </head>
 
 <body>
     <!-- ======= Intro Section ======= -->
 
-    <div class="intro">
+    <div class="intro intro-corousel">
         <div id="carousel" class="owl-carousel">
             @foreach (var estateModel in @Model.PropertyViewModels)
             {
@@ -207,7 +215,7 @@
                                 <h2 class="title-a">Best Agents</h2>
                             </div>
                             <div class="title-link">
-                                <a href="agents-grid.html">
+                                <a asp-area="" asp-controller="Agent" asp-action="All">
                                     All Agents
                                     <span class="ion-ios-arrow-forward"></span>
                                 </a>

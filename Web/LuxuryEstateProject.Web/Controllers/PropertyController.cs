@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using LuxuryEstateProject.Services.Data;
-using LuxuryEstateProject.Services.Data.Agent;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.Rendering;
-
-namespace LuxuryEstateProject.Web.Controllers
+﻿namespace LuxuryEstateProject.Web.Controllers
 {
+    using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
+
+    using LuxuryEstateProject.Services.Data;
+    using LuxuryEstateProject.Services.Data.Agent;
     using LuxuryEstateProject.Services.Data.Property;
     using LuxuryEstateProject.Web.ViewModels.Property;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.Rendering;
 
     public class PropertyController : BaseController
     {
@@ -33,6 +34,7 @@ namespace LuxuryEstateProject.Web.Controllers
             this.amenitiesService = amenitiesService;
         }
 
+        [Authorize]
         [HttpGet]
         public ActionResult GetRegions(int Id)
         {
@@ -45,6 +47,7 @@ namespace LuxuryEstateProject.Web.Controllers
             return null;
         }
 
+        [Authorize]
         [HttpGet]
         public ActionResult GetDistrict(int Id)
         {
@@ -57,6 +60,7 @@ namespace LuxuryEstateProject.Web.Controllers
             return null;
         }
 
+        [Authorize]
         public IActionResult Create()
         {
             var viewModel = new PropertyInputModel
@@ -68,6 +72,7 @@ namespace LuxuryEstateProject.Web.Controllers
             return this.View(viewModel);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Create(PropertyInputModel input)
         {
@@ -127,6 +132,29 @@ namespace LuxuryEstateProject.Web.Controllers
             var property = await this.propertyService.GetByIdAsync<SinglePropertyViewModel>(id);
 
             return this.View(property);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var model = await this.propertyService.GetByIdAsync<EditPropertyinputModel>(id);
+            model.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
+            return this.View(model);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, EditPropertyinputModel inputModel)
+        {
+            if (!this.ModelState.IsValid)
+            {
+
+                inputModel.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
+                return this.View(inputModel);
+            }
+
+            await this.propertyService.UpdateAsync(id, inputModel);
+            return this.RedirectToAction(nameof(this.PropertySingle), new { id });
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using LuxuryEstateProject.Web.ViewModels.Property;
-
-namespace LuxuryEstateProject.Web.ViewModels.Agent
+﻿namespace LuxuryEstateProject.Web.ViewModels.Agent
 {
     using System.Collections.Generic;
     using System.Linq;
@@ -8,6 +6,7 @@ namespace LuxuryEstateProject.Web.ViewModels.Agent
     using AutoMapper;
     using LuxuryEstateProject.Data.Models;
     using LuxuryEstateProject.Services.Mapping;
+    using LuxuryEstateProject.Web.ViewModels.Property;
 
     public class AgentViewModel : IMapFrom<Agent>, IHaveCustomMappings
     {

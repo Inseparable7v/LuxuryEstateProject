@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
-
-namespace LuxuryEstateProject.Services.Data.Property
+﻿namespace LuxuryEstateProject.Services.Data.Property
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
+
     using LuxuryEstateProject.Web.ViewModels.Property;
+    using Microsoft.AspNetCore.Mvc.Rendering;
 
     public interface IPropertyService
     {
@@ -21,5 +21,7 @@ namespace LuxuryEstateProject.Services.Data.Property
         IEnumerable<T> GetAll<T>(int page, int itemsPerPage);
 
         IEnumerable<SelectListItem> GetAllAsSelectListItems();
+
+        Task UpdateAsync(int id, EditPropertyinputModel input);
     }
 }

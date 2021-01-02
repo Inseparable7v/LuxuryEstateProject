@@ -1,12 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
-
-namespace LuxuryEstateProject.Services.Data
+﻿namespace LuxuryEstateProject.Services.Data
 {
     using System.Collections.Generic;
     using System.Linq;
 
     using LuxuryEstateProject.Data.Common.Repositories;
     using LuxuryEstateProject.Data.Models;
+    using Microsoft.AspNetCore.Mvc.Rendering;
 
     public class CountryService : ICountryService
     {

@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace LuxuryEstateProject.Data.Migrations
+﻿namespace LuxuryEstateProject.Data.Migrations
 {
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     public partial class AddAmenityTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -1,4 +1,5 @@
-﻿@model LuxuryEstateProject.Web.ViewModels.Property.SinglePropertyViewModel
+﻿@using LuxuryEstateProject.Common
+@model LuxuryEstateProject.Web.ViewModels.Property.SinglePropertyViewModel
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,6 +25,10 @@
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-4">
+                        @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+                        {
+                        <a asp-area="" asp-controller="Property" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
+                        }
                         <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">

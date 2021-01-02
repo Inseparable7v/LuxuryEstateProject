@@ -8,12 +8,14 @@
     <title>Grid Page</title>
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
+
+    <link href="~/assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <main id="main">
         <!-- ======= Intro Single ======= -->
-        
+
         <section class="intro-single">
             <div class="container">
                 @if (this.TempData.ContainsKey("Message"))
@@ -111,11 +113,11 @@
                             </div>
                         </div>
                     }
-                    <partial name="PagingPropertyPartial" model="@Model" />
                 </div>
+
+                <partial name="PagingPropertyPartial" model="@Model" />
             </div>
         </section><!-- End Property Grid Single-->
-
     </main><!-- End #main -->
 </body>
 </html>
