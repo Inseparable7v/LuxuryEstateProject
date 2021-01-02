@@ -21,16 +21,12 @@
         public string Email { get; set; }
 
         [Required]
-        [MaxLength(10, ErrorMessage = "Phone should contain 10 numbers")]
+        [MaxLength(10, ErrorMessage = "Phone should contain exact 10 numbers")]
         [Phone]
         public string Phone { get; set; }
 
         [MaxLength(150)]
         [MinLength(10)]
         public string Description { get; set; }
-
-        //public int PropertyId { get; set; }
-
-        //public IEnumerable<SelectListItem> Properties { get; set; }
     }
 }

@@ -110,5 +110,18 @@
 
             return this.agentRepository.All().Select(x => new SelectListItem { Text = x.Name + " " + x.LastName, Value = x.Id.ToString() }).OrderBy(c => c.Text);
         }
+
+        public async Task UpdateAsync(int id, EditAgentInputModel input)
+        {
+            var model = this.agentRepository.All().FirstOrDefault(x => x.Id.Equals(id));
+
+            model.Name = input.Name;
+            model.LastName = input.LastName;
+            model.Phone = input.Phone;
+            model.Description = input.Description;
+            model.Email = input.Email;
+
+            await this.agentRepository.SaveChangesAsync();
+        }
     }
 }

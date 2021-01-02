@@ -97,5 +97,25 @@
 
             return this.View(model);
         }
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            var model = await this.agentService.GetByIdAsync<EditAgentInputModel>(id);
+
+            return this.View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, EditAgentInputModel input)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(input);
+            }
+
+            await this.agentService.UpdateAsync(id, input);
+
+            return this.RedirectToAction(nameof(this.All), new { id });
+        }
     }
 }

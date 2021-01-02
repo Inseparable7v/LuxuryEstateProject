@@ -21,5 +21,7 @@
         int GetCount();
 
         Task<T> GetByIdAsync<T>(int id);
+
+        Task UpdateAsync(int id, EditAgentInputModel input);
     }
 }

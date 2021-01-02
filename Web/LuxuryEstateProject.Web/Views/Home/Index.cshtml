@@ -34,10 +34,10 @@
     <!-- ======= Intro Section ======= -->
 
     <div class="intro intro-corousel">
-        <div id="carousel" class="owl-carousel">
+        <div id="carousel" class="owl-carousel owl-theme">
             @foreach (var estateModel in @Model.PropertyViewModels)
             {
-                <div class="carousel-item-a  bg-image d-block w-100" style="background-image: url(@estateModel.ImageRemoteImageUrl)">
+                <div class="carousel-item-a intro-item bg-image d-block w-100" style="background-image: url(@estateModel.ImageRemoteImageUrl)">
                     <div class="overlay overlay-a"></div>
                     <div class="intro-content display-table">
                         <div class="table-cell">

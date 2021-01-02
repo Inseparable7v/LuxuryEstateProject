@@ -953,3 +953,4 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\PagingPropertyPartial.cshtml.g.cs
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\scopedcss\bundle\LuxuryEstateProject.Web.styles.css
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Property\Edit.cshtml.g.cs
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Agent\Edit.cshtml.g.cs

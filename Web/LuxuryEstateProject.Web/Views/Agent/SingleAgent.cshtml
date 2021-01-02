@@ -16,6 +16,7 @@
         <!-- ======= Intro Single ======= -->
         <section class="intro-single">
             <div class="container">
+                <a asp-area="" asp-controller="Agent" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary col-md-3">Edit</a>
                 <div class="row">
                     <div class="col-md-12 col-lg-8">
                         <div class="title-single-box">
@@ -130,56 +131,56 @@
                         </div>
                         @foreach (var property in @Model.RealEstateProperties)
                         {
-                    <div class="col-md-4">
-                        <div class="card-box-a card-shadow">
-                            <div class="img-box-a">
-                                <img src="@property.ImageRemoteImageUrl" alt="" class="img-a img-fluid">
-                            </div>
-                            <div class="card-overlay-hover">
-                                <div class="card-overlay-a-content">
-                                    <div class="card-header-a">
-                                        <h2 class="card-title-a">
-                                            <a href="#">
-                                                <br />@property.Name
-                                            </a>
-                                        </h2>
+                            <div class="col-md-4">
+                                <div class="card-box-a card-shadow">
+                                    <div class="img-box-a">
+                                        <img src="@property.ImageRemoteImageUrl" alt="" class="img-a img-fluid">
                                     </div>
-                                    <div class="card-body-a">
-                                        <div class="price-box d-flex">
-                                            <span class="price-a">rent | @property.Price</span>
+                                    <div class="card-overlay-hover">
+                                        <div class="card-overlay-a-content">
+                                            <div class="card-header-a">
+                                                <h2 class="card-title-a">
+                                                    <a href="#">
+                                                        <br />@property.Name
+                                                    </a>
+                                                </h2>
+                                            </div>
+                                            <div class="card-body-a">
+                                                <div class="price-box d-flex">
+                                                    <span class="price-a">rent | @property.Price</span>
+                                                </div>
+                                                <a asp-area="" asp-controller="Property" asp-action="PropertySingle" asp-route-id="@property.Id" class="link-a">
+                                                    Click here to view
+                                                    <span class="ion-ios-arrow-forward"></span>
+                                                </a>
+                                            </div>
+                                            <div class="card-footer-a">
+                                                <ul class="card-info d-flex justify-content-around">
+                                                    <li>
+                                                        <h4 class="card-info-title">Area</h4>
+                                                        <span>
+                                                            @property.Size
+                                                            <sup>2</sup>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <h4 class="card-info-title">Beds</h4>
+                                                        <span>@property.Bed</span>
+                                                    </li>
+                                                    <li>
+                                                        <h4 class="card-info-title">Baths</h4>
+                                                        <span>@property.Bath</span>
+                                                    </li>
+                                                    <li>
+                                                        <h4 class="card-info-title">Garages</h4>
+                                                        <span>@property.Garage</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <a asp-area="" asp-controller="Property" asp-action="PropertySingle" asp-route-id="@property.Id" class="link-a">
-                                            Click here to view
-                                            <span class="ion-ios-arrow-forward"></span>
-                                        </a>
-                                    </div>
-                                    <div class="card-footer-a">
-                                        <ul class="card-info d-flex justify-content-around">
-                                            <li>
-                                                <h4 class="card-info-title">Area</h4>
-                                                <span>
-                                                    @property.Size
-                                                    <sup>2</sup>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Beds</h4>
-                                                <span>@property.Bed</span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Baths</h4>
-                                                <span>@property.Bath</span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Garages</h4>
-                                                <span>@property.Garage</span>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
                         }
                     </div>
                 </div>

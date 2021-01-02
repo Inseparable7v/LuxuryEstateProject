@@ -148,7 +148,6 @@
         {
             if (!this.ModelState.IsValid)
             {
-
                 inputModel.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
                 return this.View(inputModel);
             }
