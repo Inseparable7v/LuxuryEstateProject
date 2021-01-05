@@ -22,6 +22,7 @@ Users can only add property.
 
 ```bash
 🔨 Used technologies
+
 Web Framework:
 -ASP.NET Core 3.1
 
@@ -45,7 +46,6 @@ Markup Languages
 -CSS
     -CSS Framework: Bootstrap 4
 
-
 Additionals:
 -ASP.NET CORE Areas
 
@@ -56,10 +56,6 @@ Additionals:
 -AutoMapper
 
 -Newtonsoft.Json
-
--Moq
-
--xUnit
 
 -AJAX
 
@@ -72,5 +68,8 @@ Additionals:
 -Dependency Injection
 ```
 
+🎞️ Website Screenshots:
+
+![Alt text](https://prnt.sc/wguqen"Optional title")
 
 ##Using Nikolay.IT ASP.NET Core Template
