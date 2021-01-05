@@ -1,72 +1,86 @@
 ## LuxuryEstateProject
 
-💡 ## My Personal Project on ASP.NET Core application for the Real Estate C# Web - ASP.NET Core October 2020 @SoftUni
+## 💡 My Personal Project on ASP.NET Core application for the Real Estate C# Web - ASP.NET Core October 2020 @SoftUni
 
-📝 ### Project Description
+## 📝 Project Description
 LuxuryEstate is a website for Rent or Sale a Real Estate.
 The main zone offers basic properties, agents and lastfiveproperties. Users can add property, administrators can add agents. Each property has its own agent to combine with it.
 Administrators can edit, delete, and add a property or an agent.
 Users can only add property.
 
 
-**The Project is about a Luxury-Real-Estate properties**
+** The Project is about a Luxury-Real-Estate properties**
 
 ```bash
 **Futures:**
 ✔️ Add property,
+✔️ Add agent,
 ✔️ See Latest properties,
 ✔️ Contact Us page,
 ✔️ Agents Page,
+✔️ Agents Grid Page,
 ✔️ Properties Grid Page,
+✔️ Properties Single Page,
 ```
 
 ```bash
-🔨 Used technologies
+### 🔨 Used technologies
 
-Web Framework:
--ASP.NET Core 3.1
+###### ID:
 
-Programming Languages:
--Back-end
-    -C#
+    -Visual Studio Enterprise 2019
 
--Front-end
-    -JavaScript
+###### Web Framework: 
 
-Database:
--MS SQL Server
+    -ASP.NET Core 3.1
 
--MS SQL Server Management Studio 2017
+###### Programming Languages:
 
--ORM:
-    - Entity Framework Core
+    -Back-end
+        -C#
 
-Markup Languages
--HTML5
--CSS
-    -CSS Framework: Bootstrap 4
+    -Front-end
+        -JavaScript
 
-Additionals:
--ASP.NET CORE Areas
+###### Database:
 
--ASP.NET CORE Identity System
+    -MS SQL Server
 
--Partial Views
+    -MS SQL Server Management Studio 2017
 
--AutoMapper
+    -ORM:
+        - Entity Framework Core
 
--Newtonsoft.Json
+###### Markup Languages
 
--AJAX
+    -HTML5
 
--Font Awesome
+    -CSS
+        -CSS Framework: Bootstrap 4
 
--Google ReCaptcha
+###### External APIs:
 
--Repository Pattern
+    -SendGrid API
 
--Dependency Injection
-```
+###### Additionals:
+    
+    -ASP.NET CORE Areas
+
+    -ASP.NET CORE Identity System
+
+    -Partial Views
+
+    -AutoMapper
+
+    -Newtonsoft.Json
+
+    -AJAX
+
+    -Font Awesome
+
+    -Repository Pattern
+
+    -Dependency Injection
 
 🎞️ Website Screenshots:
 
@@ -74,6 +88,6 @@ Additionals:
 ![HomePage](https://i.imgur.com/a/rLJDzQr.png)
 
 ### SinglePropertyPage
-![SinglePropertyPage](https://i.imgur.com/a/60l9QZX.png)
+![SinglePropertyPage](https://imgur.com/u1OHKH7)
 
 ## Using Nikolay.IT ASP.NET Core Template
