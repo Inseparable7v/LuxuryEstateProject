@@ -19,13 +19,16 @@ Users can only add property.
 ✔️ Agents Page,
 ✔️ Properties Grid Page,
 ```
+
+```bash
+🔨 Used technologies
 Web Framework:
 -ASP.NET Core 3.1
 
 Programming Languages:
 -Back-end
     -C#
-```
+
 -Front-end
     -JavaScript
 
@@ -42,7 +45,7 @@ Markup Languages
 -CSS
     -CSS Framework: Bootstrap 4
 
-```
+
 Additionals:
 -ASP.NET CORE Areas
 
