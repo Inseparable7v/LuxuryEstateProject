@@ -20,6 +20,8 @@
                 @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
                 {
                     <a asp-area="" asp-controller="Property" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
+
+                    <a asp-area="" asp-controller="Property" asp-action="SendToEmail" asp-route-id="@Model.Id" class="btn btn-secondary">Send</a>
                 }
                 <div class="row">
                     <div class="col-md-12 col-lg-8">

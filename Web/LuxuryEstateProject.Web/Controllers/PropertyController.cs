@@ -2,11 +2,13 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Text;
     using System.Threading.Tasks;
 
     using LuxuryEstateProject.Services.Data;
     using LuxuryEstateProject.Services.Data.Agent;
     using LuxuryEstateProject.Services.Data.Property;
+    using LuxuryEstateProject.Services.Messaging;
     using LuxuryEstateProject.Web.ViewModels.Property;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
@@ -21,9 +23,10 @@
         private readonly IAgentService agentService;
         private readonly ICity cityService;
         private readonly IDistrict districtService;
+        private readonly IEmailSender emailSender;
         private readonly IAmenities amenitiesService;
 
-        public PropertyController(IPropertyService propertyService, ICountryService countryService, IAgentService agentService, IAmenities amenitiesService, ICity cityService, IDistrict districtService, IWebHostEnvironment environment)
+        public PropertyController(IPropertyService propertyService, ICountryService countryService, IAgentService agentService, IAmenities amenitiesService, ICity cityService, IDistrict districtService, IEmailSender emailSender, IWebHostEnvironment environment)
         {
             this.propertyService = propertyService;
             this.countryService = countryService;
@@ -31,6 +34,7 @@
             this.agentService = agentService;
             this.cityService = cityService;
             this.districtService = districtService;
+            this.emailSender = emailSender;
             this.amenitiesService = amenitiesService;
         }
 
@@ -153,6 +157,18 @@
             }
 
             await this.propertyService.UpdateAsync(id, inputModel);
+            return this.RedirectToAction(nameof(this.PropertySingle), new { id });
+        }
+
+        [Authorize]
+        public async Task<IActionResult> SendToEmail(int id)
+        {
+            var property = await this.propertyService.GetByIdAsync<SinglePropertyViewModel>(id);
+            var html = new StringBuilder();
+            html.AppendLine($"<h1>{property.Name}</h1>");
+            html.AppendLine($"<h3>{property.Description}</h3>");
+            html.AppendLine($"<h3>{property.Price}</h3>");
+            await this.emailSender.SendEmailAsync("LuxuryEstate@gmail.com", "LuxuryEstate", "jafeles183@chomagor.com", property.Name, html.ToString());
             return this.RedirectToAction(nameof(this.PropertySingle), new { id });
         }
     }
