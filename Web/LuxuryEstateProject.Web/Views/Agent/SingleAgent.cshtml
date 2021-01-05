@@ -19,8 +19,15 @@
             <div class="container">
                 @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
                 {
+                <div class="row-cols-3">
+                    <form method="post" asp-controller="Agent" asp-action="Delete" id="deleteForm" asp-route-id="@Model.Id">
+                    </form>
+                    <button class="btn btn-danger col-md-3" data-toggle="modal" data-target="#deleteModal">Delete</button>
+
                     <a asp-area="" asp-controller="Agent" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary col-md-3">Edit</a>
+                </div>
                 }
+                <hr />
                 <div class="row">
                     <div class="col-md-12 col-lg-8">
                         <div class="title-single-box">
@@ -193,5 +200,18 @@
     </main><!-- End #main -->
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     <div id="preloader"></div>
+    <div class="modal" tabindex="-1" role="dialog" id="deleteModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>Do you want to delete "@Model.Name"?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="deleteForm.submit()">Yes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

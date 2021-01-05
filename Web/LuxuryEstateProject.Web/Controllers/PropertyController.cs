@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Text;
     using System.Threading.Tasks;
-
+    using LuxuryEstateProject.Common;
     using LuxuryEstateProject.Services.Data;
     using LuxuryEstateProject.Services.Data.Agent;
     using LuxuryEstateProject.Services.Data.Property;
@@ -139,15 +139,20 @@
         }
 
         [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public async Task<IActionResult> Edit(int id)
         {
             var model = await this.propertyService.GetByIdAsync<EditPropertyinputModel>(id);
-            model.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
-            return this.View(model);
+            if (!model.AgentId.Equals(null))
+            {
+                model.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
+                return this.View(model);
+            }
+            return this.RedirectToAction(nameof(this.PropertyGrid));
         }
 
-        [Authorize]
         [HttpPost]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public async Task<IActionResult> Edit(int id, EditPropertyinputModel inputModel)
         {
             if (!this.ModelState.IsValid)
@@ -157,10 +162,11 @@
             }
 
             await this.propertyService.UpdateAsync(id, inputModel);
-            return this.RedirectToAction(nameof(this.PropertySingle), new { id });
+            return this.RedirectToAction(nameof(this.PropertySingle));
         }
 
         [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public async Task<IActionResult> SendToEmail(int id)
         {
             var property = await this.propertyService.GetByIdAsync<SinglePropertyViewModel>(id);
@@ -168,8 +174,17 @@
             html.AppendLine($"<h1>{property.Name}</h1>");
             html.AppendLine($"<h3>{property.Description}</h3>");
             html.AppendLine($"<h3>{property.Price}</h3>");
-            await this.emailSender.SendEmailAsync("LuxuryEstate@gmail.com", "LuxuryEstate", "jafeles183@chomagor.com", property.Name, html.ToString());
+            await this.emailSender.SendEmailAsync("LuxuryEstate@gmail.com", "LuxuryEstate", "daniel.todorow1@gmail.com", property.Name, html.ToString());
             return this.RedirectToAction(nameof(this.PropertySingle), new { id });
+        }
+
+        [HttpPost]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await this.propertyService.DeleteAsync(id);
+
+            return this.RedirectToAction(nameof(this.PropertyGrid));
         }
     }
 }

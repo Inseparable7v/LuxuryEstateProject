@@ -23,5 +23,7 @@
         Task<T> GetByIdAsync<T>(int id);
 
         Task UpdateAsync(int id, EditAgentInputModel input);
+
+        Task DeleteAgentAsync(int id);
     }
 }

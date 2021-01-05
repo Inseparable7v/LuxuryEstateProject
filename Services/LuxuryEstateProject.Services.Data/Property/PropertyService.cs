@@ -63,7 +63,7 @@
         /// <inheritdoc/>
         public async Task<T> GetByIdAsync<T>(int id)
         {
-            return await this.realRepository.AllAsNoTracking().Where(x => x.Id.Equals(id)).To<T>().FirstOrDefaultAsync();
+            return await this.realRepository.All().Where(x => x.Id.Equals(id)).To<T>().FirstOrDefaultAsync();
         }
 
         /// <inheritdoc/>
@@ -139,6 +139,14 @@
             model.Price = input.Price;
             model.Name = input.Name;
             model.Year = input.Year;
+
+            await this.realRepository.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            var property = await this.realRepository.All().FirstOrDefaultAsync(x => x.Id.Equals(id));
+            this.realRepository.Delete(property);
 
             await this.realRepository.SaveChangesAsync();
         }

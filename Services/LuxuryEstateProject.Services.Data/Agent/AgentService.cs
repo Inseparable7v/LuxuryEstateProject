@@ -123,5 +123,20 @@
 
             await this.agentRepository.SaveChangesAsync();
         }
+
+        public async Task DeleteAgentAsync(int id)
+        {
+            var agent = await this.agentRepository.All().FirstOrDefaultAsync(x => x.Id.Equals(id));
+
+            var properties = await this.propertyRepository.All().Where(x => x.AgentId.Equals(agent.Id)).ToListAsync();
+
+            foreach (var property in properties)
+            {
+                this.propertyRepository.Delete(property);
+            }
+
+            this.agentRepository.Delete(agent);
+            await this.agentRepository.SaveChangesAsync();
+        }
     }
 }

@@ -23,5 +23,7 @@
         IEnumerable<SelectListItem> GetAllAsSelectListItems();
 
         Task UpdateAsync(int id, EditPropertyinputModel input);
+
+        Task DeleteAsync(int id);
     }
 }

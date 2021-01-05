@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
     using System.Threading.Tasks;
-
+    using LuxuryEstateProject.Common;
     using LuxuryEstateProject.Services.Data.Agent;
     using LuxuryEstateProject.Services.Data.Property;
     using LuxuryEstateProject.Web.ViewModels.Agent;
@@ -86,6 +86,7 @@
 
             var model = new SingleAgentViewModel
             {
+                Id = agent.Id,
                 Name = agent.Name,
                 RealEstateProperties = property,
                 Description = agent.Description,
@@ -106,6 +107,7 @@
         }
 
         [HttpPost]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public async Task<IActionResult> Edit(int id, EditAgentInputModel input)
         {
             if (!this.ModelState.IsValid)
@@ -115,7 +117,16 @@
 
             await this.agentService.UpdateAsync(id, input);
 
-            return this.RedirectToAction(nameof(this.All), new { id });
+            return this.RedirectToAction(nameof(this.All));
+        }
+
+        [HttpPost]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await this.agentService.DeleteAgentAsync(id);
+
+            return this.RedirectToAction(nameof(this.All));
         }
     }
 }

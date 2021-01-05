@@ -19,10 +19,16 @@
             <div class="container">
                 @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
                 {
-                    <a asp-area="" asp-controller="Property" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
+                    <div class="row-cols-3">
 
-                    <a asp-area="" asp-controller="Property" asp-action="SendToEmail" asp-route-id="@Model.Id" class="btn btn-secondary">Send</a>
+                        <form method="post" asp-controller="Property" asp-action="Delete" id="deleteForm" asp-route-id="@Model.Id">
+                        </form>
+                        <button class="btn btn-danger col-md-3" data-toggle="modal" data-target="#deleteModal">Delete</button>
+
+                        <a asp-area="" asp-controller="Property" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
+                    </div>
                 }
+                <hr />
                 <div class="row">
                     <div class="col-md-12 col-lg-8">
                         <div class="title-single-box">
@@ -160,11 +166,11 @@
                         </div>
                         <div class="row">
                             <div class="col-md-10 col-lg-5">
-                                    <img src="@Model.Agent.ImageRemoteImageUrl" alt="" class="img-fluid">
+                                <img src="@Model.Agent.ImageRemoteImageUrl" alt="" class="img-fluid">
                             </div>
                             <div class="col-md-10 col-lg-5">
                                 <div class="property-agent">
-                                    <h4 class="title-agent">@Model.Agent.Name @Model.Agent.LastName  @Model.Agent.Id</h4>
+                                    <h4 class="title-agent">@Model.Agent.Name @Model.Agent.LastName</h4>
                                     <p class="color-text-a">
                                         @Model.Agent.Description
                                     </p>
@@ -212,7 +218,19 @@
     </main><!-- End #main -->
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     <div id="preloader"></div>
-
+    <div class="modal" tabindex="-1" role="dialog" id="deleteModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>Do you want to delete "@Model.Name"?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="deleteForm.submit()">Yes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

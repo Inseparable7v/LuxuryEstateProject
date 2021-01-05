@@ -70,6 +70,10 @@ Additionals:
 
 🎞️ Website Screenshots:
 
-![Alt text](https://prnt.sc/wguqen"Optional title")
+### Home Page
+![HomePage](https://imgur.com/a/rLJDzQr.png)
+
+###SinglePropertyPage
+![SinglePropertyPage](https://imgur.com/a/60l9QZX.png)
 
 ##Using Nikolay.IT ASP.NET Core Template

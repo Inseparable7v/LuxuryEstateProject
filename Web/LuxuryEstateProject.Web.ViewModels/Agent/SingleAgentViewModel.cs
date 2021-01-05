@@ -9,7 +9,7 @@
 
     public class SingleAgentViewModel : IMapFrom<Data.Models.Agent>,  IHaveCustomMappings
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         public string Name { get; set; }
 
