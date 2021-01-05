@@ -84,7 +84,7 @@ Users can only add property.
 ----------------------------------------------------------------------------------------
 
 ### Home Page
-![HomePage](https://imgur.com/a/rLJDzQr.png)
+![HomePage](https://imgur.com/gallery/qAScvOG)
 
 ### SinglePropertyPage
 ![Imgur](https://imgur.com/u1OHKH7)
