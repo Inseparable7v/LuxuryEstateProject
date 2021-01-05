@@ -23,8 +23,7 @@ Users can only add property.
 ✔️ Properties Single Page,
 ```
 
-```bash
-### 🔨 Used technologies
+## 🔨 Used technologies
 
 ###### ID:
 
@@ -82,12 +81,13 @@ Users can only add property.
 
     -Dependency Injection
 
-🎞️ Website Screenshots:
+----------------------------------------------------------------------------------------
 
 ### Home Page
-![HomePage](https://i.imgur.com/a/rLJDzQr.png)
+![HomePage](https://imgur.com/a/rLJDzQr.png)
 
 ### SinglePropertyPage
-![SinglePropertyPage](https://imgur.com/u1OHKH7)
+![Imgur](https://imgur.com/u1OHKH7)
 
+----------------------------------------------------------------------------------------
 ## Using Nikolay.IT ASP.NET Core Template
