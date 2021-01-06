@@ -8,9 +8,6 @@ The main zone offers basic properties, agents and lastfiveproperties. Users can 
 Administrators can edit, delete, and add a property or an agent.
 Users can only add property.
 
-
-** The Project is about a Luxury-Real-Estate properties**
-
 ```bash
 **Futures:**
 ✔️ Add property,
@@ -80,14 +77,6 @@ Users can only add property.
     -Repository Pattern
 
     -Dependency Injection
-
-----------------------------------------------------------------------------------------
-
-### Home Page
-![HomePage](https://drive.google.com/file/d/1QmGcpJK8pkzK9hwWfJX2jicYU8nkE7Ao/view?usp=sharing)
-
-### SinglePropertyPage
-![Imgur](https://imgur.com/u1OHKH7)
 
 ----------------------------------------------------------------------------------------
 ## Using Nikolay.IT ASP.NET Core Template
