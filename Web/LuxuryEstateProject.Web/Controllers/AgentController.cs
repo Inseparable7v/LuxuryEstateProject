@@ -25,14 +25,14 @@
             this.environment = environment;
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Create()
         {
             var viewModel = new AgentInputViewModel();
             return this.View(viewModel);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> Create(AgentInputViewModel input)
         {

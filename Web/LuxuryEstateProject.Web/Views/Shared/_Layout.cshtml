@@ -155,7 +155,7 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Contact" asp-action="ContactForm"><span class="color-a">Contact</span></a>
                         </li>
-                        @if (this.User.Identity.IsAuthenticated)
+                        @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
                         {
                             <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="Property" asp-action="Create"><span class="color-a">CreateProperty</span></a>

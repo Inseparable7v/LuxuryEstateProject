@@ -27,6 +27,7 @@
             var seeders = new List<ISeeder>
                           {
                               new AmenitySeeder(),
+                              new AdminSeeder(),
                               new CountrySeeder(),
                               new RolesSeeder(),
                               new SettingsSeeder(),
