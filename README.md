@@ -8,6 +8,10 @@ The main zone offers basic properties, agents and lastfiveproperties. Users can 
 Administrators can edit, delete, and add a property or an agent.
 Users can only add property.
 
+# Admin details
+## Email:admin@localhost 
+## Password:123456
+
 ```bash
 **Futures:**
 ✔️ Add property,
