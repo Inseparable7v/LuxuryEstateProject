@@ -67,6 +67,8 @@ Users can only add property.
     -Partial Views
 
     -AutoMapper
+	
+    -Asynchronous programming
 
     -Newtonsoft.Json
 

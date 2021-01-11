@@ -65,7 +65,7 @@
         }
 
         [HttpGet]
-        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
+        [Authorize]
         public IActionResult Create()
         {
             var viewModel = new PropertyInputModel
@@ -77,8 +77,8 @@
             return this.View(viewModel);
         }
 
-        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Create(PropertyInputModel input)
         {
             if (!this.ModelState.IsValid)
