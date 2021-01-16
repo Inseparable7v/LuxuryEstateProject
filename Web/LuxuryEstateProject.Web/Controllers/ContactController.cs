@@ -28,7 +28,10 @@
             html.AppendLine($"<h1>{input.Name}</h1>");
             html.AppendLine($"<h3>{input.Body}</h3>");
             await this.emailSender.SendEmailAsync(input.Email, input.Name, "daniel.todorow1@gmail.com", input.Subject, html.ToString());
-            return this.RedirectToAction(nameof(this.ContactForm));
+
+            this.ViewData["Message"] = "Send is succesfull";
+
+            return this.View();
         }
     }
 }

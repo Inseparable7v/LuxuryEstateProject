@@ -18,7 +18,10 @@
 <body>
 
     <main id="main">
-
+               @if (this.TempData.ContainsKey("Message"))
+                {
+                    <div class="alert alert-success">@this.TempData["Message"]</div>
+                }
         <!-- ======= Intro Single ======= -->
         <section class="intro-single">
             <div class="container">

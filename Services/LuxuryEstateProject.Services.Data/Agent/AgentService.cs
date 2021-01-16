@@ -12,6 +12,7 @@
     using LuxuryEstateProject.Web.ViewModels.Agent;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.EntityFrameworkCore;
+    using SixLabors.ImageSharp;
     using SixLabors.ImageSharp.Formats.Png;
     using SixLabors.ImageSharp.Processing;
 
@@ -32,7 +33,7 @@
         /// <inheritdoc/>
         public IEnumerable<T> GetAllAgents<T>(int page, int itemsPerPage = 6)
         {
-            var agents = this.agentRepository.AllAsNoTracking()
+            var agents = this.agentRepository.All()
                 .OrderByDescending(x => x.Id)
                 .Skip((page - 1) * itemsPerPage).Take(itemsPerPage)
                 .To<T>().ToList();
@@ -58,34 +59,40 @@
             };
 
             Directory.CreateDirectory($"{imagePath}");
-            foreach (var image in input.Images)
+
+            var image = input.Images;
+
+            var extension = Path.GetExtension(image.FileName).TrimStart('.');
+            if (!this.allowedExtensions.Any(x => extension.EndsWith(x)))
             {
-                var extension = Path.GetExtension(image.FileName).TrimStart('.');
-                if (!this.allowedExtensions.Any(x => extension.EndsWith(x)))
-                {
-                    throw new Exception($"Invalid image extension {extension}");
-                }
-
-                var dbImage = new Image
-                {
-                    Extension = extension,
-                };
-
-                using var imageSharp = SixLabors.ImageSharp.Image.Load(image.OpenReadStream());
-
-                imageSharp.Mutate(x => x.Resize(550, 700));
-
-                agent.Images.Add(dbImage);
-
-                var physicalPath = $"{imagePath}{dbImage.Id}.{extension}";
-                await using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
-                await imageSharp.SaveAsync(fileStream, new PngEncoder());
-
+                throw new Exception($"Invalid image extension {extension}");
             }
 
-            await this.agentRepository.AddAsync(agent);
-            await this.agentRepository.SaveChangesAsync();
+            var dbImage = new LuxuryEstateProject.Data.Models.Image
+            {
+                Extension = extension,
+            };
 
+            using var imageSharp = SixLabors.ImageSharp.Image.Load(image.OpenReadStream());
+
+            imageSharp.Mutate(
+            x => x.Resize(
+                new ResizeOptions
+                {
+                    Mode = ResizeMode.Min,
+                    Size = new Size(800, 740),
+                    Position = AnchorPositionMode.Center,
+                }));
+
+            agent.Images.Add(dbImage);
+
+            var physicalPath = $"{imagePath}{dbImage.Id}.{extension}";
+            await using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
+            await imageSharp.SaveAsync(fileStream, new PngEncoder());
+
+            await this.agentRepository.AddAsync(agent);
+
+            await this.agentRepository.SaveChangesAsync();
         }
 
         /// <inheritdoc/>
@@ -128,11 +135,17 @@
         {
             var agent = await this.agentRepository.All().FirstOrDefaultAsync(x => x.Id.Equals(id));
 
-            var properties = await this.propertyRepository.All().Where(x => x.AgentId.Equals(agent.Id)).ToListAsync();
-
-            foreach (var property in properties)
+            if (!agent.RealEstateProperties.Any())
             {
-                this.propertyRepository.Delete(property);
+            }
+            else
+            {
+                var properties = await this.propertyRepository.All().Where(x => x.AgentId.Equals(agent.Id)).ToListAsync();
+
+                foreach (var property in properties)
+                {
+                    this.propertyRepository.Delete(property);
+                }
             }
 
             this.agentRepository.Delete(agent);

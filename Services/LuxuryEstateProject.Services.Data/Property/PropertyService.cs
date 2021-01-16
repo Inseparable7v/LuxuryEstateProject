@@ -12,6 +12,7 @@
     using LuxuryEstateProject.Web.ViewModels.Property;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.EntityFrameworkCore;
+    using SixLabors.ImageSharp;
     using SixLabors.ImageSharp.Formats.Png;
     using SixLabors.ImageSharp.Processing;
 
@@ -69,6 +70,11 @@
         /// <inheritdoc/>
         public async Task CreatePropertyAsync(PropertyInputModel input, string imagePath)
         {
+            if (!input.Images.Any())
+            {
+                throw new Exception($"Upload Image");
+            }
+
             var property = new RealEstateProperty
             {
                 Bath = input.Bath,
@@ -105,14 +111,21 @@
                     throw new Exception($"Invalid image extension {extension}");
                 }
 
-                var dbImage = new Image
+                var dbImage = new LuxuryEstateProject.Data.Models.Image
                 {
                     Extension = extension,
                 };
 
                 using var imageSharp = SixLabors.ImageSharp.Image.Load(image.OpenReadStream());
 
-                imageSharp.Mutate(x => x.Resize(750, 725));
+                imageSharp.Mutate(
+                x => x.Resize(
+                    new ResizeOptions
+                    {
+                        Mode = ResizeMode.Min,
+                        Size = new Size(815, 740),
+                        Position = AnchorPositionMode.Center,
+                    }));
 
                 property.Images.Add(dbImage);
 
