@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Text;
     using System.Threading.Tasks;
+
     using LuxuryEstateProject.Common;
     using LuxuryEstateProject.Services.Data;
     using LuxuryEstateProject.Services.Data.Agent;
@@ -40,12 +41,12 @@
 
         [Authorize]
         [HttpGet]
-        public ActionResult GetRegions(int Id)
+        public ActionResult GetRegions(int id)
         {
-            if (!string.IsNullOrWhiteSpace(Id.ToString()))
+            if (!string.IsNullOrWhiteSpace(id.ToString()))
             {
-                IEnumerable<SelectListItem> regions = cityService.GetCities(Id);
-                return Json(regions);
+                IEnumerable<SelectListItem> regions = this.cityService.GetCities(id);
+                return this.Json(regions);
             }
 
             return null;
@@ -53,12 +54,12 @@
 
         [Authorize]
         [HttpGet]
-        public ActionResult GetDistrict(int Id)
+        public ActionResult GetDistrict(int id)
         {
-            if (!string.IsNullOrWhiteSpace(Id.ToString()))
+            if (!string.IsNullOrWhiteSpace(id.ToString()))
             {
-                IEnumerable<SelectListItem> district = districtService.GetDistricts(Id);
-                return Json(district);
+                IEnumerable<SelectListItem> district = this.districtService.GetDistricts(id);
+                return this.Json(district);
             }
 
             return null;
@@ -149,6 +150,7 @@
                 model.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
                 return this.View(model);
             }
+
             return this.RedirectToAction(nameof(this.PropertyGrid));
         }
 

@@ -7,6 +7,7 @@
     public interface ICountryService
     {
         IEnumerable<SelectListItem> GetAllAsSelectListItems();
+
         IEnumerable<SelectListItem> GetCountries();
     }
 }

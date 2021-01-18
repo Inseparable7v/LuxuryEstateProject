@@ -1,6 +1,5 @@
 ﻿namespace LuxuryEstateProject.Web.ViewModels.Property
 {
-
     using LuxuryEstateProject.Data.Models;
     using LuxuryEstateProject.Services.Mapping;
 

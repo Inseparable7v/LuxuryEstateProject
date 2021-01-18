@@ -19,13 +19,12 @@
 
         public IEnumerable<SelectListItem> GetAllAsSelectListItems()
         {
-
             return this.districtRepository.AllAsNoTracking().Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).OrderBy(c => c.Text);
         }
 
         public IEnumerable<SelectListItem> GetDistricts(int id)
         {
-            if (!String.IsNullOrWhiteSpace(id.ToString()))
+            if (!string.IsNullOrWhiteSpace(id.ToString()))
             {
                 List<SelectListItem> districts = this.districtRepository.AllAsNoTracking()
                     .OrderBy(n => n.Name)

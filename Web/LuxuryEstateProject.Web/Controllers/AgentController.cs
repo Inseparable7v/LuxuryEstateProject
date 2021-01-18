@@ -3,6 +3,7 @@
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+
     using LuxuryEstateProject.Common;
     using LuxuryEstateProject.Services.Data.Agent;
     using LuxuryEstateProject.Services.Data.Property;
@@ -80,23 +81,13 @@
 
         public async Task<IActionResult> SingleAgent(int id)
         {
-            var property = this.propertyService.ListOfPropertiesByAgentId<RealEstateViewModel>(id);
+            var property = await this.propertyService.ListOfPropertiesByAgentIdAsync<RealEstateViewModel>(id);
 
             var agent = await this.agentService.GetByIdAsync<SingleAgentViewModel>(id);
 
-            var model = new SingleAgentViewModel
-            {
-                Id = agent.Id,
-                Name = agent.Name,
-                RealEstateProperties = property,
-                Description = agent.Description,
-                Email = agent.Email,
-                LastName = agent.LastName,
-                Phone = agent.Phone,
-                ImageRemoteImageUrl = agent.ImageRemoteImageUrl,
-            };
+            agent.RealEstateProperties = property;
 
-            return this.View(model);
+            return this.View(agent);
         }
 
         public async Task<IActionResult> Edit(int id)

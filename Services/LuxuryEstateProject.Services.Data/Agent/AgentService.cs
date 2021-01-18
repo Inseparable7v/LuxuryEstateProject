@@ -18,7 +18,6 @@
 
     public class AgentService : IAgentService
     {
-
         private readonly string[] allowedExtensions = new[] { "jpg", "png", "jpeg" };
 
         private readonly IDeletableEntityRepository<Agent> agentRepository;
@@ -48,7 +47,6 @@
 
         public async Task CreateAgentAsync(AgentInputViewModel input, string imagePath)
         {
-
             var agent = new Agent
             {
                 Name = input.Name,
@@ -114,7 +112,6 @@
 
         public IEnumerable<SelectListItem> GetAllAsSelectListItems()
         {
-
             return this.agentRepository.All().Select(x => new SelectListItem { Text = x.Name + " " + x.LastName, Value = x.Id.ToString() }).OrderBy(c => c.Text);
         }
 

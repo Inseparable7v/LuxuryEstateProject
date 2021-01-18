@@ -18,7 +18,7 @@
 
         public IEnumerable<SelectListItem> GetAllAsSelectListItems()
         {
-            return this.countryRepository.AllAsNoTracking().Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString()}).OrderBy(c => c.Text);
+            return this.countryRepository.AllAsNoTracking().Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).OrderBy(c => c.Text);
         }
 
         public IEnumerable<SelectListItem> GetCountries()

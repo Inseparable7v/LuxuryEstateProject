@@ -4,7 +4,7 @@
 
     using Microsoft.AspNetCore.Mvc.Rendering;
 
-    public interface IDistrict 
+    public interface IDistrict
     {
         IEnumerable<SelectListItem> GetAllAsSelectListItems();
 

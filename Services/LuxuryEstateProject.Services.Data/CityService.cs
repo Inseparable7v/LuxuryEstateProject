@@ -24,7 +24,7 @@
 
         public IEnumerable<SelectListItem> GetCities(int id)
         {
-            if (!String.IsNullOrWhiteSpace(id.ToString()))
+            if (!string.IsNullOrWhiteSpace(id.ToString()))
             {
                 List<SelectListItem> cities = this.cityRepository.AllAsNoTracking()
                     .OrderBy(n => n.Name)

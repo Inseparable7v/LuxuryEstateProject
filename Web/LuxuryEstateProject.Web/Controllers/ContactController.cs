@@ -9,6 +9,7 @@
 
     public class ContactController : BaseController
     {
+        private const string RedirectedFromContactForm = "RedirectedFromContactForm";
         private readonly IEmailSender emailSender;
 
         public ContactController(IEmailSender emailSender)
@@ -24,12 +25,25 @@
         [HttpPost]
         public async Task<IActionResult> ContactForm(ContactFormInputModel input)
         {
-            var html = new StringBuilder();
-            html.AppendLine($"<h1>{input.Name}</h1>");
-            html.AppendLine($"<h3>{input.Body}</h3>");
-            await this.emailSender.SendEmailAsync(input.Email, input.Name, "daniel.todorow1@gmail.com", input.Subject, html.ToString());
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(input);
+            }
 
-            this.ViewData["Message"] = "Send is succesfull";
+            await this.emailSender.SendEmailAsync(input.Email, input.Name, "daniel.todorow1@gmail.com", input.Subject, input.Body);
+
+            this.TempData["Message"] = "Send is succesfull";
+            this.TempData[RedirectedFromContactForm] = true;
+
+            return this.RedirectToAction("ThankYou");
+        }
+
+        public IActionResult ThankYou()
+        {
+            if (this.TempData[RedirectedFromContactForm] == null)
+            {
+                return this.NotFound();
+            }
 
             return this.View();
         }

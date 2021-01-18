@@ -4,8 +4,8 @@
 
 ## 📝 Project Description
 LuxuryEstate is a website for Rent or Sale a Real Estate.
-The main zone offers basic properties, agents and lastfiveproperties. Users can add property, administrators can add agents. Each property has its own agent to combine with it.
-Administrators can edit, delete, and add a property or an agent.
+The main zone offers basic properties and agents. Each property has its own agent to combine with it.
+Administrators can edit, add or delete a property or an agent.
 Users can only add property.
 
 # Admin details

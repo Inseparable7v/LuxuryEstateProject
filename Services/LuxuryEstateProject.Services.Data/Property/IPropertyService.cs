@@ -14,7 +14,7 @@
 
         int GetCount();
 
-        IEnumerable<T> ListOfPropertiesByAgentId<T>(int id);
+        Task<IEnumerable<T>> ListOfPropertiesByAgentIdAsync<T>(int id);
 
         IEnumerable<T> GetLatestProperties<T>();
 

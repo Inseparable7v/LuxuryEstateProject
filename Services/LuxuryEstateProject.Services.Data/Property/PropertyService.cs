@@ -33,9 +33,9 @@
             return this.realRepository.AllAsNoTracking().Count();
         }
 
-        public IEnumerable<T> ListOfPropertiesByAgentId<T>(int id)
+        public async Task<IEnumerable<T>> ListOfPropertiesByAgentIdAsync<T>(int id)
         {
-            return this.realRepository.AllAsNoTracking().Where(x => x.AgentId.Equals(id)).To<T>().ToList();
+            return await this.realRepository.AllAsNoTracking().Where(x => x.AgentId.Equals(id)).To<T>().ToListAsync();
         }
 
         /// <inheritdoc/>
