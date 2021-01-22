@@ -70,11 +70,6 @@
         /// <inheritdoc/>
         public async Task CreatePropertyAsync(PropertyInputModel input, string imagePath)
         {
-            if (!input.Images.Any())
-            {
-                throw new Exception($"Upload Image");
-            }
-
             var property = new RealEstateProperty
             {
                 Bath = input.Bath,
