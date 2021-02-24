@@ -19,14 +19,13 @@
             <div class="container">
                 @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
                 {
-                    <div class="row-cols-3">
+                <div class="row-cols-3">
 
-                        <form method="post" asp-controller="Property" asp-action="Delete" id="deleteForm" asp-route-id="@Model.Id">
-                        </form>
-                        <button class="btn btn-danger col-md-3" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                    <form method="post" asp-controller="Property" asp-action="Delete" id="deleteForm" asp-route-id="@Model.Id"></form>
+                    <button class="btn btn-danger col-md-3" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                    <a asp-area="" asp-controller="Property" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
 
-                        <a asp-area="" asp-controller="Property" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
-                    </div>
+                </div>
                 }
                 <hr />
                 <div class="row">
@@ -120,6 +119,10 @@
                                             <li class="d-flex justify-content-between">
                                                 <strong>Garage:</strong>
                                                 <span>@Model.Garage</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between">
+                                                <strong>Floor:</strong>
+                                                <span>@Model.Floor</span>
                                             </li>
                                         </ul>
                                     </div>

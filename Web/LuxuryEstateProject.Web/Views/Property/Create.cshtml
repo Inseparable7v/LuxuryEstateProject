@@ -157,7 +157,6 @@
                                 value: region.value,
                                 text: region.text
                             }));
-                            console.log(regionsSelect);
                         });
                     };
                 });
@@ -174,13 +173,10 @@
                     if (regions != null && !jQuery.isEmptyObject(regions))
                     {
                         $.each(regions, function (index, region) {
-                            console.log(region.value);
-                            console.log(region.text);
                             districtSelect.append($('<option/>', {
                                 value: region.value,
                                 text: region.text
                             }));
-                            console.log(districtSelect);
                         });
                     };
                 });

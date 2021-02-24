@@ -145,13 +145,9 @@
         public async Task<IActionResult> Edit(int id)
         {
             var model = await this.propertyService.GetByIdAsync<EditPropertyinputModel>(id);
-            if (!model.AgentId.Equals(null))
-            {
-                model.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
-                return this.View(model);
-            }
+            model.AgentsCreateForm = this.agentService.GetAllAsSelectListItems();
 
-            return this.RedirectToAction(nameof(this.PropertyGrid));
+            return this.View(model);
         }
 
         [HttpPost]
@@ -164,8 +160,16 @@
                 return this.View(inputModel);
             }
 
-            await this.propertyService.UpdateAsync(id, inputModel);
-            return this.RedirectToAction(nameof(this.PropertySingle));
+            try
+            {
+                await this.propertyService.UpdateAsync(id, inputModel);
+            }
+            catch (Exception ex)
+            {
+                this.ModelState.AddModelError(string.Empty, ex.Message);
+            }
+
+            return this.RedirectToAction(nameof(this.PropertySingle), new { id });
         }
 
         [Authorize]

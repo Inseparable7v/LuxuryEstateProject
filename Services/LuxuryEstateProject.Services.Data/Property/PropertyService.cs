@@ -38,6 +38,17 @@
             return await this.realRepository.AllAsNoTracking().Where(x => x.AgentId.Equals(id)).To<T>().ToListAsync();
         }
 
+        public IEnumerable<T> GetAllSortedAlpha<T>(int page, int itemsPerPage = 6)
+        {
+            var sortedAlphaProperties = this.realRepository.AllAsNoTracking()
+                .OrderBy(x => x.Name)
+                .OrderByDescending(x => x.Id)
+                .Skip((page - 1) * itemsPerPage).Take(itemsPerPage)
+                .To<T>().ToList();
+
+            return sortedAlphaProperties;
+        }
+
         /// <inheritdoc/>
         public IEnumerable<T> GetLatestProperties<T>()
         {
@@ -142,7 +153,6 @@
             model.AgentId = input.AgentId;
             model.Description = input.Description;
             model.Floor = input.Floor;
-            model.TotalNumberOfFloors = input.TotalNumbersOfFloors;
             model.Size = input.Size;
             model.Price = input.Price;
             model.Name = input.Name;

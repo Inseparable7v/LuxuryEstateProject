@@ -934,7 +934,6 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.pdb
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.genruntimeconfig.cache
-C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Agent\All.cshtml.g.cs
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Property\Create.cshtml.g.cs
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_Layout.cshtml.g.cs
@@ -955,3 +954,4 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Property\Edit.cshtml.g.cs
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Agent\Edit.cshtml.g.cs
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Contact\ThankYou.cshtml.g.cs
+C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Agent\AgentGrid.cshtml.g.cs

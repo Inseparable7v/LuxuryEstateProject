@@ -51,7 +51,7 @@
                     <div class="col-sm-12">
                         <div class="grid-option">
                             <form>
-                                <select class="custom-select">
+                                <select class="custom-select" id="SelectSort">
                                     <option selected>All</option>
                                     <option value="1">New to Old</option>
                                     <option value="2">For Rent</option>
@@ -121,3 +121,26 @@
     </main><!-- End #main -->
 </body>
 </html>
+@section Scripts
+{
+    <script>
+        $('#SelectSort').change(function () {
+            var selectedSort = $("#SelectSort").val();
+           // var regionsSelect = $('#Region');
+            regionsSelect.empty();
+            if (selectedCountry != null && selectedCountry != '') {
+                $.getJSON('@Url.Action("GetRegions")', { Id: selectedCountry }, function (regions) {
+                    if (regions != null && !jQuery.isEmptyObject(regions))
+                    {
+                        $.each(regions, function (region) {
+                            regionsSelect.append($('<option/>', {
+                                value: region.value,
+                                text: region.text
+                            }));
+                        });
+                    };
+                });
+            }
+        });
+    </script>
+}

@@ -49,10 +49,6 @@
 
         public int Year { get; set; }
 
-        [Range(0, 150)]
-        [DisplayName("TotalFloors")]
-        public int TotalNumbersOfFloors { get; set; }
-
         public int AgentId { get; set; }
 
         public IEnumerable<SelectListItem> AgentsCreateForm { get; set; }

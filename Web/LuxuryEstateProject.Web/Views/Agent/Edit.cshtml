@@ -10,9 +10,11 @@
 <br />
 <br />
 <br />
+<hr />
+<h1 class="color-b" style="text-align: center">@this.ViewData["Title"]</h1>
+<hr />
 <form method="post" class=" form-row col-md-12 offset-md-3"
       enctype="multipart/form-data">
-    <h1 class="color-b">@this.ViewData["Title"]</h1>
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="row">
         <div class="form-group col-md-4">
@@ -40,10 +42,10 @@
             <textarea asp-for="Description" class="form-control" rows="3"></textarea>
             <span asp-validation-for="Description" class="text-danger"></span>
         </div>
-    </div>
-    <div class="mt-6">
-        <div style="text-align:center;">
-            <input type="submit" class="btn btn-success col-lg-12 " value="Create" />
+        <div>
+            <div style="text-align:center;">
+                <input type="submit" class="btn btn-success col-lg-12 " value="Create" />
+            </div>
         </div>
     </div>
 </form>

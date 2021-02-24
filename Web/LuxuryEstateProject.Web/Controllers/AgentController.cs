@@ -58,7 +58,7 @@
             return this.RedirectToAction("All");
         }
 
-        public IActionResult All(int id = 1)
+        public IActionResult AgentGrid(int id = 1)
         {
             if (id <= 0)
             {
@@ -108,7 +108,7 @@
 
             await this.agentService.UpdateAsync(id, input);
 
-            return this.RedirectToAction(nameof(this.All));
+            return this.RedirectToAction(nameof(this.AgentGrid));
         }
 
         [HttpPost]
@@ -117,7 +117,7 @@
         {
             await this.agentService.DeleteAgentAsync(id);
 
-            return this.RedirectToAction(nameof(this.All));
+            return this.RedirectToAction(nameof(this.AgentGrid));
         }
     }
 }

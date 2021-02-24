@@ -17,6 +17,7 @@
             this.emailSender = emailSender;
         }
 
+        [HttpGet]
         public IActionResult ContactForm()
         {
             return this.View();

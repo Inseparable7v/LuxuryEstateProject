@@ -25,5 +25,7 @@
         Task UpdateAsync(int id, EditPropertyinputModel input);
 
         Task DeleteAsync(int id);
+
+        IEnumerable<T> GetAllSortedAlpha<T>(int page, int itemsPerPage);
     }
 }
