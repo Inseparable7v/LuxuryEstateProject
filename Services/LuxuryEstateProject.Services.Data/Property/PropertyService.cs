@@ -128,8 +128,8 @@
                 x => x.Resize(
                     new ResizeOptions
                     {
-                        Mode = ResizeMode.Min,
-                        Size = new Size(815, 740),
+                        Mode = ResizeMode.Max,
+                        Size = new Size(1100, 750),
                         Position = AnchorPositionMode.Center,
                     }));
 

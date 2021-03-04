@@ -38,7 +38,7 @@
         public int Year { get; set; }
 
         [Required]
-        [MaxLength(200)]
+        [MaxLength(2000)]
         [MinLength(15)]
         public string Description { get; set; }
 
@@ -53,7 +53,7 @@
         [DisplayName("For")]
         public PropertyType Type { get; set; }
 
-        [Range(0, 5)]
+        [Range(0, 7)]
         public Material Material { get; set; }
 
         [DisplayName("Country")]

@@ -55,7 +55,7 @@
 
             this.TempData["Message"] = "Agent added successfully.";
 
-            return this.RedirectToAction("All");
+            return this.RedirectToAction("AgentGrid");
         }
 
         public IActionResult AgentGrid(int id = 1)
