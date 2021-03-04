@@ -31,12 +31,12 @@
                 user.UserName = adminUserName;
                 user.Email = adminUserName;
 
-                var result = userManager.CreateAsync(
-                user, "123456").Result;
+                var result = await userManager.CreateAsync(
+                user, "123456");
 
                 if (result.Succeeded)
                 {
-                    userManager.AddToRoleAsync(user, GlobalConstants.AdministratorRoleName).Wait();
+                    await userManager.AddToRoleAsync(user, roleName);
                 }
             }
         }
