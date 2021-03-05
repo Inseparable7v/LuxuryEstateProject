@@ -24,12 +24,10 @@
 
         public IActionResult Index()
         {
-            var state = this.agentService.GetAllAgents<AgentViewModel>(Id, ItemPerPage).ToList().OrderBy(x => x.Id);
+            var state = this.agentService.GetAllAgentsAdminPanel<AgentViewModel>().ToList().OrderBy(x => x.Id);
 
             var model = new AgentsListViewModel
             {
-                ItemsPerPage = ItemPerPage,
-                PageNumber = Id,
                 Agents = state,
             };
 
