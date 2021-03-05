@@ -33,9 +33,9 @@
             return this.realRepository.AllAsNoTracking().Count();
         }
 
-        public async Task<IEnumerable<T>> ListOfPropertiesByAgentIdAsync<T>(int id)
+        public IEnumerable<T> ListOfPropertiesByAgentIdAsync<T>(int id)
         {
-            return await this.realRepository.AllAsNoTracking().Where(x => x.AgentId.Equals(id)).To<T>().ToListAsync();
+            return this.realRepository.AllAsNoTracking().Where(x => x.AgentId.Equals(id)).To<T>().ToList();
         }
 
         public IEnumerable<T> GetAllSortedAlpha<T>(int page, int itemsPerPage = 6)

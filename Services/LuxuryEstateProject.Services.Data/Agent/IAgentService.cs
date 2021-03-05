@@ -10,6 +10,8 @@
     {
         IEnumerable<T> GetAllAgents<T>(int page, int itemsPerPage);
 
+        IEnumerable<T> GetAllAgentsAdminPanel <T>();
+
         IEnumerable<T> GetHomePageAgents<T>();
 
         IEnumerable<SelectListItem> GetAllAsSelectListItems();

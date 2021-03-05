@@ -81,7 +81,7 @@
 
         public async Task<IActionResult> SingleAgent(int id)
         {
-            var property = await this.propertyService.ListOfPropertiesByAgentIdAsync<RealEstateViewModel>(id);
+            var property = this.propertyService.ListOfPropertiesByAgentIdAsync<RealEstateViewModel>(id);
 
             var agent = await this.agentService.GetByIdAsync<SingleAgentViewModel>(id);
 

@@ -1,36 +1,43 @@
 ﻿namespace LuxuryEstateProject.Web.Areas.Administration.Controllers
 {
     using System.Linq;
-
-    using LuxuryEstateProject.Services.Data;
     using LuxuryEstateProject.Services.Data.Agent;
-    using LuxuryEstateProject.Web.ViewModels.Administration.Dashboard;
+    using LuxuryEstateProject.Services.Data.Property;
     using LuxuryEstateProject.Web.ViewModels.Agent;
+    using LuxuryEstateProject.Web.ViewModels.Property;
     using Microsoft.AspNetCore.Mvc;
+
 
     public class DashboardController : AdministrationController
     {
-        private readonly IAgentService agentService;
+        private const int Id = 1;
+        private const int ItemPerPage = 6;
 
-        public DashboardController(IAgentService agentService)
+        private readonly IAgentService agentService;
+        private readonly IPropertyService propertyService;
+
+        public DashboardController(IAgentService agentService, IPropertyService propertyService)
         {
+            this.propertyService = propertyService;
             this.agentService = agentService;
         }
 
         public IActionResult Index()
         {
-            int id = 1;
-            int ItemPerPage = 6;
-
-            var state = this.agentService.GetAllAgents<AgentViewModel>(id, ItemPerPage).ToList().OrderBy(x => x.Id);
+            var state = this.agentService.GetAllAgents<AgentViewModel>(Id, ItemPerPage).ToList().OrderBy(x => x.Id);
 
             var model = new AgentsListViewModel
             {
                 ItemsPerPage = ItemPerPage,
-                PageNumber = id,
-                PropertiesCount = this.agentService.GetCount(),
+                PageNumber = Id,
                 Agents = state,
             };
+
+            foreach (var agentViewModel in model.Agents)
+            {
+                agentViewModel.RealEstateViewModels = this.propertyService.ListOfPropertiesByAgentIdAsync<RealEstateViewModel>(agentViewModel.Id);
+                model.PropertiesCount = agentViewModel.RealEstateViewModels.Count();
+            }
 
             return this.View(model);
         }

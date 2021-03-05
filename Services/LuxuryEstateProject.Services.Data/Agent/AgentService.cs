@@ -39,6 +39,14 @@
             return agents;
         }
 
+        public IEnumerable<T> GetAllAgentsAdminPanel<T>()
+        {
+            var agents = this.agentRepository.All()
+                .OrderByDescending(x => x.Id)
+                .To<T>().ToList();
+            return agents;
+        }
+
         /// <inheritdoc/>
         public IEnumerable<T> GetHomePageAgents<T>()
         {

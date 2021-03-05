@@ -1,0 +1,81 @@
+﻿@model LuxuryEstateProject.Web.ViewModels.Agent.AgentsListViewModel
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+@{
+        this.ViewData["Title"] = "Admin panel";
+}
+
+<div class="table-responsive">
+    <table class="table table-hover table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+                @foreach (var agent in @Model.Agents)
+                {
+                @for (var i = 0; i < agent.RealEstateViewModels.Count(); i++)
+                    {
+                <th></th>
+                <th scope="col">EstateId</th>
+                <th scope="col">EstateName</th>
+                <th scope="col">EstatePrice</th>
+                <th scope="col">EstateSize</th>
+                <th scope="col">EstatePrice</th>
+                    }
+                }
+                <th></th>
+            </tr>
+        </thead>
+        @foreach (var agent in @Model.Agents)
+                    {
+        <tbody class="thead-light">
+            <tr>
+                <th>@agent.Id</th>
+                <td>@agent.Name</td>
+                <td>@agent.LastName</td>
+                <td>@agent.Phone</td>
+                <td>@agent.Email</td>
+                <td class="row-cols-1">
+                    <form method="post" asp-area="" asp-controller="Agent" asp-action="Delete" id="deleteForm" asp-route-id="@agent.Id"></form>
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                    <a asp-area="" asp-controller="Agent" asp-action="Edit" asp-route-id="@agent.Id" class="btn btn-secondary">Edit</a>
+                </td>
+                @foreach (var property in agent.RealEstateViewModels)
+                                {
+                <td>@property.Id</td>
+                <td>@property.Name</td>
+                <td>@property.Price</td>
+                <td>@property.Size</td>
+                <td>@property.Type</td>
+                <td class="row-cols-1">
+                    <form method="post" asp-area="" asp-controller="Property" asp-action="Delete" id="deleteForm" asp-route-id="@property.Id"></form>
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                    <a asp-area="" asp-controller="Property" asp-action="Edit" asp-route-id="@property.Id" class="btn btn-secondary">Edit</a>
+                </td>
+                                }
+            </tr>
+        </tbody>
+                    }
+    </table>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="deleteModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>Do you really want to delete this record"?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="deleteForm.submit()">Yes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
