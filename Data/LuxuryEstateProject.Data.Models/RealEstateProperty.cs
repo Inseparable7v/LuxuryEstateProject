@@ -30,7 +30,6 @@
 
         public int? Year { get; set; }
 
-        [Required]
         public string Description { get; set; }
 
         public PropertyType Type { get; set; }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj": {}
+    "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj": {
+    "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj",
+        "projectUniqueName": "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj",
         "projectName": "LuxuryEstateProject.Common",
-        "projectPath": "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj",
-        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\obj\\",
+        "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj",
+        "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

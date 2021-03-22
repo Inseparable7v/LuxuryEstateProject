@@ -1,0 +1,55 @@
+﻿@model LuxuryEstateProject.Web.ViewModels.Blog.EditBlogInputModel
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <br />  
+    <br />
+    <div class="row" style="padding-left: 30px">
+        <h1 class="color-b">Edit</h1>
+        <h4 class="color-d">Blog</h4>
+        <div class="form-group col-md-5">
+            <label asp-for="Name" class="color-b"></label>
+            <input asp-for="Name" class="form-control " />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="SubName"></label>
+            <input asp-for="SubName" class="form-control" />
+            <span asp-validation-for="SubName" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="Category" class="color-b"></label>
+            <input asp-for="Category" class="form-control" />
+            <span asp-validation-for="Category" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="Author" class="color-b"></label>
+            <input asp-for="Author" class="form-control" />
+            <span asp-validation-for="Author" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-5">
+            <label asp-for="Date" class="color-b"></label>
+            <input asp-for="Date" class="form-control" />
+            <span asp-validation-for="Date" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-5">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="mt-lg-3 col-sm-12">
+        <div style="text-align:center;">
+            <input type="submit" class="btn btn-success col-2" value="Create" />
+        </div>
+    </div>
+</body>
+</html>

@@ -19,13 +19,13 @@
             <div class="container">
                 @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
                 {
-                <div class="row-cols-3">
+                    <div class="row-cols-3">
 
-                    <form method="post" asp-controller="Property" asp-action="Delete" id="deleteForm" asp-route-id="@Model.Id"></form>
-                    <button class="btn btn-danger col-md-3" data-toggle="modal" data-target="#deleteModal">Delete</button>
-                    <a asp-area="" asp-controller="Property" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
+                        <form method="post" asp-controller="Property" asp-action="Delete" id="deleteForm" asp-route-id="@Model.Id"></form>
+                        <button class="btn btn-danger col-md-3" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                        <a asp-area="" asp-controller="Property" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
 
-                </div>
+                    </div>
                 }
                 <hr />
                 <div class="row">
@@ -59,7 +59,7 @@
                             @foreach (var img in @Model.ImageRemoteImageUrl)
                             {
                                 <div class="carousel-item-a">
-                                    <img src="@img" style="height: 750px; width: 1100px;"alt="">
+                                    <img src="@img" style="height: 750px; width: 1100px;" alt="">
                                 </div>
                             }
                         </div>

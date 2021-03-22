@@ -1,0 +1,63 @@
+﻿@model LuxuryEstateProject.Web.ViewModels.Blog.CreateBlogInputModel
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    
+    <section class="intro-single">
+        <form method="post" class=" form-row col-md-12 offset-md-3"
+              enctype="multipart/form-data">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Name" class="color-b"></label>
+                    <input asp-for="Name" class="form-control " />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label asp-for="SubName"></label>
+                    <input asp-for="SubName" class="form-control" />
+                    <span asp-validation-for="SubName" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label asp-for="Category" class="color-b"></label>
+                    <input asp-for="Category" class="form-control" />
+                    <span asp-validation-for="Category" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label asp-for="Author" class="color-b"></label>
+                    <input asp-for="Author" class="form-control" />
+                    <span asp-validation-for="Author" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Date" class="color-b"></label>
+                    <input asp-for="Date" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Description" class="color-b"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="custom-file col-md-12 mt-2">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span asp-validation-for="BlogImages" class="input-group-text">Upload</span>
+                    </div>
+                    <div class="custom-file">
+                        <input asp-for="BlogImages" class="form-control col-md-6 custom-file-input" />
+                        <label asp-for="BlogImages" class="custom-file-label">Choose file</label>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-lg-3 col-sm-12">
+                <div style="text-align:center;">
+                    <input type="submit" class="btn btn-success col-2" value="Create" />
+                </div>
+            </div>
+        </form>
+    </section>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <div id="preloader"></div>
+</body>
+</html>

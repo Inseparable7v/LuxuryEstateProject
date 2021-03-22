@@ -22,3 +22,15 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProjec
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Models\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Models.csproj.CopyComplete
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Models\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Models.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Models\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Models.pdb
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Models\bin\Debug\netstandard2.1\LuxuryEstateProject.Data.Models.deps.json
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Models\bin\Debug\netstandard2.1\LuxuryEstateProject.Data.Models.dll
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Models\bin\Debug\netstandard2.1\LuxuryEstateProject.Data.Models.pdb
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Models\bin\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.dll
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Models\bin\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.pdb
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Models\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Models.csprojAssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Models\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Models.AssemblyInfoInputs.cache
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Models\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Models.AssemblyInfo.cs
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Models\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Models.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Models\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Models.csproj.CopyComplete
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Models\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Models.dll
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Data\LuxuryEstateProject.Data.Models\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Models.pdb

@@ -1,0 +1,181 @@
+﻿@model LuxuryEstateProject.Web.ViewModels.Blog.BlogDetailsViewModel
+@using LuxuryEstateProject.Common
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <!-- ======= Property Search Section ======= -->
+    <div class="click-closed"></div>
+    <main id="main">
+
+        <!-- ======= Intro Single ======= -->
+        <section class="intro-single">
+            <div class="container">
+                @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+                {
+                    <div class="row-cols-3">
+
+                        <form method="post" asp-action="Delete" id="deleteForm" asp-route-id="@this.Model.Id"></form>
+                        <button class="btn btn-danger col-md-3" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                        <a asp-area="" asp-action="Edit" asp-route-id="@this.Model.Id" class="btn btn-secondary">Edit</a>
+
+                    </div>
+                }
+                <div class="row">
+                    <div class="col-md-12 col-lg-8">
+                        <div class="title-single-box">
+                            <h1 class="title-single">@Model.Name</h1>
+                            <span class="color-text-a">@Model.SubName</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                        <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a asp-controller="Home" asp-action="Index">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    @Model.Name
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Intro Single-->
+        <!-- ======= Blog Single ======= -->
+        <section class="news-single nav-arrow-b">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="property-single-carousel" class="owl-carousel owl-arrow gallery-property">
+                            @foreach (var img in @Model.ImageUrl)
+                            {
+                                <div class="carousel-item-a">
+                                    <img src="@img" style="height: 850px; width: 1300px;" alt="">
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                        <div class="post-information">
+                            <ul class="list-inline text-center color-a">
+                                <li class="list-inline-item mr-2">
+                                    <strong>Author: </strong>
+                                    <span class="color-text-a">@Model.Author</span>
+                                </li>
+                                <li class="list-inline-item mr-2">
+                                    <strong>Category: </strong>
+                                    <span class="color-text-a">@Model.Category</span>
+                                </li>
+                                <li class="list-inline-item">
+                                    <strong>Date: </strong>
+                                    <span class="color-text-a">@Model.Date</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="post-content color-text-a">
+                            <p class="post-intro">
+                                <strong>@Model.Description</strong>
+                            </p>
+                            <blockquote class="blockquote">
+                                <p class="m-md-4">
+
+                                </p>
+                                <footer class="blockquote-footer">
+                                    <strong>@Model.Author</strong>
+                                    <cite title="Source Title">Author</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="col-md-10 offset-md-1 col-lg-10 offset-lg-1">
+                        <div class="title-box-d">
+                            <h3 class="title-d">Comments (@Model.Comments.Count())</h3>
+                        </div>
+                        <div class="box-comments">
+                            <ul class="list-comments">
+
+                                @foreach (var comment in Model.Comments)
+                                {
+                                    <li>
+                                        <div class="comment-details">
+                                            <h4 class="comment-author">@comment.Name</h4>
+                                            <span>@comment.CreatedOn</span>
+                                            <p class="comment-description">
+                                                @comment.Content
+                                            </p>
+                                        </div>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        <div class="form-comments">
+                            <div class="title-box-d">
+                                <h3 class="title-d"> Leave a Reply</h3>
+                            </div>
+                            <form asp-action="AddComment" method="post">
+                                <label for="content"></label>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <textarea placeholder="Comment *" cols="45" rows="8" required class="form-control text-left" id="content" name="content"></textarea>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="blogId" value="@Model.Id" />
+                                <input type="submit" class="btn btn-a" style="margin-top: 25px" value="Comment">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Blog Single-->
+    </main><!-- End #main -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <div id="preloader"></div>
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete Property</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Do you want to delete?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary" onclick="deleteForm.submit()">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form method="post" id="antiForgeryForm"></form>
+    @section Scripts {
+        <script>
+            $("i[data-vote]").each(function (el) {
+                $(this).on("click", function () {
+                    var value = $(this).attr("data-vote");
+                    var blogId = @Model.Id;
+                    var data = { blogId: blogId, value: value };
+                    var antiForgeryToken = $('#antiForgeryForm input[name=__RequestVerificationToken]').val();
+                    $.ajax({
+                        type: "POST",
+                        url: "/api/Votes",
+                        data: JSON.stringify(data),
+                        headers: {
+                            'X-CSRF-TOKEN': antiForgeryToken
+                        },
+                        success: function (data) {
+                            console.log(data);
+                            $('#averageVoteValue').html(data.averageVote.toFixed(1));
+                        },
+                        contentType: 'application/json',
+                    });
+                })
+            });
+        </script>
+    }
+</body>
+
+</html>

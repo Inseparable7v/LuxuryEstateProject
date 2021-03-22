@@ -23,6 +23,12 @@
         {
         }
 
+        public DbSet<Blog> Blog { get; set; }
+
+        public DbSet<BlogImage> BlogImage { get; set; }
+
+        public DbSet<Comment> Comment{ get; set; }
+
         public DbSet<RealEstateProperty> RealEstateProperties { get; set; }
 
         public DbSet<RealEstateAmenity> RealEstateAmenities { get; set; }

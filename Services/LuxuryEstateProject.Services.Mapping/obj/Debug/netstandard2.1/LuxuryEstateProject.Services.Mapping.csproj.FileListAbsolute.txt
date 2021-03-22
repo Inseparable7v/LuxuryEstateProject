@@ -16,3 +16,12 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstatePr
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.csproj.CoreCompileInputs.cache
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.pdb
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services.Mapping\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.deps.json
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services.Mapping\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.dll
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services.Mapping\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.pdb
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.csprojAssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.AssemblyInfoInputs.cache
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.AssemblyInfo.cs
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.dll
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.pdb

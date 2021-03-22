@@ -16,3 +16,12 @@ C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstatePr
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.csproj.CoreCompileInputs.cache
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.dll
 C:\Users\danie\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.pdb
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.deps.json
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.dll
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.pdb
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.csprojAssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.AssemblyInfoInputs.cache
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.AssemblyInfo.cs
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.dll
+C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.pdb

@@ -6181,19 +6181,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\danie\\.nuget\\packages\\": {}
+    "C:\\Users\\Daniel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj",
       "projectName": "LuxuryEstateProject.Data",
-      "projectPath": "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj",
-      "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\Data\\LuxuryEstateProject.Data\\obj\\",
+      "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj",
+      "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\Data\\LuxuryEstateProject.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6207,14 +6207,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj": {
-              "projectPath": "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj"
+            "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj": {
+              "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj"
             },
-            "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj": {
-              "projectPath": "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj"
+            "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj": {
+              "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj"
             },
-            "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj": {
-              "projectPath": "C:\\Users\\danie\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj"
+            "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj": {
+              "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj"
             }
           }
         }
@@ -6273,7 +6273,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

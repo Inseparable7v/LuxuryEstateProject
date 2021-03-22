@@ -71,6 +71,8 @@
             services.AddTransient<ICity, CityService>();
             services.AddTransient<IDistrict, DistrictService>();
             services.AddTransient<IAmenities, AmenitiesService>();
+            services.AddTransient<IBlogService, BlogService>();
+            services.AddTransient<ICommentService, CommentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
