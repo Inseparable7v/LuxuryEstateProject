@@ -2,7 +2,7 @@
 <nav class="pagination-a">
     <ul class="pagination justify-content-center">
         <li class="page-item @if (!Model.HasPreviousPage) { <text>disabled</text> }">
-            <a class="page-link" tabindex="-1" asp-action="ById" asp-route-id="@Model.PreviousPageNumber"> <span class="ion-ios-arrow-back"></span></a>
+            <a class="page-link" tabindex="-1" asp-action="All" asp-route-id="@Model.PreviousPageNumber"> <span class="ion-ios-arrow-back"></span></a>
         </li>
         @for (int i = Model.PageNumber - 3; i < Model.PageNumber; i++)
         {
@@ -25,7 +25,7 @@
             }
         }
         <li class="page-item @if (!Model.HasNextPage) { <text>disabled</text> }">
-            <a class="page-link" asp-action="ById" asp-route-id="@Model.NextPageNumber"> <span class="ion-ios-arrow-forward"></span></a>
+            <a class="page-link" asp-action="All" asp-route-id="@Model.NextPageNumber"> <span class="ion-ios-arrow-forward"></span></a>
         </li>
     </ul>
 </nav>

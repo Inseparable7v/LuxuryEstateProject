@@ -22,7 +22,7 @@
 
         [Required]
         [Range(0, 10)]
-        public string Garage { get; set; }
+        public int Garage { get; set; }
 
         [Required]
         [Range(0, 10)]

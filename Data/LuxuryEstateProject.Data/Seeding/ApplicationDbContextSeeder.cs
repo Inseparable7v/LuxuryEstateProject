@@ -26,10 +26,10 @@
 
             var seeders = new List<ISeeder>
                           {
+                              new RolesSeeder(),
                               new AmenitySeeder(),
                               new AdminSeeder(),
                               new CountrySeeder(),
-                              new RolesSeeder(),
                               new SettingsSeeder(),
                           };
 

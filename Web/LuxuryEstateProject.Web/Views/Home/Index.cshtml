@@ -22,7 +22,7 @@
 <body>
     <!-- ======= Intro Section ======= -->
 
-    <div class="intro intro-corousel">
+    <div class="intro intro-carousel position-relative">
         <div id="carousel" class="owl-carousel owl-theme">
             @foreach (var estateModel in @Model.PropertyViewModels)
             {
@@ -34,7 +34,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="intro-body">
-                                            <p  class="intro-title-top">
+                                            <p class="intro-title-top">
                                                 <h3>@estateModel.DistrictName</h3>
                                             </p>
                                             <h2 class="intro-title mb-4">
@@ -141,7 +141,7 @@
                         <div class="col-md-12">
                             <div class="card-box-a card-shadow">
                                 <div class="img-box-a">
-                                    <img src="@estateModel.ImageRemoteImageUrl" style="height: 365px"alt="" class="img-a img-fluid">
+                                    <img src="@estateModel.ImageRemoteImageUrl" style="height: 365px" alt="" class="img-a img-fluid">
                                 </div>
                                 <div class="card-overlay-hover">
                                     <div class="card-overlay-a-content">
@@ -216,7 +216,7 @@
                         <div class="col-md-4">
                             <div class="card-box-d">
                                 <div class="card-img-d">
-                                    <img src="@agents.ImageRemoteImageUrl" style="height:365px"alt="" class="img-d img-fluid">
+                                    <img src="@agents.ImageRemoteImageUrl" style="height:365px" alt="" class="img-d img-fluid">
                                 </div>
                                 <div class="card-overlay-hover card-img-overlay">
                                     <div class="card-header-b">
@@ -248,6 +248,59 @@
                 </div>
             </div>
         </section><!-- End Agents Section -->
+        <section class="section-news section-t8">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title-wrap d-flex justify-content-between">
+                            <div class="title-box">
+                                <h2 class="title-a">Latest News</h2>
+                            </div>
+                            <div class="title-link">
+                                <a asp-area="" asp-controller="Blog" asp-action="All">
+                                    All Agents
+                                    <span class="bi bi-chevron-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @foreach (var blog in @Model.Blogs)
+                    {
+                        <div id="news-carousel" class="col-md-4 swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="card-box-b news-box">
+                                    <div class="img-box-b">
+                                        <img src="@blog.ImageUrl" style="height:365px" alt="" class="img-d img-fluid">
+                                    </div>
+                                    <div class="card-overlay">
+                                        <div class="card-header-b">
+                                            <div class="card-category-b">
+                                                <a asp-controller="Blog" asp-action="ById" asp-route-id="@blog.Id" class="category-b">@blog.Category</a>
+                                            </div>
+                                            <div class="card-title-b">
+                                                <h2 class="title-2">
+
+                                                    <a asp-controller="Blog" asp-action="ById" asp-route-id="@blog.Id">
+                                                        @blog.Name
+                                                        <br> new
+                                                    </a>
+                                                </h2>
+                                            </div>
+                                            <div class="card-date">
+                                                <span class="date-b">@blog.Date</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="news-carousel-pagination carousel-pagination"></div>
+            </div>
+        </section><!-- End Latest News Section -->
         <!-- ======= Testimonials Section ======= -->
         <section class="section-testimonials section-t8 nav-arrow-a">
             <div class="container">
@@ -321,6 +374,7 @@
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     <div id="preloader"></div>
 
+    <script src="~/assets/js/main.js"></script>
 </body>
 
 </html>

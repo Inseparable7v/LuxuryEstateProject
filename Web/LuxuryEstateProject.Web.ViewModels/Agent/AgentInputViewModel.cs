@@ -6,6 +6,6 @@
 
     public class AgentInputViewModel : BaseAgentInputModel
     {
-        public IFormFile Images { get; set; }
+        public IEnumerable<IFormFile> Images { get; set; }
     }
 }

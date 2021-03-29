@@ -68,33 +68,37 @@
 
             var image = input.Images;
 
-            var extension = Path.GetExtension(image.FileName).TrimStart('.');
-            if (!this.allowedExtensions.Any(x => extension.EndsWith(x)))
+            foreach (var img in image)
             {
-                throw new Exception($"Invalid image extension {extension}");
-            }
+                var extension = Path.GetExtension(img.FileName).TrimStart('.');
 
-            var dbImage = new LuxuryEstateProject.Data.Models.Image
-            {
-                Extension = extension,
-            };
-
-            using var imageSharp = SixLabors.ImageSharp.Image.Load(image.OpenReadStream());
-
-            imageSharp.Mutate(
-            x => x.Resize(
-                new ResizeOptions
+                if (!this.allowedExtensions.Any(x => extension.EndsWith(x)))
                 {
-                    Mode = ResizeMode.Min,
-                    Size = new Size(800, 740),
-                    Position = AnchorPositionMode.Center,
-                }));
+                    throw new Exception($"Invalid image extension {extension}");
+                }
 
-            agent.Images.Add(dbImage);
+                var dbImage = new LuxuryEstateProject.Data.Models.Image
+                {
+                    Extension = extension,
+                };
 
-            var physicalPath = $"{imagePath}{dbImage.Id}.{extension}";
-            await using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
-            await imageSharp.SaveAsync(fileStream, new PngEncoder());
+                using var imageSharp = SixLabors.ImageSharp.Image.Load(img.OpenReadStream());
+
+                imageSharp.Mutate(
+                x => x.Resize(
+                    new ResizeOptions
+                    {
+                        Mode = ResizeMode.Min,
+                        Size = new Size(800, 740),
+                        Position = AnchorPositionMode.Center,
+                    }));
+
+                agent.Images.Add(dbImage);
+
+                var physicalPath = $"{imagePath}{dbImage.Id}.{extension}";
+                await using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
+                await imageSharp.SaveAsync(fileStream, new PngEncoder());
+            }
 
             await this.agentRepository.AddAsync(agent);
 

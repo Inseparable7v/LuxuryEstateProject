@@ -2,30 +2,35 @@
 {
     using System.Diagnostics;
 
+    using LuxuryEstateProject.Services.Data;
     using LuxuryEstateProject.Services.Data.Agent;
     using LuxuryEstateProject.Services.Data.Property;
     using LuxuryEstateProject.Web.ViewModels;
     using LuxuryEstateProject.Web.ViewModels.Agent;
+    using LuxuryEstateProject.Web.ViewModels.Blog;
     using LuxuryEstateProject.Web.ViewModels.Property;
     using Microsoft.AspNetCore.Mvc;
 
     public class HomeController : BaseController
     {
         private readonly IPropertyService propertyService;
+        private readonly IBlogService blogService;
         private readonly IAgentService agentService;
 
-        public HomeController(IPropertyService propertyService, IAgentService agentService)
+        public HomeController(IPropertyService propertyService, IAgentService agentService, IBlogService blogService)
         {
             this.agentService = agentService;
             this.propertyService = propertyService;
+            this.blogService = blogService;
         }
 
         public IActionResult Index()
         {
             var property = this.propertyService.GetLatestProperties<RealEstateViewModel>();
             var agent = this.agentService.GetHomePageAgents<AgentViewModel>();
+            var blogs = this.blogService.GetHomePageBlogs<VisualizeBlogViewModel>();
 
-            var model = new RealEstateListViewModel { PropertyViewModels = property, Agents = agent };
+            var model = new RealEstateListViewModel { PropertyViewModels = property, Agents = agent, Blogs = blogs };
             return this.View(model);
         }
 

@@ -20,8 +20,6 @@
 
         IEnumerable<T> GetAll<T>(int page, int itemsPerPage);
 
-        IEnumerable<SelectListItem> GetAllAsSelectListItems();
-
         Task UpdateAsync(int id, EditPropertyinputModel input);
 
         Task DeleteAsync(int id);

@@ -37,12 +37,12 @@
                         <div class="col-md-4">
                             <div class="card-box-b card-shadow news-box">
                                 <div class="img-box-b">
-                                    <img src=@blog.ImageUrl alt="" class="img-b img-fluid">
+                                    <img src=@blog.ImageUrl alt="" style="height: 400px; width:350px" class="img-b img-fluid">
                                 </div>
                                 <div class="card-overlay">
                                     <div class="card-header-b">
                                         <div class="card-category-b">
-                                            <a href="#" class="category-b">@blog.Category</a>
+                                            <a asp-area="" asp-route-id="@blog.Id" asp-action="ById" class="category-b">@blog.Category</a>
                                         </div>
                                         <div class="card-title-b">
                                             <h2 class="title-2">

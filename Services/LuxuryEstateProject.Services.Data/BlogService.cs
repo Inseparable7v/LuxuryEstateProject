@@ -12,6 +12,8 @@
     using LuxuryEstateProject.Services.Mapping;
     using LuxuryEstateProject.Web.ViewModels.Blog;
     using Microsoft.AspNetCore.Mvc.Rendering;
+    using SixLabors.ImageSharp;
+    using SixLabors.ImageSharp.Processing;
 
     public class BlogService : IBlogService
     {
@@ -31,7 +33,7 @@
                 Name = input.Name,
                 SubName = input.SubName,
                 Author = input.Author,
-                Category = input.Category,
+                Category = (BlogCategory)input.Category,
                 Date = input.Date,
                 Description = input.Description,
                 AddedByUserId = userId,
@@ -53,6 +55,18 @@
                     AddedByUserid = userId,
                     Extension = extension,
                 };
+
+                using var imageSharp = SixLabors.ImageSharp.Image.Load(image.OpenReadStream());
+
+                imageSharp.Mutate(
+                x => x.Resize(
+                    new ResizeOptions
+                    {
+                        Mode = ResizeMode.Max,
+                        Size = new Size(700, 650),
+                        Position = AnchorPositionMode.Center,
+                    }));
+
                 blog.BlogImages.Add(dbImage);
 
                 var phycicalPath = $"{imagePath}/blogs/{dbImage.Id}.{extension}";
@@ -63,6 +77,13 @@
 
             await this.blogRepository.AddAsync(blog);
             await this.blogRepository.SaveChangesAsync();
+        }
+
+        public IEnumerable<T> GetHomePageBlogs<T>()
+        {
+            var blogs = this.blogRepository.AllAsNoTracking().Take(3).OrderByDescending(x => x.Id).To<T>().ToList();
+
+            return blogs;
         }
 
         public async Task DeleteAsync(int id)
@@ -109,7 +130,7 @@
             blog.Name = input.Name;
             blog.Description = input.Description;
             blog.SubName = input.SubName;
-            blog.Category = input.Category;
+            blog.Category = (BlogCategory)input.Category;
             blog.Author = input.Author;
             blog.Date = input.Date;
 

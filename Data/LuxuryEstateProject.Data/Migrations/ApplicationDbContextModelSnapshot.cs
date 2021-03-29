@@ -227,8 +227,8 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.Property<string>("Author")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Category")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Category")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
@@ -347,9 +347,6 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.Property<string>("AddedByUserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("AgentId")
-                        .HasColumnType("int");
-
                     b.Property<int>("BlogId")
                         .HasColumnType("int");
 
@@ -377,8 +374,6 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AddedByUserId");
-
-                    b.HasIndex("AgentId");
 
                     b.HasIndex("BlogId");
 
@@ -757,12 +752,6 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.HasOne("LuxuryEstateProject.Data.Models.ApplicationUser", "AddedByUser")
                         .WithMany()
                         .HasForeignKey("AddedByUserId");
-
-                    b.HasOne("LuxuryEstateProject.Data.Models.Agent", "Agent")
-                        .WithMany()
-                        .HasForeignKey("AgentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
 
                     b.HasOne("LuxuryEstateProject.Data.Models.Blog", "Blog")
                         .WithMany("Comments")

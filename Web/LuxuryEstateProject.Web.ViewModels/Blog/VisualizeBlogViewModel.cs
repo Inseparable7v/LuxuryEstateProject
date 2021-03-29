@@ -17,7 +17,7 @@
 
         public string ImageUrl { get; set; }
 
-        public string Category { get; set; }
+        public BlogCategory Category { get; set; }
 
         public DateTime Date { get; set; }
 

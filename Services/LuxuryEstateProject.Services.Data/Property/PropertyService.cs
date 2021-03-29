@@ -67,15 +67,10 @@
             return properties;
         }
 
-        public IEnumerable<SelectListItem> GetAllAsSelectListItems()
-        {
-            return this.realRepository.All().Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).OrderBy(c => c.Text);
-        }
-
-        /// <inheritdoc/>
+        // <inheritdoc/>
         public async Task<T> GetByIdAsync<T>(int id)
         {
-            return await this.realRepository.All().Where(x => x.Id.Equals(id)).To<T>().FirstOrDefaultAsync();
+            return await this.realRepository.AllAsNoTracking().Where(x => x.Id.Equals(id)).To<T>().FirstOrDefaultAsync();
         }
 
         /// <inheritdoc/>

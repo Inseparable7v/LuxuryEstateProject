@@ -24,7 +24,8 @@
         public string Author { get; set; }
 
         [Required]
-        public string Category { get; set; }
+        [Range(0, 4)]
+        public BlogCategory Category { get; set; }
 
         [Required]
         public DateTime Date { get; set; }

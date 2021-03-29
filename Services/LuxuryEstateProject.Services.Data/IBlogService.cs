@@ -22,5 +22,7 @@
         int GetCount();
 
         Task UpdateAsync(int id, EditBlogInputModel input);
+
+        IEnumerable<T> GetHomePageBlogs<T>();
     }
 }
