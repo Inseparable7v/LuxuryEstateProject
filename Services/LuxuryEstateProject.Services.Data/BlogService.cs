@@ -86,13 +86,6 @@
             return blogs;
         }
 
-        public async Task DeleteAsync(int id)
-        {
-            var blog = this.blogRepository.All().FirstOrDefault(x => x.Id == id);
-            this.blogRepository.Delete(blog);
-            await this.blogRepository.SaveChangesAsync();
-        }
-
         public IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 12)
         {
             var blogs = this.blogRepository.AllAsNoTracking()
@@ -134,6 +127,13 @@
             blog.Author = input.Author;
             blog.Date = input.Date;
 
+            await this.blogRepository.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            var blog = this.blogRepository.All().FirstOrDefault(x => x.Id == id);
+            this.blogRepository.Delete(blog);
             await this.blogRepository.SaveChangesAsync();
         }
     }

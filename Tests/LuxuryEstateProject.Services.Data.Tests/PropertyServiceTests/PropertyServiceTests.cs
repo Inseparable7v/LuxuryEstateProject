@@ -18,11 +18,8 @@
 
     public class PropertyServiceTests : TestBase
     {
-        private Mock<IDeletableEntityRepository<RealEstateProperty>> propertiesRepository;
-
         public PropertyServiceTests()
         {
-            this.propertiesRepository = new Mock<IDeletableEntityRepository<RealEstateProperty>>();
         }
 
         [Fact]
@@ -169,7 +166,7 @@
 
             await service.UpdateAsync(1, editProperty);
 
-            Assert.Equal("test", property.Name);
+            Assert.Equal(1, property.Bath);
         }
 
         [Fact]

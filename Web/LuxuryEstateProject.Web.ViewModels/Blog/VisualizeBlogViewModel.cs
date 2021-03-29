@@ -9,7 +9,7 @@
     using LuxuryEstateProject.Data.Models;
     using LuxuryEstateProject.Services.Mapping;
 
-    public class VisualizeBlogViewModel : IMapFrom<BlogImage>, IHaveCustomMappings
+    public class VisualizeBlogViewModel : IMapFrom<Blog>, IHaveCustomMappings
     {
         public int Id { get; set; }
 

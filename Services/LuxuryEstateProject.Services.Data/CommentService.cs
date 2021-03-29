@@ -1,5 +1,6 @@
 ﻿namespace LuxuryEstateProject.Services.Data
 {
+    using System.Linq;
     using System.Threading.Tasks;
 
     using LuxuryEstateProject.Data.Common.Repositories;
@@ -28,6 +29,11 @@
 
             await this.commentsRepository.AddAsync(comment);
             await this.commentsRepository.SaveChangesAsync();
+        }
+
+        public async Task<int> GetCountAsync()
+        {
+           return this.commentsRepository.AllAsNoTracking().Count();
         }
     }
 }

@@ -8,5 +8,7 @@
     public interface ICommentService
     {
         Task AddCommentAsync(string content, int blogId, string userId, string email);
+
+        Task<int> GetCountAsync();
     }
 }
