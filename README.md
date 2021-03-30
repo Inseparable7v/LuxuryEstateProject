@@ -1,9 +1,5 @@
 ## LuxuryEstateProject
 
-
-# https://luxuryestate.azurewebsites.net - Check it Out on this link.
-
-
 ## 💡 My Personal Project on ASP.NET Core application for the Real Estate C# Web - ASP.NET Core October 2020 @SoftUni
 
 ## 📝 Project Description
@@ -18,14 +14,18 @@ Users can only add property.
 
 ```bash
 **Futures:**
-✔️ Add property,
-✔️ Add agent,
-✔️ See Latest properties,
-✔️ Contact Us page,
-✔️ Agents Page,
-✔️ Agents Grid Page,
-✔️ Properties Grid Page,
-✔️ Properties Single Page,
+#✔️ Add property,
+#✔️ Add agent,
+#✔️ See Latest properties,
+#✔️ Contact Us page,
+#✔️ Agents Page,
+#✔️ Agents Grid Page,
+#✔️ Properties Grid Page,
+#✔️ Blog Grid Page,
+#✔️ Comments To Blogs,
+#✔️ Blog Single Page,
+#✔️ Test Service Coverage,
+#✔️ Properties Single Page,
 ```
 
 ## 🔨 Used technologies
