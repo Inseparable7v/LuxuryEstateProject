@@ -21,5 +21,10 @@
         {
             return this.settingsRepository.AllAsNoTracking().Count();
         }
+
+        public IEnumerable<T> GetAll<T>()
+        {
+            return this.settingsRepository.AllAsNoTracking().To<T>().ToList();
+        }
     }
 }

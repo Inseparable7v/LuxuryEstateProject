@@ -66,15 +66,34 @@
                 Name = "Philosophy",
             };
 
+            var thirdBlog = new Blog()
+            {
+                Id = 3,
+                Author = "Aristotle",
+                Category = BlogCategory.Blog,
+                Name = "Philosophy",
+            };
+
+            var fourthBlog = new Blog()
+            {
+                Id = 4,
+                Author = "Aristotle",
+                Category = BlogCategory.Blog,
+                Name = "Philosophy",
+            };
+
             var service = new BlogService(blogRepository);
 
             await db.Blog.AddAsync(firstBlog);
             await db.Blog.AddAsync(secondBlog);
+            await db.Blog.AddAsync(thirdBlog);
+            await db.Blog.AddAsync(fourthBlog);
             await db.SaveChangesAsync();
 
             var blogEntity = service.GetHomePageBlogs<VisualiseBlogViewModel>();
 
-            Assert.Equal(secondBlog.Id, blogEntity.FirstOrDefault().Id);
+            Assert.Equal(thirdBlog.Id, blogEntity.FirstOrDefault().Id);
+            Assert.Equal(3, blogEntity.Count());
         }
 
         [Fact]
@@ -91,15 +110,40 @@
                 Category = BlogCategory.Blog,
                 Name = "Philosophy",
             };
+            var secondBlog = new Blog()
+            {
+                Id = 2,
+                Author = "Aristotle",
+                Category = BlogCategory.Blog,
+                Name = "Philosophy",
+            };
+            var thirdBlog = new Blog()
+            {
+                Id = 3,
+                Author = "Aristotle",
+                Category = BlogCategory.Blog,
+                Name = "Philosophy",
+            };
+            var fourthBlog = new Blog()
+            {
+                Id = 4,
+                Author = "Aristotle",
+                Category = BlogCategory.Blog,
+                Name = "Philosophy",
+            };
 
             var service = new BlogService(blogRepository);
 
             await db.Blog.AddAsync(firstBlog);
+            await db.Blog.AddAsync(secondBlog);
+            await db.Blog.AddAsync(thirdBlog);
+            await db.Blog.AddAsync(fourthBlog);
             await db.SaveChangesAsync();
 
             var blogs = service.GetAll<VisualiseBlogViewModel>(1);
 
             Assert.Equal(firstBlog.Name, blogs.FirstOrDefault().Name);
+            Assert.Equal(4, blogs.Count());
         }
 
         [Fact]

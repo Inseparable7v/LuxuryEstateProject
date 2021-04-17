@@ -1,14 +1,13 @@
+
 /**
-* Template Name: EstateAgency - v4.0.1
+* Template Name: EstateAgency - v4.1.0
 * Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-
 (function () {
     "use strict";
 
-    var Swiper = {};
     /**
      * Easy selector helper function
      */
@@ -103,7 +102,7 @@
     /**
      * Intro Carousel
      */
-    Swiper = new Swiper('.intro-carousel', {
+    new Swiper('.intro-carousel', {
         speed: 600,
         loop: true,
         autoplay: {
@@ -121,7 +120,7 @@
     /**
      * Property carousel
      */
-    Swiper = new Swiper('#property-carousel', {
+    new Swiper('#property-carousel', {
         speed: 600,
         loop: true,
         autoplay: {
@@ -150,7 +149,7 @@
     /**
      * News carousel
      */
-    Swiper = new Swiper('#news-carousel', {
+    new Swiper('#news-carousel', {
         speed: 600,
         loop: true,
         autoplay: {
@@ -179,7 +178,7 @@
     /**
      * Testimonial carousel
      */
-    Swiper = new Swiper('#testimonial-carousel', {
+    new Swiper('#testimonial-carousel', {
         speed: 600,
         loop: true,
         autoplay: {
@@ -197,7 +196,7 @@
     /**
      * Property Single carousel
      */
-    Swiper = new Swiper('#property-single-carousel', {
+    new Swiper('#property-single-carousel', {
         speed: 600,
         loop: true,
         autoplay: {
@@ -210,4 +209,5 @@
             clickable: true
         }
     });
+
 })()

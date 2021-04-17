@@ -1,9 +1,5 @@
 ## LuxuryEstateProject
 
-
-# https://luxuryestate.azurewebsites.net - Check it Out on this link.
-
-
 ## 💡 My Personal Project on ASP.NET Core application for the Real Estate C# Web - ASP.NET Core October 2020 @SoftUni
 
 ## 📝 Project Description
