@@ -25,3 +25,13 @@ C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateP
 C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.csproj.CoreCompileInputs.cache
 C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.dll
 C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.pdb
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.deps.json
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.dll
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.pdb
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.csproj.AssemblyReference.cache
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.GeneratedMSBuildEditorConfig.editorconfig
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.AssemblyInfoInputs.cache
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.AssemblyInfo.cs
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.csproj.CoreCompileInputs.cache
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.dll
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.pdb

@@ -12,10 +12,8 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("LuxuryEstateProject.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\Data\\LuxuryEstateProjec" +
-    "t.Data", "LuxuryEstateProject.Data.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("LuxuryEstateProject.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\Web\\LuxuryEstateProject" +
-    ".Web", "LuxuryEstateProject.Web.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("LuxuryEstateProject.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data", "LuxuryEstateProject.Data.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("LuxuryEstateProject.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "E:\\Git-repos\\LuxuryEstateProject\\Web\\LuxuryEstateProject.Web", "LuxuryEstateProject.Web.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("LuxuryEstateProject.Web.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

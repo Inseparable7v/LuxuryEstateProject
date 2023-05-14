@@ -25,3 +25,13 @@ C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateP
 C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services.Messaging\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Messaging.csproj.CoreCompileInputs.cache
 C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services.Messaging\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Messaging.dll
 C:\Users\Daniel\Documents\GitHub\LuxuryEstateProject-main\Services\LuxuryEstateProject.Services.Messaging\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Messaging.pdb
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Messaging\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.Messaging.deps.json
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Messaging\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.Messaging.dll
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Messaging\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.Messaging.pdb
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Messaging\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Messaging.csproj.AssemblyReference.cache
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Messaging\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Messaging.GeneratedMSBuildEditorConfig.editorconfig
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Messaging\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Messaging.AssemblyInfoInputs.cache
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Messaging\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Messaging.AssemblyInfo.cs
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Messaging\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Messaging.csproj.CoreCompileInputs.cache
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Messaging\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Messaging.dll
+E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Messaging\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Messaging.pdb

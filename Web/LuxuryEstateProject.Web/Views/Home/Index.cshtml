@@ -11,39 +11,51 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>EstateAgency Bootstrap Template - Index</title>
-    <meta content="" name="descriptison">
+    <meta content="" name="description">
     <meta content="" name="keywords">
 
-
+    <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- ======= Intro Section ======= -->
+    <div class="intro intro-carousel swiper position-relative">
 
-    <div class="intro intro-carousel position-relative">
-        <div id="carousel" class="owl-carousel owl-theme">
+        <div class="swiper-wrapper">
             @foreach (var estateModel in @Model.PropertyViewModels)
             {
-                <div class="carousel-item-a intro-item bg-image " style="background-image: url(@estateModel.ImageRemoteImageUrl)">
+                    <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(@estateModel.ImageRemoteImageUrl)">
                     <div class="overlay overlay-a"></div>
                     <div class="intro-content display-table">
                         <div class="table-cell">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-8">
                                         <div class="intro-body">
                                             <p class="intro-title-top">
-                                                <h3>@estateModel.DistrictName</h3>
+                                                @estateModel.DistrictName
                                             </p>
-                                            <h2 class="intro-title mb-4">
-                                                <br> @estateModel.Name
-                                                <span class="color-b">@estateModel.Size m²</span>
+                                                    <h1><span class="color-b">@estateModel.Size m²</span></h1>
+                                            <h2 class="intro-title mb-4 ">
+                                                    <br class="color-b">@estateModel.Name
                                             </h2>
-                                            <p class="intro-subtitle intro-price">
-                                                <a asp-area="" asp-controller="Property" asp-action="PropertySingle" asp-route-id="@estateModel.Id"><span class="price-a">@estateModel.Type | $ @estateModel.Price</span></a>
-                                            </p>
+                                             <p class="intro-subtitle intro-price">
+                                                        <a asp-area="" asp-controller="Property" asp-action="PropertySingle" asp-route-id="@estateModel.Id"><span class="price-a">@estateModel.Type | $ @estateModel.Price</span></a>
+                                             </p>
                                         </div>
                                     </div>
                                 </div>
@@ -53,10 +65,13 @@
                 </div>
             }
         </div>
+        <div class="swiper-pagination"></div>
     </div><!-- End Intro Section -->
+
     <main id="main">
+
         <!-- ======= Services Section ======= -->
-        <section class="section-services section-t8">
+       <section class="section-services section-t8">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -118,7 +133,7 @@
             </div>
         </section><!-- End Services Section -->
         <!-- ======= Latest Properties Section ======= -->
-        <section class="section-t8">
+        <section class="section-property section-t8">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -135,61 +150,67 @@
                         </div>
                     </div>
                 </div>
-                <div id="property-carousel" class="owl-carousel owl-theme">
-                    @foreach (var estateModel in @Model.PropertyViewModels)
-                    {
-                        <div class="col-md-12">
+
+                <div id="property-carousel" class="swiper">
+                    <div class="swiper-wrapper">
+
+                        @foreach (var estateModel in @Model.PropertyViewModels)
+                        {
+                        <div class="carousel-item-b swiper-slide">
                             <div class="card-box-a card-shadow">
                                 <div class="img-box-a">
-                                    <img src="@estateModel.ImageRemoteImageUrl" style="height: 365px" alt="" class="img-a img-fluid">
+                                        <img src="@estateModel.ImageRemoteImageUrl" alt="" class="img-a img-fluid">
                                 </div>
-                                <div class="card-overlay-hover">
+                                <div class="card-overlay">
                                     <div class="card-overlay-a-content">
                                         <div class="card-header-a">
                                             <h2 class="card-title-a">
-                                                <a href="#">
-                                                    <br />@estateModel.Name
+                                                <a href="property-single.html">
+                                                        <br /> @estateModel.Name
                                                 </a>
                                             </h2>
                                         </div>
                                         <div class="card-body-a">
                                             <div class="price-box d-flex">
-                                                <span class="price-a">rent | @estateModel.Price</span>
+                                                    <span class="price-a">rent | $ @estateModel.Price</span>
                                             </div>
-                                            <a asp-area="" asp-controller="Property" asp-action="PropertySingle" asp-route-id="@estateModel.Id" class="link-a">
-                                                Click here to view
-                                                <span class="ion-ios-arrow-forward"></span>
-                                            </a>
+                                                <a asp-area="" asp-controller="Property" asp-action="PropertySingle" asp-route-id="@estateModel.Id" class="link-a">
+                                                    Click here to view
+                                                    <span class="ion-ios-arrow-forward"></span>
+                                                </a>
                                         </div>
                                         <div class="card-footer-a">
                                             <ul class="card-info d-flex justify-content-around">
                                                 <li>
                                                     <h4 class="card-info-title">Area</h4>
                                                     <span>
-                                                        @estateModel.Size
+                                                            @estateModel.Size
                                                         <sup>2</sup>
                                                     </span>
                                                 </li>
                                                 <li>
                                                     <h4 class="card-info-title">Beds</h4>
-                                                    <span>@estateModel.Bed</span>
+                                                        <span>@estateModel.Bed</span>
                                                 </li>
                                                 <li>
                                                     <h4 class="card-info-title">Baths</h4>
-                                                    <span>@estateModel.Bath</span>
+                                                        <span>@estateModel.Bath</span>
                                                 </li>
                                                 <li>
                                                     <h4 class="card-info-title">Garages</h4>
-                                                    <span>@estateModel.Garage</span>
+                                                        <span>@estateModel.Garage</span>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    }
+                        </div><!-- End carousel item -->
+                        }
+                    </div>
                 </div>
+              <div class="propery-carousel-pagination carousel-pagination"></div>
+
             </div>
         </section><!-- End Latest Properties Section -->
         <!-- ======= Agents Section ======= -->
@@ -211,43 +232,69 @@
                     </div>
                 </div>
                 <div class="row">
-                    @foreach (var agents in @Model.Agents)
-                    {
-                        <div class="col-md-4">
-                            <div class="card-box-d">
-                                <div class="card-img-d">
-                                    <img src="@agents.ImageRemoteImageUrl" style="height:365px" alt="" class="img-d img-fluid">
-                                </div>
-                                <div class="card-overlay-hover card-img-overlay">
-                                    <div class="card-header-b">
-                                        <div class="card-title-d align-self-center">
-                                            <h3 class="title-d">
+                @foreach (var agents in @Model.Agents)
+                {
+                <div class="col-md-4">
+                        <div class="card-box-d">
+                            <div class="card-img-d">
+                                    <img src="@agents.ImageRemoteImageUrl" alt="" class="img-d img-fluid">
+                            </div>
+                            <div class="card-overlay card-overlay-hover">
+                                <div class="card-header-d">
+                                    <div class="card-title-d align-self-center">
+                                        <h3 class="title-d">
                                                 <a asp-area="" asp-controller="Agent" asp-action="SingleAgent" asp-route-id="@agents.Id" class="link-two">
                                                     @agents.Name @agents.LastName
-                                                </a>
-                                            </h3>
-                                        </div>
+                                                    </a>
+                                        </h3>
                                     </div>
-                                    <div class="card-body-d">
-                                        <p class="content-d color-text-a">
-                                            @agents.Description
+                                </div>
+                                <div class="card-body-d">
+                                    <p class="content-d color-text-a">
+                                        Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
+                                    </p>
+                                    <div class="info-agents color-a">
+                                        <p>
+                                            <strong>Phone: </strong>@agents.Phone
                                         </p>
-                                        <div class="info-agents color-a">
-                                            <p>
-                                                <strong>Phone: </strong> @agents.Phone
-                                            </p>
-                                            <p>
-                                                <strong>Email: </strong> @agents.Email
-                                            </p>
-                                        </div>
+                                        <p>
+                                                <strong>Email: </strong>  @agents.Email
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-footer-d">
+                                    <div class="socials-footer d-flex justify-content-center">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <a href="#" class="link-one">
+                                                    <i class="bi bi-facebook" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#" class="link-one">
+                                                    <i class="bi bi-twitter" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#" class="link-one">
+                                                    <i class="bi bi-instagram" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#" class="link-one">
+                                                    <i class="bi bi-linkedin" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    }
+                    </div>
+                }
                 </div>
-            </div>
         </section><!-- End Agents Section -->
+        <!-- ======= Latest News Section ======= -->
         <section class="section-news section-t8">
             <div class="container">
                 <div class="row">
@@ -258,123 +305,62 @@
                             </div>
                             <div class="title-link">
                                 <a asp-area="" asp-controller="Blog" asp-action="All">
-                                    All Agents
+                                    All Blogs
                                     <span class="bi bi-chevron-right"></span>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    @foreach (var blog in @Model.Blogs)
-                    {
-                        <div id="news-carousel" class="col-md-4 swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="card-box-b news-box">
-                                    <div class="img-box-b">
-                                        <img src="@blog.ImageUrl" style="height:365px" alt="" class="img-d img-fluid">
-                                    </div>
-                                    <div class="card-overlay">
-                                        <div class="card-header-b">
-                                            <div class="card-category-b">
-                                                <a asp-controller="Blog" asp-action="ById" asp-route-id="@blog.Id" class="category-b">@blog.Category</a>
-                                            </div>
-                                            <div class="card-title-b">
-                                                <h2 class="title-2">
 
+                <div id="news-carousel" class="swiper">
+                    <div class="swiper-wrapper">
+                        @foreach (var blog in @Model.Blogs)
+                    {
+                        <div class="carousel-item-c swiper-slide">
+                            <div class="card-box-b card-shadow news-box">
+                                <div class="img-box-b">
+                                        <img src="@blog.ImageUrl" alt="" class="img-b img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-header-b">
+                                        <div class="card-category-b">
+                                                    <a asp-controller="Blog" asp-action="ById" asp-route-id="@blog.Id" class="category-b">@blog.Category</a>
+                                            </div>
+                                        <div class="card-title-b">
+                                            <h2 class="title-2">
                                                     <a asp-controller="Blog" asp-action="ById" asp-route-id="@blog.Id">
                                                         @blog.Name
-                                                        <br> new
-                                                    </a>
-                                                </h2>
-                                            </div>
-                                            <div class="card-date">
-                                                <span class="date-b">@blog.Date</span>
-                                            </div>
+                                                            <br> new
+                                                        </a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-date">
+                                            <span class="date-b">@blog.Date</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    }
+                        </div><!-- End carousel item -->
+                        }
+                    </div>
                 </div>
+
                 <div class="news-carousel-pagination carousel-pagination"></div>
             </div>
         </section><!-- End Latest News Section -->
-        <!-- ======= Testimonials Section ======= -->
-        <section class="section-testimonials section-t8 nav-arrow-a">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="title-wrap d-flex justify-content-between">
-                            <div class="title-box">
-                                <h2 class="title-a">Testimonials</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="testimonial-carousel" class="owl-carousel owl-arrow">
-                    <div class="carousel-item-a">
-                        <div class="testimonials-box">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="testimonial-img">
-                                        <img src="assets/img/testimonial-1.jpg" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="testimonial-ico">
-                                        <span class="ion-ios-quote"></span>
-                                    </div>
-                                    <div class="testimonials-content">
-                                        <p class="testimonial-text">
-                                            We are very pleased from services of agent Teodor Todorov.
-                                        </p>
-                                    </div>
-                                    <div class="testimonial-author-box">
-                                        <img src="assets/img/mini-testimonial-1.jpg" alt="" class="testimonial-avatar">
-                                        <h5 class="testimonial-author">Albert & Erika</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item-a">
-                        <div class="testimonials-box">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="testimonial-img">
-                                        <img src="assets/img/testimonial-2.jpg" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="testimonial-ico">
-                                        <span class="ion-ios-quote"></span>
-                                    </div>
-                                    <div class="testimonials-content">
-                                        <p class="testimonial-text">
-                                            We are very pleased from services of agent Daniel Todorov.
-                                        </p>
-                                    </div>
-                                    <div class="testimonial-author-box">
-                                        <img src="assets/img/mini-testimonial-2.jpg" alt="" class="testimonial-avatar">
-                                        <h5 class="testimonial-author">Pablo & Emma</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- End Testimonials Section -->
-
     </main><!-- End #main -->
-    <!-- ======= Footer ======= -->
-
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <script src="~/assets/js/main.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>

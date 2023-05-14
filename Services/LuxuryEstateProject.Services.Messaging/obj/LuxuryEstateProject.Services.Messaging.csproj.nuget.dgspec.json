@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj": {}
+    "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj": {
+    "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj",
+        "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj",
         "projectName": "LuxuryEstateProject.Services.Messaging",
-        "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj",
-        "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\Services\\LuxuryEstateProject.Services.Messaging\\obj\\",
+        "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +57,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -66,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "gW8q83MFuXtBsHpgOYy2u7phfe+X6Vkd8vwpn4+0lXVQJHRrLsNr/5uYZZSuB20xwuolCDivjyAVjJCv+XAvjA==",
+  "dgSpecHash": "Ou2dtN7c3rPHbeF+Ls2Mun7uSi9WSVEFjwWe4AmkawDSRACDCTXakmqTxAsYy88gxeGwrXY+NGpgc7WcQKN1Rw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel\\Documents\\GitHub\\LuxuryEstateProject-main\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj",
+  "projectFilePath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Daniel\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
-    "C:\\Users\\Daniel\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512"
   ],
   "logs": []
 }
