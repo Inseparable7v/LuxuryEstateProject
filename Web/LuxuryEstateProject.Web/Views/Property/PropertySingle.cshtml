@@ -52,17 +52,13 @@
         </section><!-- End Intro Single-->
         <!-- ======= Property Single ======= -->
         <section class="property-single nav-arrow-b">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-10">
-                        <div id="property-single-carousel" class="owl-carousel owl-arrow gallery-property">
+                    <div class="swiper-wrapper"">
                             @foreach (var img in @Model.ImageRemoteImageUrl)
                             {
-                                <div class="carousel-item-a">
+                                    <div class="carousel-item-b swiper-slide">
                                     <img src="@img" style="height: 750px; width: 1100px;" alt="">
                                 </div>
                             }
-                        </div>
                         <div class="row justify-content-between">
                             <div class="col-md-5 col-lg-4">
                                 <div class="property-price d-flex justify-content-center foo">
@@ -214,8 +210,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
         </section><!-- End Property Single-->
 
     </main><!-- End #main -->

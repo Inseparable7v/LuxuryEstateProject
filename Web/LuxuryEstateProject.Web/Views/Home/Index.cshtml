@@ -159,7 +159,7 @@
                         <div class="carousel-item-b swiper-slide">
                             <div class="card-box-a card-shadow">
                                 <div class="img-box-a">
-                                        <img src="@estateModel.ImageRemoteImageUrl" alt="" class="img-a img-fluid">
+                                            <img src="@estateModel.ImageRemoteImageUrl" style="height:400px; width:360px" alt="" class="img-a img-fluid">
                                 </div>
                                 <div class="card-overlay">
                                     <div class="card-overlay-a-content">
@@ -214,7 +214,7 @@
             </div>
         </section><!-- End Latest Properties Section -->
         <!-- ======= Agents Section ======= -->
-        <section class="section-agents section-t8">
+         <section class="section-agents section-t8">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -232,68 +232,44 @@
                     </div>
                 </div>
                 <div class="row">
-                @foreach (var agents in @Model.Agents)
-                {
-                <div class="col-md-4">
-                        <div class="card-box-d">
-                            <div class="card-img-d">
-                                    <img src="@agents.ImageRemoteImageUrl" alt="" class="img-d img-fluid">
-                            </div>
-                            <div class="card-overlay card-overlay-hover">
-                                <div class="card-header-d">
-                                    <div class="card-title-d align-self-center">
-                                        <h3 class="title-d">
-                                                <a asp-area="" asp-controller="Agent" asp-action="SingleAgent" asp-route-id="@agents.Id" class="link-two">
-                                                    @agents.Name @agents.LastName
+                    @foreach (var agent in @Model.Agents)
+                    {
+                            <div class="col-md-4">
+                                <div class="card-box-d">
+                                    <div class="card-img-d">
+                                        <img src="@agent.ImageRemoteImageUrl" style="height: 450px;"alt="" class="img-d img-fluid">
+                                    </div>
+                                    <div class="card-overlay card-overlay-hover">
+                                        <div class="card-header-d">
+                                            <div class="card-title-d align-self-center">
+                                                <h3 class="title-d">
+                                                    <a asp-area="" asp-controller="Agent" asp-action="SingleAgent" asp-route-id="@agent.Id" class="link-two">
+                                                    @agent.Name @agent.LastName
                                                     </a>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="card-body-d">
-                                    <p class="content-d color-text-a">
-                                        Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
-                                    </p>
-                                    <div class="info-agents color-a">
-                                        <p>
-                                            <strong>Phone: </strong>@agents.Phone
-                                        </p>
-                                        <p>
-                                                <strong>Email: </strong>  @agents.Email
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="card-footer-d">
-                                    <div class="socials-footer d-flex justify-content-center">
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="bi bi-facebook" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="bi bi-twitter" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="bi bi-instagram" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#" class="link-one">
-                                                    <i class="bi bi-linkedin" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="card-body-d">
+                                            <p class="content-d color-text-a">
+                                            @agent.Id
+                                            @agent.Description
+                                            </p>
+                                            <div class="info-agents color-a">
+                                                <p>
+                                                    <strong>Phone: </strong> @agent.Phone
+                                                </p>
+                                                <p>
+                                                    <strong>Email: </strong> @agent.Email
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                }
+                    }
                 </div>
-        </section><!-- End Agents Section -->
+            </div>
+        </section><!-- End About Section-->
         <!-- ======= Latest News Section ======= -->
         <section class="section-news section-t8">
             <div class="container">
@@ -332,7 +308,7 @@
                                                     <a asp-controller="Blog" asp-action="ById" asp-route-id="@blog.Id">
                                                         @blog.Name
                                                             <br> new
-                                                        </a>
+                                                    </a>
                                             </h2>
                                         </div>
                                         <div class="card-date">
@@ -345,7 +321,6 @@
                         }
                     </div>
                 </div>
-
                 <div class="news-carousel-pagination carousel-pagination"></div>
             </div>
         </section><!-- End Latest News Section -->
