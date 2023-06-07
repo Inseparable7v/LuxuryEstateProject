@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zLFgYj6i6ISpfACR1X9ld9SgCddyhAIs7uwImRl2Npsy13tQ80ksVMPFMCSLY+NMfI0ORzw7Hx7cO9NQPAw0/A==",
+  "dgSpecHash": "/pppgXU0PSmVyOsgxfSOapXpm1p2Q7sYVLpXszSSzwHEIke7sSHprFq1f8DJD5Xhz42FGNG5UOBlbHIeVdDIJQ==",
   "success": true,
   "projectFilePath": "E:\\Git-repos\\LuxuryEstateProject\\Tests\\LuxuryEstateProject.Services.Data.Tests\\LuxuryEstateProject.Services.Data.Tests.csproj",
   "expectedPackageFiles": [
@@ -202,10 +202,7 @@
     "C:\\Users\\User\\.nuget\\packages\\xunit.core\\2.4.1\\xunit.core.2.4.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\xunit.extensibility.core\\2.4.1\\xunit.extensibility.core.2.4.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512"
   ],
   "logs": []
 }

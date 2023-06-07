@@ -19,13 +19,13 @@
             <div class="container">
                 @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
                 {
-                    <div class="row-cols-3">
+                            <div class="row-cols-3">
 
-                        <form method="post" asp-controller="Property" asp-action="Delete" id="deleteForm" asp-route-id="@Model.Id"></form>
-                        <button class="btn btn-danger col-md-3" data-toggle="modal" data-target="#deleteModal">Delete</button>
-                        <a asp-area="" asp-controller="Property" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
+                                <form method="post" asp-controller="Property" asp-action="Delete" id="deleteForm" asp-route-id="@Model.Id"></form>
+                                <button class="btn btn-danger col-md-3" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                                <a asp-area="" asp-controller="Property" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
 
-                    </div>
+                            </div>
                 }
                 <hr />
                 <div class="row">
@@ -51,166 +51,176 @@
             </div>
         </section><!-- End Intro Single-->
         <!-- ======= Property Single ======= -->
-        <section class="property-single nav-arrow-b">
-                    <div class="swiper-wrapper"">
-                            @foreach (var img in @Model.ImageRemoteImageUrl)
-                            {
-                                    <div class="carousel-item-b swiper-slide">
-                                    <img src="@img" style="height: 750px; width: 1100px;" alt="">
-                                </div>
-                            }
-                        <div class="row justify-content-between">
-                            <div class="col-md-5 col-lg-4">
-                                <div class="property-price d-flex justify-content-center foo">
-                                    <div class="card-header-c d-flex">
-                                        <div class="card-box-ico">
-                                            <span class="ion-money">$</span>
-                                        </div>
-                                        <div class="card-title-c align-self-center">
-                                            <h5 class="title-c">@Model.Price</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="property-summary">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="title-box-d section-t4">
-                                                <h3 class="title-d">Quick Summary</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="summary-list">
-                                        <ul class="list">
-                                            <li class="d-flex justify-content-between">
-                                                <strong>Property ID:</strong>
-                                                <span>@Model.Id</span>
-                                            </li>
-                                            <li class="d-flex justify-content-between">
-                                                <strong>Location:</strong>
-                                                <span>@Model.CountriesName</span>
-                                            </li>
-                                            <li class="d-flex justify-content-between">
-                                                <strong>Year:</strong>
-                                                <span>@Model.Year</span>
-                                            </li>
-                                            <li class="d-flex justify-content-between">
-                                                <strong>Status:</strong>
-                                                <span>@Model.Type</span>
-                                            </li>
-                                            <li class="d-flex justify-content-between">
-                                                <strong>Area:</strong>
-                                                <span>
-                                                    @Model.Size
-                                                    <sup>2</sup>
-                                                </span>
-                                            </li>
-                                            <li class="d-flex justify-content-between">
-                                                <strong>Beds:</strong>
-                                                <span>@Model.Bed</span>
-                                            </li>
-                                            <li class="d-flex justify-content-between">
-                                                <strong>Baths:</strong>
-                                                <span>@Model.Bath</span>
-                                            </li>
-                                            <li class="d-flex justify-content-between">
-                                                <strong>Garage:</strong>
-                                                <span>@Model.Garage</span>
-                                            </li>
-                                            <li class="d-flex justify-content-between">
-                                                <strong>Floor:</strong>
-                                                <span>@Model.Floor</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-7 col-lg-7 section-md-t3">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="title-box-d">
-                                            <h3 class="title-d">Property Description</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="property-description">
-                                    <p class="description color-text-a">
-                                        @Model.Description
-                                    </p>
-                                </div>
-                                <div class="row section-t3">
-                                    <div class="col-sm-12">
-                                        <div class="title-box-d">
-                                            <h3 class="title-d">Amenities</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="amenities-list color-text-a">
-                                    <ul class="list-a no-margin">
-                                        @foreach (var amenity in @Model.RealEstateAmenities)
-                                        {
-                                            <li>@amenity.AmenityName</li>
-                                        }
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+    <section class="property-single nav-arrow-b">
+      <div class="swiper-wrapper">
+                @foreach (var img in @Model.ImageRemoteImageUrl){
+                <div class="carousel-item-b swiper-slide">
+                              <img src="@img" style="height:750px; width:1100px; display: block; margin-left: auto;margin-right: auto;width: 50%;" class="center"  alt="">
+                </div>
+                }
+      </div>
+
+        <div class="row" style="padding-left:5rem;">
+          <div class="col-sm-12">
+
+            <div class="">
+              <div class="col-md-5 col-lg-4">
+                <div class="property-price d-flex justify-content-center foo">
+                  <div class="card-header-c d-flex">
+                    <div class="card-box-ico">
+                      <span class="bi bi-cash">$</span>
                     </div>
-                    <div class="col-md-12">
-                        <div class="row section-t3">
-                            <div class="col-sm-12">
-                                <div class="title-box-d">
-                                    <h3 class="title-d">Contact Agent</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-10 col-lg-5">
-                                <img src="@Model.Agent.ImageRemoteImageUrl" alt="" class="img-fluid">
-                            </div>
-                            <div class="col-md-10 col-lg-5">
-                                <div class="property-agent">
-                                    <h4 class="title-agent">@Model.Agent.Name @Model.Agent.LastName</h4>
-                                    <p class="color-text-a">
-                                        @Model.Agent.Description
-                                    </p>
-                                    <ul class="list-unstyled">
-                                        <li class="d-flex justify-content-between">
-                                            <strong>Phone:</strong>
-                                            <span class="color-text-a">@Model.Agent.Phone</span>
-                                        </li>
-                                        <li class="d-flex justify-content-between">
-                                            <strong>Mobile:</strong>
-                                            <span class="color-text-a">@Model.Agent.Phone</span>
-                                        </li>
-                                        <li class="d-flex justify-content-between">
-                                            <strong>Email:</strong>
-                                            <span class="color-text-a">@Model.Agent.Email</span>
-                                        </li>
-                                    </ul>
-                                    <div class="socials-a">
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item">
-                                                <a href="http://www.facebook.com/">
-                                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="https://twitter.com">
-                                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="http://www.instagram.com">
-                                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="card-title-c align-self-center">
+                      <h5 class="title-c">@Model.Price</h5>
                     </div>
-        </section><!-- End Property Single-->
+                  </div>
+                </div>
+                <div class="property-summary">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="title-box-d section-t4">
+                        <h3 class="title-d">Quick Summary</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="summary-list">
+                    <ul class="list">
+                      <li class="d-flex justify-content-between">
+                        <strong>Property ID:</strong>
+                        <span>@Model.Id</span>
+                      </li>
+                      <li class="d-flex justify-content-between">
+                        <strong>Location:</strong>
+                        <span>@Model.CountriesName City:@Model.CityName</span>
+                      </li>
+                      <li class="d-flex justify-content-between">
+                        <strong>Property Type:</strong>
+                        <span>House</span>
+                      </li>
+                      <li class="d-flex justify-content-between">
+                        <strong>Property Type:</strong>
+                        <span>@Model.Type</span>
+                      </li>
+                      <li class="d-flex justify-content-between">
+                        <strong>Year:</strong>
+                        <span>@Model.Year</span>
+                      </li>
+                      <li class="d-flex justify-content-between">
+                        <strong>Area:</strong>
+                        <span>@Model.Size
+                          <sup>Floor: @Model.Floor</sup>
+                        </span>
+                      </li>
+                      <li class="d-flex justify-content-between">
+                        <strong>Beds:</strong>
+                        <span>@Model.Bed</span>
+                      </li>
+                      <li class="d-flex justify-content-between">
+                        <strong>Baths:</strong>
+                        <span>@Model.Bath</span>
+                      </li>
+                      <li class="d-flex justify-content-between">
+                        <strong>Garage:</strong>
+                        <span>@Model.Garage</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7 col-lg-7 section-md-t3">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="title-box-d">
+                      <h3 class="title-d">Property Description</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="property-description">
+                  <p class="description color-text-a">
+                    @Model.Description
+                  </p>
+                  <p class="description color-text-a no-margin">
+                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget
+                    malesuada. Quisque velit nisi,
+                    pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada.
+                  </p>
+                </div>
+                <div class="row section-t3">
+                  <div class="col-sm-12">
+                    <div class="title-box-d">
+                      <h3 class="title-d">Amenities</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="amenities-list color-text-a" style="display: block; margin-left: auto;margin-right: auto;">
+                  <ul class="list-a no-margin">
+                      @foreach(var amenity in Model.RealEstateAmenities){
+                    <li>@amenity.AmenityName</li>
+                      }
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row section-t3">
+              <div class="col-sm-12">
+                <div class="title-box-d">
+                  <h3 class="title-d">Contact Agent</h3>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-lg-4">
+                <img src="@Model.Agent.ImageRemoteImageUrl" style="display: block; margin-left: auto;margin-right: auto;" alt="" class="img-fluid">
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="property-agent">
+                  <h4 class="title-agent">@Model.Agent.Name @Model.Agent.LastName</h4>
+                  <p class="color-text-a">
+                    @Model.Agent.Description
+                  </p>
+                  <ul class="list-unstyled">
+                    <li class="d-flex justify-content-between">
+                      <strong>Phone:</strong>
+                      <span class="color-text-a">@Model.Agent.Phone</span>
+                    </li>
+                    <li class="d-flex justify-content-between">
+                      <strong>Email:</strong>
+                      <span class="color-text-a">@Model.Agent.Email</span>
+                    </li>
+                  </ul>
+                  <div class="socials-a">
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a href="">
+                          <i class="bi bi-facebook" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#">
+                          <i class="bi bi-twitter" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#">
+                          <i class="bi bi-instagram" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#">
+                          <i class="bi bi-linkedin" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Property Single-->
 
     </main><!-- End #main -->
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>

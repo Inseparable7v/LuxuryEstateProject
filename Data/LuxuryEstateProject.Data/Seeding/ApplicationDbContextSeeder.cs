@@ -29,6 +29,7 @@
                               new RolesSeeder(),
                               new AmenitySeeder(),
                               new AdminSeeder(),
+                              new AgentSeeder(),
                               new CountrySeeder(),
                               new SettingsSeeder(),
                           };

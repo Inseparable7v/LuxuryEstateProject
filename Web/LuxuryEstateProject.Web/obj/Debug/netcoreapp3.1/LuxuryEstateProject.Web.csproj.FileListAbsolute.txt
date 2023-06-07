@@ -1987,3 +1987,4 @@ E:\Git-repos\LuxuryEstateProject\Web\LuxuryEstateProject.Web\obj\Debug\netcoreap
 E:\Git-repos\LuxuryEstateProject\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.LuxuryEstateProject.Web.props
 E:\Git-repos\LuxuryEstateProject\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Original_Index_View.cshtml.g.cs
 E:\Git-repos\LuxuryEstateProject\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\LuxuryEstateProject.Web.genruntimeconfig.cache
+E:\Git-repos\LuxuryEstateProject\Web\LuxuryEstateProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Property\CopyOfPropertySingle.cshtml.g.cs

@@ -101,16 +101,23 @@
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, EditBlogInputModel property)
+        public async Task<IActionResult> Edit(int id, EditBlogInputModel blogInputModel)
         {
             if (!this.ModelState.IsValid)
             {
                 return this.View();
             }
 
-            await this.blogsService.UpdateAsync(id, property);
+            try
+            {
+                await this.blogsService.UpdateAsync(id, blogInputModel);
+            }
+            catch (Exception ex)
+            {
+                this.ModelState.AddModelError(string.Empty, ex.Message);
+            }
 
-            return this.RedirectToAction("ById", new { id = id });
+            return this.RedirectToAction(nameof(this.ById), new { id = id });
         }
 
         [HttpPost]
@@ -126,13 +133,13 @@
         public async Task<IActionResult> AddComment(string content, int blogId)
         {
             var userId = this.userManager.GetUserId(this.User);
-            var lol = this.User.Identity.Name;
+            var userName = this.User.Identity.Name;
             if (content != null)
             {
-                await this.commentService.AddCommentAsync(content, blogId, userId, lol);
+                await this.commentService.AddCommentAsync(content, blogId, userId, userName);
             }
 
-            return this.RedirectToAction("ById", new { id = blogId });
+            return this.RedirectToAction(nameof(this.ById), new { id = blogId });
         }
     }
 }
