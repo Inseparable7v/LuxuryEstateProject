@@ -1,13 +1,6 @@
 ## LuxuryEstateProject
 
-## 💡 My Personal Project on ASP.NET Core application for the Real Estate C# Web - ASP.NET Core October 2020 @SoftUni
-
-## 📝 Project Description
-LuxuryEstate is a website for Rent or Sale a Real Estate.
-The main zone offers basic properties and agents. Each property has its own agent to combine with it.
-Blogs have comments attached to them.
-Administrators can edit, add or delete a property, blog or an agent.
-Users can only add property.
+## 💡 My Personal Project on ASP.NET Core application for the Real Estate C# Web - ASP.NET Core
 
 # Admin details
 ## Email:admin@localhost 
@@ -44,9 +37,6 @@ Users can only add property.
     -Back-end
         -C#
 
-    -Front-end
-        -JavaScript
-
 ###### Database:
 
     -MS SQL Server
@@ -81,8 +71,6 @@ Users can only add property.
 
     -Newtonsoft.Json
 
-    -AJAX
-
     -Font Awesome
 
     -Repository Pattern
@@ -90,4 +78,3 @@ Users can only add property.
     -Dependency Injection
 
 ----------------------------------------------------------------------------------------
-## Using Nikolay.IT ASP.NET Core Template
