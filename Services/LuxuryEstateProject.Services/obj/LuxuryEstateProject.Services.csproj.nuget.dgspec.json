@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services\\LuxuryEstateProject.Services.csproj": {}
+    "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services\\LuxuryEstateProject.Services.csproj": {}
   },
   "projects": {
-    "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services\\LuxuryEstateProject.Services.csproj": {
+    "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services\\LuxuryEstateProject.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services\\LuxuryEstateProject.Services.csproj",
+        "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services\\LuxuryEstateProject.Services.csproj",
         "projectName": "LuxuryEstateProject.Services",
-        "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services\\LuxuryEstateProject.Services.csproj",
+        "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services\\LuxuryEstateProject.Services.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services\\obj\\",
+        "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

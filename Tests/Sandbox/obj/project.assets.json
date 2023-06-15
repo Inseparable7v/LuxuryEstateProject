@@ -9654,11 +9654,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\Tests\\Sandbox\\Sandbox.csproj",
+      "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Tests\\Sandbox\\Sandbox.csproj",
       "projectName": "Sandbox",
-      "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Tests\\Sandbox\\Sandbox.csproj",
+      "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Tests\\Sandbox\\Sandbox.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\Tests\\Sandbox\\obj\\",
+      "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Tests\\Sandbox\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9675,29 +9675,29 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj": {
-              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj"
+            "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj": {
+              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj"
             },
-            "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj": {
-              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj"
+            "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj": {
+              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj"
             },
-            "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj": {
-              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj"
+            "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj": {
+              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj"
             },
-            "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj": {
-              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj"
+            "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj": {
+              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj"
             },
-            "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Data\\LuxuryEstateProject.Services.Data.csproj": {
-              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Data\\LuxuryEstateProject.Services.Data.csproj"
+            "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Data\\LuxuryEstateProject.Services.Data.csproj": {
+              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Data\\LuxuryEstateProject.Services.Data.csproj"
             },
-            "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Mapping\\LuxuryEstateProject.Services.Mapping.csproj": {
-              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Mapping\\LuxuryEstateProject.Services.Mapping.csproj"
+            "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Mapping\\LuxuryEstateProject.Services.Mapping.csproj": {
+              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Mapping\\LuxuryEstateProject.Services.Mapping.csproj"
             },
-            "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj": {
-              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj"
+            "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj": {
+              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj"
             },
-            "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services\\LuxuryEstateProject.Services.csproj": {
-              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services\\LuxuryEstateProject.Services.csproj"
+            "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services\\LuxuryEstateProject.Services.csproj": {
+              "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services\\LuxuryEstateProject.Services.csproj"
             }
           }
         }

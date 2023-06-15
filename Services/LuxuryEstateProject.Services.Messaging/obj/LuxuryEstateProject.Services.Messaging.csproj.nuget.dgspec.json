@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj": {}
+    "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj": {}
   },
   "projects": {
-    "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj": {
+    "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj",
+        "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj",
         "projectName": "LuxuryEstateProject.Services.Messaging",
-        "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj",
+        "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\LuxuryEstateProject.Services.Messaging.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\obj\\",
+        "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Messaging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

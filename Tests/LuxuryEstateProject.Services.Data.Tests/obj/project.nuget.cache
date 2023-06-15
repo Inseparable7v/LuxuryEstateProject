@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/pppgXU0PSmVyOsgxfSOapXpm1p2Q7sYVLpXszSSzwHEIke7sSHprFq1f8DJD5Xhz42FGNG5UOBlbHIeVdDIJQ==",
+  "dgSpecHash": "d5UwrNpBJ/i9bUAdhg7K1hPlQ0+4OeKOIegejp3T5X8ctf1NU23UntydS0XDX/c0vg77CDEobS6eNgNcNsW/YQ==",
   "success": true,
-  "projectFilePath": "E:\\Git-repos\\LuxuryEstateProject\\Tests\\LuxuryEstateProject.Services.Data.Tests\\LuxuryEstateProject.Services.Data.Tests.csproj",
+  "projectFilePath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Tests\\LuxuryEstateProject.Services.Data.Tests\\LuxuryEstateProject.Services.Data.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B97028wyoX/ReXozqn8PbWovN3gyqKIWaz8w3zBoWbrsgvFzczk7dX+IcaXabo63T4EuiRnnXQeaW7HsxxO9vw==",
+  "dgSpecHash": "XH1uk0Yf55uJHwcuqwxaNp1BdcyPpPtvfOYMu7tzK8hDQTy7XRaBFdNKaIqXRtahvTXxVobiMzsJbtBadDmAKQ==",
   "success": true,
-  "projectFilePath": "E:\\Git-repos\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Mapping\\LuxuryEstateProject.Services.Mapping.csproj",
+  "projectFilePath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Services\\LuxuryEstateProject.Services.Mapping\\LuxuryEstateProject.Services.Mapping.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

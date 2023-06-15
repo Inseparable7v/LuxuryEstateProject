@@ -507,6 +507,38 @@ namespace LuxuryEstateProject.Data.Migrations
                     b.ToTable("Images");
                 });
 
+            modelBuilder.Entity("LuxuryEstateProject.Data.Models.Log_19118027", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnName("CreatedOn_19118027")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnName("ModifiedOn_19118027")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("OperationType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("TimeOfTheChange")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("Log_19118027");
+                });
+
             modelBuilder.Entity("LuxuryEstateProject.Data.Models.RealEstateAmenity", b =>
                 {
                     b.Property<int>("Id")

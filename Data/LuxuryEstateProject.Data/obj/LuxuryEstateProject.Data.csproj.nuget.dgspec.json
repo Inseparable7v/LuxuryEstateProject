@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj": {}
+    "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj": {}
   },
   "projects": {
-    "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj": {
+    "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj",
+        "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj",
         "projectName": "LuxuryEstateProject.Data.Common",
-        "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj",
+        "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\obj\\",
+        "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,14 +71,14 @@
         }
       }
     },
-    "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj": {
+    "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj",
+        "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj",
         "projectName": "LuxuryEstateProject.Data.Models",
-        "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj",
+        "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\obj\\",
+        "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -95,8 +95,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj": {
-                "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj"
+              "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj": {
+                "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj"
               }
             }
           }
@@ -142,14 +142,14 @@
         }
       }
     },
-    "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj": {
+    "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj",
+        "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj",
         "projectName": "LuxuryEstateProject.Data",
-        "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj",
+        "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data\\LuxuryEstateProject.Data.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data\\obj\\",
+        "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -166,14 +166,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj": {
-                "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj"
+              "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj": {
+                "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Common\\LuxuryEstateProject.Data.Common.csproj"
               },
-              "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj": {
-                "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj"
+              "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj": {
+                "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Data\\LuxuryEstateProject.Data.Models\\LuxuryEstateProject.Data.Models.csproj"
               },
-              "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj": {
-                "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj"
+              "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj": {
+                "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj"
               }
             }
           }
@@ -237,14 +237,14 @@
         }
       }
     },
-    "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj": {
+    "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj",
+        "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj",
         "projectName": "LuxuryEstateProject.Common",
-        "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj",
+        "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\LuxuryEstateProject.Common\\LuxuryEstateProject.Common.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject.Common\\obj\\",
+        "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\LuxuryEstateProject.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

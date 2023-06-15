@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gNipYuGj6IozesceDQLAZSp2Y/kWKAlVSWB/FL865+K8BPYCFdi8Qi9s/kATt9dbaAFiTM+GBbMp+hP2H5aWMA==",
+  "dgSpecHash": "PEZY+MoI+9QJs8n8K07KVFDc0YzNObGi8WJKXaAnC9K7J2ft1D4sDPxoqu3j2CIHCAkyeu1nmass/2RRRsTWkw==",
   "success": true,
-  "projectFilePath": "E:\\Git-repos\\LuxuryEstateProject\\Web\\LuxuryEstateProject.Web.ViewModels\\LuxuryEstateProject.Web.ViewModels.csproj",
+  "projectFilePath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Web\\LuxuryEstateProject.Web.ViewModels\\LuxuryEstateProject.Web.ViewModels.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

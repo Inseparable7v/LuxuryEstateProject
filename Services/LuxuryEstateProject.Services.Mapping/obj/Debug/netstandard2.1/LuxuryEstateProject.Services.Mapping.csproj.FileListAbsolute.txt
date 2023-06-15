@@ -35,3 +35,13 @@ E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\o
 E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.csproj.CoreCompileInputs.cache
 E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.dll
 E:\Git-repos\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.pdb
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.deps.json
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.dll
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\bin\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.pdb
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.csproj.AssemblyReference.cache
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.GeneratedMSBuildEditorConfig.editorconfig
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.AssemblyInfoInputs.cache
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.AssemblyInfo.cs
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.csproj.CoreCompileInputs.cache
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.dll
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Services\LuxuryEstateProject.Services.Mapping\obj\Debug\netstandard2.1\LuxuryEstateProject.Services.Mapping.pdb

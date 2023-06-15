@@ -35,3 +35,13 @@ E:\Git-repos\LuxuryEstateProject\Data\LuxuryEstateProject.Data.Common\obj\Debug\
 E:\Git-repos\LuxuryEstateProject\Data\LuxuryEstateProject.Data.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.csproj.CoreCompileInputs.cache
 E:\Git-repos\LuxuryEstateProject\Data\LuxuryEstateProject.Data.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.dll
 E:\Git-repos\LuxuryEstateProject\Data\LuxuryEstateProject.Data.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.pdb
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Data\LuxuryEstateProject.Data.Common\bin\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.deps.json
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Data\LuxuryEstateProject.Data.Common\bin\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.dll
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Data\LuxuryEstateProject.Data.Common\bin\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.pdb
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Data\LuxuryEstateProject.Data.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.csproj.AssemblyReference.cache
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Data\LuxuryEstateProject.Data.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.GeneratedMSBuildEditorConfig.editorconfig
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Data\LuxuryEstateProject.Data.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.AssemblyInfoInputs.cache
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Data\LuxuryEstateProject.Data.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.AssemblyInfo.cs
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Data\LuxuryEstateProject.Data.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.csproj.CoreCompileInputs.cache
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Data\LuxuryEstateProject.Data.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.dll
+E:\Git-repos\LuxuryEstateProject\LuxuryEstateProject\Data\LuxuryEstateProject.Data.Common\obj\Debug\netstandard2.1\LuxuryEstateProject.Data.Common.pdb

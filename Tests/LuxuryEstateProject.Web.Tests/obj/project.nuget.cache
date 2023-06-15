@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i2jXnZLu1zKiQRKL7ns1tNmguyJ5MRiMKGxLwmoGtnO4tRyk6FovKyMfqsBeMs+GH0ZyJQ5OlJ7lltPkSgvCrw==",
+  "dgSpecHash": "/4qhRh8T3qUR2hqG7PxfY5B+KdiNkSoDnUpdNaEDLkMKs88bEQ2STWXvIDKx840xQUKTQULvkY/M3qZo4AEodA==",
   "success": true,
-  "projectFilePath": "E:\\Git-repos\\LuxuryEstateProject\\Tests\\LuxuryEstateProject.Web.Tests\\LuxuryEstateProject.Web.Tests.csproj",
+  "projectFilePath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Tests\\LuxuryEstateProject.Web.Tests\\LuxuryEstateProject.Web.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",

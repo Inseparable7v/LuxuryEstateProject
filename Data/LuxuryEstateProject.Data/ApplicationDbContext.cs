@@ -47,6 +47,8 @@
 
         public DbSet<Setting> Settings { get; set; }
 
+        public DbSet<Log_19118027> Log_19118027 { get; set; }
+
         /// <inheritdoc/>
         public override int SaveChanges() => this.SaveChanges(true);
 

@@ -65,11 +65,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\Web\\LuxuryEstateProject.Web.Infrastructure\\LuxuryEstateProject.Web.Infrastructure.csproj",
+      "projectUniqueName": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Web\\LuxuryEstateProject.Web.Infrastructure\\LuxuryEstateProject.Web.Infrastructure.csproj",
       "projectName": "LuxuryEstateProject.Web.Infrastructure",
-      "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\Web\\LuxuryEstateProject.Web.Infrastructure\\LuxuryEstateProject.Web.Infrastructure.csproj",
+      "projectPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Web\\LuxuryEstateProject.Web.Infrastructure\\LuxuryEstateProject.Web.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\Web\\LuxuryEstateProject.Web.Infrastructure\\obj\\",
+      "outputPath": "E:\\Git-repos\\LuxuryEstateProject\\LuxuryEstateProject\\Web\\LuxuryEstateProject.Web.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
